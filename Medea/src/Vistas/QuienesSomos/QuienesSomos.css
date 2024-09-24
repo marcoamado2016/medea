@@ -1,0 +1,72 @@
+
+
+.parallax img{
+    margin-bottom: 500px;
+    width: 600px;
+    height: 500px;
+    filter: drop-shadow(1px 1px 20px rgb(253, 253, 13));
+    position: relative;
+}
+
+
+.parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    height: 800px;
+    padding: 0 10%;
+    transition: 0.1s linear;
+    position: relative;
+}
+.container {
+    padding: 20px;
+    position: relative;
+    top: -60px;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    min-height: calc(100vh - 390px);
+}
+.tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+}
+.text{
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    text-align: justify; 
+    margin: 0 15%; 
+    color: #555; 
+}
+.Icon-container{ 
+  margin: 40px;
+  padding: 0;
+  display: flex;  
+  justify-content: end; 
+  gap: 40px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.Icon-container img:hover{
+ transform: translateX(-0.5rem)
+}
+.tv{
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-direction:column;  
+    gap: 20px;  
+    position: absolute;  
+    left: 450px;  
+    top: 100px;  
+}

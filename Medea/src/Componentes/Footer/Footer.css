@@ -1,0 +1,18 @@
+.Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #191e24a2;
+}
+.Footer div{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.Footer div img{
+    cursor: pointer;
+}

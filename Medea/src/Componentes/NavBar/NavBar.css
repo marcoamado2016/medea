@@ -1,0 +1,42 @@
+.Container{
+    position: sticky;
+    top: 0;
+    background-color: #191e24a2;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:50px;
+    padding: 15px 50px;
+    color: white;
+}
+.Container div img{
+    height: 90px;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+}
+div ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+li {
+    width: auto; 
+    white-space: nowrap;
+}
+li a{
+    font-size: 1.1rem;
+    cursor:pointer;
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+li a:hover{
+    color: #c59e03;
+    text-shadow: 2px 2px 4px rgb(255, 204, 0);
+    transition: 0.2s;
+}
+.hide{
+    top: 70px;
+}
