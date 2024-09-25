@@ -4,50 +4,32 @@ import facebook from "../../assets/FB.png"
 import insta from "../../assets/INSTAGRAM.png"
 import youTube from "../../assets/YOUTUBE.png"
 import mail from "../../assets/GMAIL.png"
-import { useState,useEffect } from 'react'
-import fieles from "../../assets/fieles.jpg"
 import tv from "../../assets/TV.png"
 import radio from "../../assets/radio.png"
 
-const useParallaxBanner = setScrollPosition=>{
-    const handleScroll=()=>
-        setScrollPosition(window.scrollY);
 
-    useEffect(()=>{
-        window.addEventListener("scroll",handleScroll,{passive: true});
-        return()=>window.removeEventListener("scroll",handleScroll)
-    },[]);
-}
+
 
 const QuienesSomos=()=>{
 
-    const [ScrollPosition,setScrollPosition]=useState(0);
-
-    useParallaxBanner(setScrollPosition);
 
     return(
     <div className='todo'>
-
+      <div className='parallax'> 
         <div className='Icon-container'>
             <img src={insta}></img>
             <img src={facebook}></img>
             <img src={youTube}></img>
             <img src={mail}></img>
         </div>
-        
-         
-        
-
-
-    
-        <section style={{
-            
-            backgroundSize:`${(window.outerHeight-ScrollPosition)/3}%`,
-        }} className="parallax">
-          
+        <div className='titulo'>
+            <h1>El mundo necesita mas<br/> gente que ama<br/>lo que hace!</h1>
+        </div>
+          <div className='parallax-img'>
             <img src={medea}></img>
+          </div>
     
-        </section>
+        </div>
         
 
 
@@ -63,6 +45,11 @@ const QuienesSomos=()=>{
             En el ámbito educativo, el C.I.E.M. (Centro Integral Educativo M.E.D.E.A.) ofrece niveles inicial, primario y secundario, brindando educación a niños y adolescentes con principios cristianos y buenos valores, formándolos como personas de fe y amor al prójimo.
             M.E.D.E.A. lleva el evangelio de Jesucristo a toda persona a través de seminarios y cultos de adoración y alabanza a Dios todos los días, utilizando diversos medios de transmisión y comunicación. Además, profundiza en la Palabra de Dios a través del I.B.M. (Instituto Bíblico M.E.D.E.A.), que cuenta con más de mil alumnos cada año.
             </p>
+        </div>
+        <div className='radio'>
+        <img src={radio}></img>
+        <img src={tv}></img>
+
         </div>
     </div>
     </div>

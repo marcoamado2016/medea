@@ -1,19 +1,37 @@
 
-
-.parallax img{
-    margin-bottom: 500px;
-    width: 600px;
-    height: 500px;
-    filter: drop-shadow(1px 1px 20px rgb(253, 253, 13));
-    position: relative;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+                
 
 .parallax{
     display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin:0;
+}
+
+.parallax-img{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    filter: drop-shadow(1px 1px 20px rgb(255, 255, 255));
+    
+}
+.parallax-img img{
+    width: 300px;
+    
+}
+.todo{
+    position: relative;
+    z-index: 1;
+    
+}
+
+.parallax{
+    
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background-image: url("../../assets/FondoQ.jpg");
     background-size: cover;
     background-repeat:no-repeat;
     background-position: 50% 50%;
@@ -21,14 +39,31 @@
     padding: 0 10%;
     transition: 0.1s linear;
     position: relative;
+    z-index: -1; 
+    border-top-left-radius: 50px; 
+    border-bottom-right-radius: 50px;
+  
 }
 .container {
     padding: 20px;
     position: relative;
-    top: -60px;
-    color: rgb(0, 0, 0);
+    top: -90px;
+    color: rgba(0, 0, 0, 0.61);
     border-radius: 15px;
-    min-height: calc(100vh - 390px);
+    min-height: calc(100vh - 350px);
+    
+   
+}
+.titulo h1{
+   
+    font-family: 'Allura',;
+    font-size: 4rem; 
+    line-height: 1.4; 
+    text-align: center; 
+    color: #000000b6; 
+   
+    letter-spacing: 2px; 
+    margin: 0; 
 }
 .tittle{
     display: flex;
@@ -47,26 +82,47 @@
     text-align: justify; 
     margin: 0 15%; 
     color: #555; 
+    margin-bottom: 50px;
 }
 .Icon-container{ 
-  margin: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  margin: 0px;
   padding: 0;
   display: flex;  
-  justify-content: end; 
-  gap: 40px;
+  align-items: center;
+  justify-content: start; 
+  gap: 20px;
   transition: all 0.5s ease;
   cursor: pointer;
+  z-index: 10;
+ 
 }
 .Icon-container img:hover{
- transform: translateX(-0.5rem)
+ transform: translateX(-0.5rem);
+ filter: drop-shadow(1px 1px 20px rgb(241, 238, 238));
 }
-.tv{
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    flex-direction:column;  
-    gap: 20px;  
-    position: absolute;  
-    left: 450px;  
-    top: 100px;  
+
+.radio{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin:0px ;
+    padding: 40px;
+    width: 100vw; 
+    background-image: url("../../assets/FondoQ.jpg");
+    gap: 40px;
+    width:auto;
+    border-top-left-radius: 50px; 
+    border-bottom-right-radius: 50px;
+    position: relative;
+    left: 50%; 
+    right: 50%; 
+    transform: translateX(-50%); 
 }
+.radio img:hover{
+    transform: translateX(-0.5rem);
+    filter: drop-shadow(1px 1px 20px rgb(224, 203, 6));
+   }
