@@ -37,7 +37,7 @@ const NavBar=()=>{
             </Link>
             </li>
             <li>
-            <Link>
+            <Link to="/Contact">
                 Contacto
             </Link>
             </li>

@@ -1,5 +1,11 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@font-face {
+    font-family: 'Didot tittle';
+    src: url('../../assets/didot-2/Didot%20Title.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
                 
 
 .parallax{
@@ -56,25 +62,25 @@
 }
 .titulo h1{
    
-    font-family: 'Allura',;
+    font-family: 'Didot tittle', serif;
+    font-weight:200 ;
     font-size: 4rem; 
     line-height: 1.4; 
     text-align: center; 
     color: #000000b6; 
-   
     letter-spacing: 2px; 
     margin: 0; 
 }
-.tittle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
-    font-size: 2.5rem; 
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase; 
-    letter-spacing: 1.5px; 
+.tittle h1{
+    font-family: 'Didot tittle', serif;
+    font-weight:200 ;
+    font-size: 4rem; 
+    line-height: 1.4; 
+    text-align: center; 
+    color: #000000d8; 
+    letter-spacing: 2px; 
+    margin-top: 30px; 
+   
 }
 .text{
     font-size: 1.2rem; 

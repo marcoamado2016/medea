@@ -1,0 +1,130 @@
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.Tittle-Contact{
+    background-image: url('../../assets/fondoQ2.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    height:100px ;
+    border-top-left-radius: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.Tittle-Contact h1{
+    font-family: 'Didot tittle', serif;
+    font-weight:200 ;
+    font-size: 4rem; 
+    line-height: 1.4; 
+    text-align: center; 
+    color: #000000d3; 
+    letter-spacing: 2px; 
+    margin-top: 100px;
+    margin-right: 500px;
+    z-index: 3;
+}
+.redes {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; 
+    padding-right: 20px;
+    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.Imagen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(../../assets/contact.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: 50% 45%;
+    height: 120px;
+    width: 100%;
+
+}
+.Imagen img{
+    margin: 0 40px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.Imagen img:hover {
+    transform: scale(1.5); 
+}
+.mobiles{
+ 
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    height: 500px;
+    width: 100%;
+    z-index: 100;
+}
+.radio{
+    background-image: url('../../assets/contact.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: 50% 60%;
+    height: 70px;
+    width: 100%
+}
+.radio h1{
+    font-family: 'Didot tittle', serif;
+    font-weight:200 ;
+    font-size: 4rem; 
+    line-height: 1.4; 
+    text-align: center; 
+    color: #000000d3; 
+    letter-spacing: 2px; 
+    z-index: 3;
+    margin-top: 10px;
+
+}
+.mujer{
+    background-image: url('../../assets/fondoQ2.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: 50% 60%;
+    height:100px ;
+    border-bottom-left-radius: 50px; 
+    border-top-right-radius: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.mujer h1{
+    font-family: 'Didot tittle', serif;
+    font-weight:200 ;
+    font-size: 4rem; 
+    line-height: 1.4; 
+    text-align: center; 
+    color: #000000d3; 
+    letter-spacing: 2px; 
+    margin-top: 100px;
+    margin-right: 500px;
+    z-index: 3;
+}
