@@ -1,0 +1,86 @@
+.Landing{
+  position: relative;
+  width: 100%;
+  height:700px;
+  background-image: url(../../assets/Landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: 0;
+  padding: 0;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden; 
+
+}
+.container{
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.texto{
+  width: 600px;
+  height: 40px;
+  padding: 10px;
+  color: #FFF;
+  margin: 0; 
+  font-family: 'Didot tittle', serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  top: 40%; 
+  left: 10%; 
+  transform: translateY(-50%); 
+}
+.boton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  bottom: 150px;
+  left: 80px;
+  padding: 15px 30px; 
+  font-size: 1.2rem; 
+  color: #FFF;
+  background-color:rgba(143 , 64, 248, .5); 
+  border: 2px solid rgba(143 , 64, 248, .5); 
+  border-radius: 40px; 
+  box-shadow: 0px -0px 0px 0px rgba(143 , 64, 248, .5) 0px 0px 0px 0px rgba(39, 200,255,.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+}
+.boton:hover{
+    transform: translate(0,-6px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 43,248, .25),-10px 10px 25px 0px rgba(39, 200,255, .25);
+}
+.boton:hover::after{
+    transform: rotate(150deg);
+}
+.boton::after{
+    content: '';
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.container-Iconos {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    display: flex;
+    gap: 10px; 
+}
+.container-Iconos img {
+    width: 40px; 
+    height: 40px;
+}

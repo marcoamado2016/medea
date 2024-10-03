@@ -2,6 +2,7 @@
 
 
 .Container{
+    
     font-family: monospace;
     position: sticky;
     top: 0;
@@ -10,9 +11,10 @@
     justify-content: space-between;
     align-items:center;
     gap:50px;
-    padding: 15px 50px;
+    
     color: rgba(255, 255, 255, 0);
     z-index: 100;
+    margin: 0;
 }
 .Container div img{
     height: 90px;
@@ -25,12 +27,15 @@ div ul{
     display: flex;
     align-items: center;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 li {
     width: auto; 
     white-space: nowrap;
 }
 li a{
+    margin-right: 20px;
     font-size: 1.1rem;
     cursor:pointer;
     text-decoration: none;
