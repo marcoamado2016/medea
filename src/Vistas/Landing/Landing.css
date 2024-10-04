@@ -35,43 +35,51 @@
   left: 10%; 
   transform: translateY(-50%); 
 }
-.boton{
+.boton{ 
+  padding: 10px;
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute; 
   bottom: 150px;
   left: 80px;
-  padding: 15px 30px; 
   font-size: 1.2rem; 
+  
+}
+.boton button{
+  font-family: monospace;
+  height: 70px;
+  width: 200px;
+  border-radius: 30px;
+  background-color:#7d2ae8;
+  border: 2px solid #28005c;
+  outline: none;
+  box-shadow: 0 0 40px #9341ff;
+  font-size: 15px ;
   color: #FFF;
-  background-color:rgba(143 , 64, 248, .5); 
-  border: 2px solid rgba(143 , 64, 248, .5); 
-  border-radius: 40px; 
-  box-shadow: 0px -0px 0px 0px rgba(143 , 64, 248, .5) 0px 0px 0px 0px rgba(39, 200,255,.5);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  cursor:pointer;
+  letter-spacing: 2px;
+
 
 }
-.boton:hover{
-    transform: translate(0,-6px);
-    box-shadow: 10px -10px 25px 0px rgba(143, 43,248, .25),-10px 10px 25px 0px rgba(39, 200,255, .25);
+.boton button:hover{
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0px rgba(143,64, 248, .25),
+  -10px 10px 25px 0px rgba(39, 200 , 255,.25);
 }
-.boton:hover::after{
-    transform: rotate(150deg);
+.boton button:hover::after{
+  transform: rotate(150deg);
 }
-.boton::after{
-    content: '';
-    width: 80px;
-    height: 40px;
-    position: absolute;
-    top: -50px;
-    left: -100px;
-    background-color: #FF3CAC;
-    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
-    z-index: -1;
-    transition: all .5s ease;
+.boton button.clicked {
+  background-color: #FF3CAC; 
+  color: #fff;; 
+  box-shadow: 0 0 40px #FF3CAC;
+  border: 2px solid #9e025a;
+
 }
+
+
 
 .container-Iconos {
     position: absolute;

@@ -3,10 +3,21 @@ import youtube from '../../assets/social_media_logo_you_tube_icon-icons.com_5906
 import whats from '../../assets/social_media_logo_whatsapp_icon-icons.com_59066.png'
 import face from '../../assets/social_media_logo_facebook_icon-icons.com_59059.png'
 import inst from '../../assets/socialinsta.png'
+import { useState } from 'react'
 
 
 
 const Landing =()=>{
+
+ 
+ const [isClicked, setIsClicked] = useState(false);
+
+ const handleClick = () => {
+   setIsClicked(!isClicked); 
+ };
+
+
+
     return(
     <div className='container'>
       <div className='Landing'>
@@ -14,7 +25,8 @@ const Landing =()=>{
         <h1>Algo mas que reunirnos</h1>
       </div>
       <div className='boton'>
-        <button>ir a reuniones</button>
+        <button  className={isClicked ? 'clicked' : ''}
+            onClick={handleClick}>ver reuniones</button>
       </div>
         <div className='container-Iconos'>
         
