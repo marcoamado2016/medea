@@ -1,6 +1,5 @@
 import './Contacto.css'
 import insta from '../../assets/Insta.png'
-import face from '../../assets/Face.png'
 import you from '../../assets/you.png'
 import gmail from '../../assets/gmail.png'
 import whats from '../../assets/whats.png'
@@ -25,6 +24,17 @@ const Contacto =()=>{
          </div>
         </div>
         <div className='mobiles'>
+          <div className='anuncio'>
+          <a>
+             Únase a nosotros
+             Nos reunimos todos los domingos a las 9:30 a. m. y a las 11:45 a. m. para asistir a la iglesia. Hay un lugar para todos los domingos por la mañana. ¡Estamos ansiosos por verte!
+          </a>
+          <a className='Link' href=''>
+            Mas informacion 
+          </a>
+           
+
+          </div>
         </div>
         <div className='mujer'>
          <img src={tv}></img>

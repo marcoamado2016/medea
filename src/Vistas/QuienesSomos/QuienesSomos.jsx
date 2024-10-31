@@ -1,4 +1,6 @@
 import './QuienesSomos.css'
+import { Link } from 'react-router-dom'
+import Radio from '../Radio/Radio'
 import medea from "../../assets/Medea.png"
 import facebook from "../../assets/FB.png"
 import insta from "../../assets/INSTAGRAM.png"
@@ -47,7 +49,10 @@ const QuienesSomos=()=>{
             </p>
         </div>
         <div className='radio'>
+        <Link to='/radio'>
+
         <img src={radio}></img>
+        </Link>
         <img src={tv}></img>
 
         </div>

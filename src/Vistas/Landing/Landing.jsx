@@ -1,51 +1,30 @@
-import './Landing.css'
-import youtube from '../../assets/social_media_logo_you_tube_icon-icons.com_59065.png'
-import whats from '../../assets/social_media_logo_whatsapp_icon-icons.com_59066.png'
-import face from '../../assets/social_media_logo_facebook_icon-icons.com_59059.png'
-import inst from '../../assets/socialinsta.png'
-import { useState } from 'react'
+import './Landing.css';
+import radio from '../../assets/index_14.jpg';
+import tv from '../../assets/index_16.jpg';
+import banner from '../../assets/banner-01.jpg';
 
-
-
-const Landing =()=>{
-
- 
- const [isClicked, setIsClicked] = useState(false);
-
- const handleClick = () => {
-   setIsClicked(!isClicked); 
- };
-
-
-
-    return(
-    <div className='container'>
-      <div className='Landing'>
-      <div className='texto'>
-        <h1>Algo mas que reunirnos</h1>
+const Landing = () => {
+  return (
+    <div>
+      <div className='nube-principal'>
+        <img src={banner} alt="Banner principal" />
       </div>
-      <div className='boton'>
-        <button  className={isClicked ? 'clicked' : ''}
-            onClick={handleClick}>ver reuniones</button>
-      </div>
-        <div className='container-Iconos'>
-        
-              
-              <img src={inst}></img>
-              <img src={face}></img>
-              <img src={whats}></img>
-              <img src={youtube}></img>
-
-                
-
-
+      <div className='medios'>
+        <div className='medios-tittle'>
+          <h1>Aqui estamos</h1>
         </div>
+        <div className='medios-imagenes'>
+          <img src={radio} alt="Imagen de radio" />
+          <img src={tv} alt="Imagen de televisión" />
+        </div>
+        <div>
+          <a>
 
+          </a>
+        </div>
       </div>
-
-     
     </div>
-    )
-}
+  );
+};
 
-export default Landing
+export default Landing;
