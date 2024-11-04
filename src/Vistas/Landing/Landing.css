@@ -1,55 +1,50 @@
-/* Ajusta el contenedor principal de la imagen del banner */
-.nube-principal {
-  position: absolute; /* Coloca el contenedor al principio de la página */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: -1; /* Opcional, asegura que otros elementos queden encima si es necesario */
-}
 
-.nube-principal img {
-  width: 100%;
+.medios{
+  background-image: url(../../assets/home_02.jpg);
+  background-size:cover;
+  background-position:top center;
+  background-repeat: no-repeat;
+  width: 100vw;
   height: 100%;
-  object-fit: cover;
-}
-
-/* Estilos para la sección de medios */
-.medios {
- background-image: url(../../assets/texto-1_02_03.jpg);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  
-  margin-top:100vh; /* Asegura que esta sección empiece debajo del banner */
-}
-
-.medios-tittle {
-  margin-bottom: 20px; 
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
  
 }
-
-.medios h1 {
-  font-size: 24px;
-  color: #333;
+.titulo h1{
+  font-size: 2.5rem;
+  margin: 4rem ;
+  margin-bottom:2.8rem;
+}
+.iconos {
+  margin-top: 65%;            
+  padding: 20px;
+  width: 100%;
+  text-align: center;
 }
 
-.medios-imagenes {
-  display: flex; 
-  gap: 70px; 
-}
-
-.medios img {
-  border-radius: 15px;
-  width: 250px;
-  height: auto;
+.iconos img {
+  width: 450px;
+  height: 200px;
+  border-radius: 20px;             
+  margin: 0 30px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
-
-.medios img:hover {
-  transform: scale(1.1);
+.iconos img:hover {
+  transform: scale(1.05);
+}
+.texto-Landing {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  padding: 15px;
+  max-width: 800px; 
+  margin: 0 auto;
+ 
+  
 }
