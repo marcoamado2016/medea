@@ -3,8 +3,8 @@ import insta from '../../assets/Insta.png'
 import you from '../../assets/you.png'
 import gmail from '../../assets/gmail.png'
 import whats from '../../assets/whats.png'
-import radio from '../../assets/radio.png'
-import tv from '../../assets/TV.png'
+
+
 
 const Contacto =()=>{
     return(

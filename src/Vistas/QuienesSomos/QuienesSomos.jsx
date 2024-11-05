@@ -1,13 +1,12 @@
 import './QuienesSomos.css'
 import { Link } from 'react-router-dom'
-import Radio from '../Radio/Radio'
+
 import medea from "../../assets/Medea.png"
-import facebook from "../../assets/FB.png"
-import insta from "../../assets/INSTAGRAM.png"
-import youTube from "../../assets/YOUTUBE.png"
-import mail from "../../assets/GMAIL.png"
-import tv from "../../assets/TV.png"
-import radio from "../../assets/radio.png"
+
+
+
+
+
 
 
 

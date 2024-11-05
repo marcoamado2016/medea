@@ -45,6 +45,39 @@
   padding: 15px;
   max-width: 800px; 
   margin: 0 auto;
+  margin-bottom: 80px;
  
   
 }
+
+.noticias1 .noticias2{
+  display: flex;
+  width: 100vw; 
+  height: 50vh;
+  margin: 0 auto;
+
+}
+.noticias1 img:first-child {
+  width: 40%; 
+  height: 100%; 
+  object-fit: cover;
+}
+.noticias1 img:last-child {
+  width: 60%; 
+  height: 100%; 
+  object-fit: cover;
+}  
+.noticias2 img:first-child {
+  width: 60%; 
+  height: 100%; 
+
+}
+.noticias2 img:last-child {
+  width: 40%; 
+  height: 100%; 
+
+}
+.noticias1 img:hover,.noticias2 img:hover{
+  transform: scale(1.05);
+}
+

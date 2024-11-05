@@ -1,10 +1,16 @@
 import './Landing.css';
 import radio from '../../assets/index_14.jpg';
 import tv from '../../assets/index_16.jpg';
-import fondo from '../../assets/home_02.jpg';
+import notisomos from '../../assets/Noticias-1.jpg'
+import notisomos2 from '../../assets/Noticias-2.jpg'
+import notisomos3 from '../../assets/Noticias-3.jpg'
+import notisomos4 from '../../assets/Noticias-3-27.jpg'
+
 
 const Landing = () => {
   return (
+    <div>
+
     <div className='medios'>
 
     <div className='iconos'>
@@ -24,6 +30,16 @@ const Landing = () => {
      
       
      </div>
+     <div className='noticias1'>
+      <img src={notisomos}></img>
+      <img src={notisomos2}></img>
+     </div>
+     <div className='noticias2'>
+      <img src={notisomos3}></img>
+      <img src={notisomos4}></img>
+     </div>
+    </div>
+     
   );
 };
 
