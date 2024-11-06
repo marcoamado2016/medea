@@ -9,7 +9,7 @@ import notisomos4 from '../../assets/Noticias-3-27.jpg'
 
 const Landing = () => {
   return (
-    <div>
+  <div>
 
     <div className='medios'>
 
@@ -31,12 +31,12 @@ const Landing = () => {
       
      </div>
      <div className='noticias1'>
-      <img src={notisomos}></img>
-      <img src={notisomos2}></img>
+      <img src={notisomos} className='imagen1'></img>
+      <img src={notisomos2} className='imagen2'></img>
      </div>
      <div className='noticias2'>
-      <img src={notisomos3}></img>
-      <img src={notisomos4}></img>
+      <img src={notisomos3} className='imagen3'></img>
+      <img src={notisomos4} className='imagen4'></img>
      </div>
     </div>
      

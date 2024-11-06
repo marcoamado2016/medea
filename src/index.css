@@ -1,8 +1,15 @@
-
+@font-face {
+  font-family: "TheSeason";
+  src: url("../src/assets/My\ Creative\ Land\ -\ The\ Seasons\ Regular.otf");
+}
+@font-face {
+  font-family: "Tillilium";
+  src: url("../src/assets/TitilliumWeb-Light.ttf");
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
+
 

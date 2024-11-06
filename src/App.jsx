@@ -1,3 +1,4 @@
+import './App.css'
 import { Routes,Route, } from "react-router-dom"
 import NavBar from "./Componentes/NavBar/NavBar"
 import QuienesSomos from "./Vistas/QuienesSomos/QuienesSomos"
@@ -13,16 +14,21 @@ function App() {
  
   
   return (
-    <div>
+  <div>
+  <div className='app'>
   <NavBar/>
-    <Routes>
+  <Routes>
       <Route path="/" element={<Landing/>}/><Route />
+  </Routes>
+  </div>
+    <Routes>
+    
       <Route path="/quienes" element={<QuienesSomos/>}/><Route />
       <Route path="/contact" element={<Contacto/>}/><Route />
       <Route path="/radio" element={<Radio/>}/><Route />
     </Routes>
     <Footer/>
-    </div>
+  </div>
   )
 }
 

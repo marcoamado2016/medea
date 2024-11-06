@@ -1,21 +1,7 @@
 
-.medios{
-  background-image: url(../../assets/home_02.jpg);
-  background-size:cover;
-  background-position:top center;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
- 
-}
+
 .titulo h1{
+  font-family: "TheSeason";
   font-size: 2.5rem;
   margin: 4rem ;
   margin-bottom:2.8rem;
@@ -39,6 +25,7 @@
   transform: scale(1.05);
 }
 .texto-Landing {
+  font-family: "Tillilium";
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
@@ -50,29 +37,28 @@
   
 }
 
-.noticias1 .noticias2{
+.noticias1, .noticias2{
   display: flex;
-  width: 100vw; 
-  height: 50vh;
-  margin: 0 auto;
+  height: 400px;
+
 
 }
-.noticias1 img:first-child {
+.imagen1{
   width: 40%; 
   height: 100%; 
   object-fit: cover;
 }
-.noticias1 img:last-child {
+.imagen2 {
   width: 60%; 
   height: 100%; 
   object-fit: cover;
 }  
-.noticias2 img:first-child {
+.imagen3 {
   width: 60%; 
   height: 100%; 
 
 }
-.noticias2 img:last-child {
+.imagen4{
   width: 40%; 
   height: 100%; 
 
