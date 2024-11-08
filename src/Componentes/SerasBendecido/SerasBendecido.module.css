@@ -1,0 +1,24 @@
+.container{
+    background-image: url(../../assets/ser-bendecido.jpg);
+    height: 800px;
+    align-items: center;
+    justify-content: start;
+    background-size:cover;
+    background-position:top center;
+    background-repeat: no-repeat;
+    font-family:"TheSeason" ;
+    position: relative;
+}
+.container h1{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.685);
+}
+.brillante {
+    cursor: pointer;
+    background-color: #d6c90f; /* o cualquier otro estilo */
+  }

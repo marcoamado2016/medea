@@ -1,51 +1,54 @@
-
-
-
-.Container{
-    
-    font-family:"Tillilium";
-    position: sticky;
-    top: 0;
+.container {
+    font-family: "Tillilium";
+    position: fixed;
+    top:0;
+    width:100%;   
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    gap:50px;
-    color: rgba(255, 255, 255, 0);
+    align-items: center;
+    color: rgb(224, 211, 211);
     z-index: 100;
     margin: 0;
 }
-.Container div img{
+
+.logo {
+    
     height: 90px;
     width: 120px;
     margin: 0;
     padding: 0;
 }
-div ul{
+
+.menu {
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
     margin: 0;
     padding: 0;
 }
-li {
-    width: auto; 
+
+.menuItem {
+    width: auto;
     white-space: nowrap;
 }
-li a{
-    margin-right: 20px;
+
+.link {
+    margin-right: 60px;
     font-size: 1.1rem;
-    cursor:pointer;
+    cursor: pointer;
     text-decoration: none;
     transition: 0.5s;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 246, 246);
 }
-li a:hover{
+
+.link:hover {
     color: #c59e03;
     text-shadow: 2px 2px 4px rgb(255, 204, 0);
     transition: 0.2s;
 }
-.hide{
+
+.hide {
     top: 70px;
 }

@@ -5,13 +5,14 @@ import notisomos from '../../assets/Noticias-1.jpg'
 import notisomos2 from '../../assets/Noticias-2.jpg'
 import notisomos3 from '../../assets/Noticias-3.jpg'
 import notisomos4 from '../../assets/Noticias-3-27.jpg'
-
+import EstoSomos from '../../Componentes/EstoSomos/EstoSomos';
+import SerasBendecido from '../../Componentes/SerasBendecido/SerasBendecido';
 
 const Landing = () => {
   return (
   <div>
 
-    <div className='medios'>
+  <div className='medios'>
 
     <div className='iconos'>
     <div className='titulo'>
@@ -38,6 +39,8 @@ const Landing = () => {
       <img src={notisomos3} className='imagen3'></img>
       <img src={notisomos4} className='imagen4'></img>
      </div>
+     <EstoSomos/>
+     <SerasBendecido/>
     </div>
      
   );

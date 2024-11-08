@@ -1,0 +1,58 @@
+.estoSomos{
+    background-image: url(../../assets/esto-somos.jpg);
+    display: flex;
+    height: 800px;
+    background-size:cover;
+    background-position:top center;
+    background-repeat: no-repeat;
+    font-family:"TheSeason" ;
+    align-items: center;
+    justify-content: start;
+}
+.miLista{
+    color: antiquewhite;
+    display:grid;
+    gap: 1;
+    font-size: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 70px;
+    
+}
+.miLista li {
+    margin: 5px 0; 
+    padding: 5px 0; 
+    cursor: pointer;
+}
+.miLista li a {
+    color: antiquewhite;
+    text-decoration: none; 
+    position: relative; 
+    display: inline-block; 
+    padding: 5px 0;
+}
+.miLista li a::before,
+.miLista li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: yellow;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.miLista li a::before {
+    top: -2px; 
+}
+
+.miLista li a::after {
+    bottom: -2px; 
+}
+
+.miLista li a:hover::before,
+.miLista li a:hover::after {
+    opacity: 1; 
+}
