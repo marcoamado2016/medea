@@ -30,6 +30,7 @@ const NavBar = () => {
                             ESTO SOMOS
                         </Link>
                     </li>
+            
                     
                 </ul>
             </div>

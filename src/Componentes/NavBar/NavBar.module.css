@@ -11,6 +11,15 @@
     z-index: 100;
     margin: 0;
 }
+.linkWhite {
+    color: #ffffff !important;
+    text-shadow: none;
+}
+
+.linkBlack {
+    color: #000000 !important;
+    text-shadow: none;
+}
 
 .logo {
     
@@ -41,6 +50,8 @@
     text-decoration: none;
     transition: 0.5s;
     color: rgb(255, 246, 246);
+    mix-blend-mode: difference;
+    
 }
 
 .link:hover {

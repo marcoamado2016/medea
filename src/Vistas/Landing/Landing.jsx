@@ -7,6 +7,7 @@ import notisomos3 from '../../assets/Noticias-3.jpg'
 import notisomos4 from '../../assets/Noticias-3-27.jpg'
 import EstoSomos from '../../Componentes/EstoSomos/EstoSomos';
 import SerasBendecido from '../../Componentes/SerasBendecido/SerasBendecido';
+import Concejeria from '../../Componentes/Concejeria/Concejeria';
 
 const Landing = () => {
   return (
@@ -39,6 +40,7 @@ const Landing = () => {
       <img src={notisomos3} className='imagen3'></img>
       <img src={notisomos4} className='imagen4'></img>
      </div>
+     <Concejeria/>
      <EstoSomos/>
      <SerasBendecido/>
     </div>
