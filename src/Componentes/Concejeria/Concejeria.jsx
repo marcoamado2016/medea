@@ -6,7 +6,7 @@ const Concejeria=()=>{
         <div className={style.concejeria}>
             <div className={style.texto}>
                 <h1>No estás solo</h1>
-                <a>
+                <p>
                     Orar por los demas es un acto profundo de
                     amor por el prójimo, nos permite desconectarnos
                     de las distracciones diarias para pensar en el
@@ -18,9 +18,9 @@ const Concejeria=()=>{
                     nosotros mismos. Es un gesto simple pero 
                     poderosoque transforma tanto a quienes oran 
                     como aquellos por quienes se ora
-                </a>
+                </p>
+               <button>LO NECESITO</button>
             </div>
-            <button>LO NECESITO</button>
         </div>
     )
 
