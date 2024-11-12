@@ -48,6 +48,32 @@
     transform: scale(1.1);
     filter: brightness(1.2); 
 }
+.divider {
+    width: 100%;
+    max-width: 1200px;
+    border: none;
+    border-top: 1px solid #444; 
+    margin: 20px 0; 
+}
+.longFooter{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+  
+}
+
+.longFooter img{
+    width: 80px;
+    height: 60px;
+
+}
+.longFooter h2{
+    
+   font-size: 0.95rem;
+   font-weight: 100;
+   color: #777777; 
+}
 @media (max-width: 768px) {
     .row {
         flex-direction: column;

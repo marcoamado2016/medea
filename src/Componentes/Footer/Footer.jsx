@@ -5,7 +5,7 @@ import twitter from '../../assets/twitter_x_new_logo_square_x_icon_256075.png'
 import whats from '../../assets/whatsapp_icon-icons.com_53606.png'
 import gmail from '../../assets/google_plus_icon-icons.com_53608.png'
 import you from '../../assets/youtube.png'
-
+import medea from '../../assets/Medea.png'
 
 
 const Footer =()=>{
@@ -48,9 +48,14 @@ const Footer =()=>{
               <img src={you}></img>
 
             <p>Recibe contenido exclusivo</p>
-           
-           </div>
         </div>
+        <hr className={style.divider} />
+
+           </div>
+           <div className={style.longFooter} >
+            <img src={medea}></img>
+            <h2>Copyright©2024. Todos los derechos reservados</h2>
+           </div>
         
     </div>
     )
