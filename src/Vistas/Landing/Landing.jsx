@@ -9,13 +9,14 @@ import EstoSomos from '../../Componentes/EstoSomos/EstoSomos';
 import SerasBendecido from '../../Componentes/SerasBendecido/SerasBendecido';
 import Concejeria from '../../Componentes/Concejeria/Concejeria';
 
+
 const Landing = () => {
   return (
-  <div>
+<div>
 
-  <div className='medios'>
+ <div className='medios'>
 
-    <div className='iconos'>
+  <div className='iconos'>
     <div className='titulo'>
       <h1>AQUÍ ESTAMOS</h1>
     </div>
@@ -26,7 +27,7 @@ const Landing = () => {
     <div className='texto-Landing'>
         <a>El Ministerio M.E.D.E.A , con 41 años de misión, difunde el evangelio globalmente mediante tecnología y medios, alcanzando a quienes no puedan asistir en persona. Brinda apoyo espiritual a personas privadas de libertad y mantiene una presencia continua a través de "Libertad en la red" y "Un mensaje al Corazon". Su labor busca transformar vidas con mensaje de esperanza y amor a Dios</a>
 
-    </div>
+    </div> 
 
     </div>
      
@@ -43,7 +44,7 @@ const Landing = () => {
      <Concejeria/>
      <EstoSomos/>
      <SerasBendecido/>
-    </div>
+</div>
      
   );
 };
