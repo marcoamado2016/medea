@@ -26,9 +26,9 @@ const Parallax = () => {
                     <h1>con Vida</h1>
                 </div>
             </div>
-            <img src={nube} alt="Nube" style={{ position: 'absolute', top: '0', left: '50%', transform: 'translateX(-50%)' }} />
+            <img src={nube} alt="Nube" style={{ position: 'absolute', top: '100px', left: '50%', transform: 'translateX(-50%)' }} />
 
-            {/* Aquí estamos */}
+           
             <div className={style.aquiEstamos}>
                 <div className={style.titulo2}>
                     <h1>AQUÍ ESTAMOS</h1>
@@ -37,11 +37,11 @@ const Parallax = () => {
                 <div className={style.medio}>
                     <div className={style.card}>
                         <img src={radio} alt="Radio" />
-                        <div className={style.icono}></div> {/* Icono de radio */}
+                        <div className={style.icono}></div> 
                     </div>
                     <div className={style.card}>
                         <img src={tv} alt="TV" />
-                        <div className={style.icono}></div> {/* Icono de TV */}
+                        <div className={style.icono}></div> 
                     </div>
                 </div>
 
