@@ -8,31 +8,18 @@ import notisomos4 from '../../assets/Noticias-3-27.jpg'
 import EstoSomos from '../../Componentes/EstoSomos/EstoSomos';
 import SerasBendecido from '../../Componentes/SerasBendecido/SerasBendecido';
 import Concejeria from '../../Componentes/Concejeria/Concejeria';
+import Parallax from '../../Componentes/Parallax/Parallax';
 
 
 const Landing = () => {
   return (
 <div>
-
+<Parallax/>
  <div className='medios'>
 
-  <div className='iconos'>
-    <div className='titulo'>
-      <h1>AQUÍ ESTAMOS</h1>
-    </div>
-    <div>
-      <img src={tv}></img>
-      <img src={radio}></img>
-    </div>
-    <div className='texto-Landing'>
-        <a>El Ministerio M.E.D.E.A , con 41 años de misión, difunde el evangelio globalmente mediante tecnología y medios, alcanzando a quienes no puedan asistir en persona. Brinda apoyo espiritual a personas privadas de libertad y mantiene una presencia continua a través de "Libertad en la red" y "Un mensaje al Corazon". Su labor busca transformar vidas con mensaje de esperanza y amor a Dios</a>
 
-    </div> 
-
-    </div>
-     
-      
-     </div>
+ 
+  </div>
      <div className='noticias1'>
       <img src={notisomos} className='imagen1'></img>
       <img src={notisomos2} className='imagen2'></img>

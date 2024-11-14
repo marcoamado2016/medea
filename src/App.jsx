@@ -5,6 +5,7 @@ import QuienesSomos from "./Vistas/QuienesSomos/QuienesSomos"
 import Footer from "./Componentes/Footer/Footer"
 import Radio from "./Vistas/Radio/Radio"
 import Landing from "./Vistas/Landing/Landing"
+import Parallax from './Componentes/Parallax/Parallax'
 
 
 

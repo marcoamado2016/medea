@@ -1,0 +1,133 @@
+.parallax {
+    background-image: url('../../assets/home-ppal.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 2000px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.outerParallax {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.titulo {
+    font-family: 'TheSeason';
+    color: #ffffff;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+}
+
+.titulo h1 {
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 6rem;
+    line-height: 1;
+    font-style: italic;
+    font-family: "Italic";
+}
+
+.titulo h2 {
+    font-weight: 80;
+    margin: 0;
+    padding: 0;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+.parallax img {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.aquiEstamos {
+    margin-top: 50%;
+    padding: 70px 0;
+    width: 100%;
+    text-align: center;
+    color: #555;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo2 {
+    margin-top: 50px; /* Ajusta este valor para mover el título más arriba */
+}
+
+.titulo2 h1 {
+    font-family: "TheSeason";
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #333;
+}
+
+.medio {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.card {
+    position: relative;
+    width: 450px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    
+}
+
+.icono {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.textoLanding p {
+    font-family: "Tillilium";
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 1rem;
+}
+

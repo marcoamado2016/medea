@@ -1,4 +1,4 @@
-.medios{
+/* .medios{
   background-image: url(../src/assets/home_02.jpg);
   background-size:cover;
   background-position:top center;
@@ -12,7 +12,7 @@
   overflow: hidden;
   margin:0;
   padding: 0;
-}
+} */
 
 .titulo h1{
   font-family: "TheSeason";
