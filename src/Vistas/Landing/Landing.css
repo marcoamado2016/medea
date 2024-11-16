@@ -77,6 +77,13 @@
   background-size:cover;
   background-repeat: no-repeat;
 }
+.noticias{
+  background-image: url('../../assets/index_17.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 500px;
+}
     
 
 

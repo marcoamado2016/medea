@@ -9,6 +9,7 @@ import EstoSomos from '../../Componentes/EstoSomos/EstoSomos';
 import SerasBendecido from '../../Componentes/SerasBendecido/SerasBendecido';
 import Concejeria from '../../Componentes/Concejeria/Concejeria';
 import Parallax from '../../Componentes/Parallax/Parallax';
+import Slider from '../../Componentes/Silder/Silder';
 
 
 const Landing = () => {
@@ -20,13 +21,8 @@ const Landing = () => {
 
  
   </div>
-     <div className='noticias1'>
-      <img src={notisomos} className='imagen1'></img>
-      <img src={notisomos2} className='imagen2'></img>
-     </div>
-     <div className='noticias2'>
-      <img src={notisomos3} className='imagen3'></img>
-      <img src={notisomos4} className='imagen4'></img>
+     <div className='noticias'>
+     <Slider/>
      </div>
      <Concejeria/>
      <EstoSomos/>
