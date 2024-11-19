@@ -26,7 +26,7 @@ const Parallax = () => {
                     <h1>con Vida</h1>
                 </div>
             </div>
-            <img src={nube} alt="Nube" style={{ position: 'absolute', top: '100px', left: '50%', transform: 'translateX(-50%)' }} />
+            <img src={nube} alt="Nube" className={style.nube} /> 
 
            
             <div className={style.aquiEstamos}>

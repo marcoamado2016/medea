@@ -1,12 +1,13 @@
 .parallax {
     background-image: url('../../assets/home-ppal.jpg');
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     background-repeat: no-repeat;
     height: 2000px; 
     overflow: hidden;
     position: relative;
 }
+
 
 .outerParallax {
     position: relative;
@@ -16,6 +17,13 @@
     justify-content: center;
     overflow: hidden;
 }
+@media (max-width: 480px){
+    .parallax{
+        width: 100vh;
+    }
+}
+
+
 
 .titulo {
     font-family: 'TheSeason';
@@ -70,6 +78,13 @@
     align-items: center;
     justify-content: center;
 }
+.nube {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%; /* Tamaño inicial */
+}
 .titulo2 {
     margin-top: 50px; /* Ajusta este valor para mover el título más arriba */
 }
@@ -107,6 +122,7 @@
     width: 100%;
     height: 100%;
     margin-top: 30px;
+    object-fit: cover;
     
 }
 
@@ -130,4 +146,65 @@
     padding: 20px;
     margin-top: 1rem;
 }
+@media (max-width: 768px) {
+   
+    .titulo h1 {
+        font-size: 4rem; /* Reduce el tamaño en pantallas pequeñas */
+    }
+
+    .titulo h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 200px; /* Ajusta el tamaño de las tarjetas */
+        height: 100px;
+    }
+
+    .medio {
+        
+        gap: 0.5rem; /* Reduce el espacio entre elementos */
+    }
+
+    .textoLanding p {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    }
+    .nube{
+        top: 500px; 
+        display: none;
+        width: 100%; 
+        
+    }
+}
+
+@media (max-width: 480px) {
+  
+    .titulo h1 {
+        font-size: 3rem;
+    }
+
+    .titulo h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        
+        width: 200px;
+        height: 100px; 
+    }
+
+    .textoLanding p {
+        font-size: 0.8rem; 
+    }
+    .aquiEstamos{
+        top: 350px;
+    }
+    .nube{
+        top: 500px; 
+        display: none;
+        width: 100%; 
+        
+    }
+}
+
 

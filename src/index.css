@@ -1,14 +1,14 @@
 @font-face {
   font-family: "TheSeason";
-  src: url("../src/assets/My\ Creative\ Land\ -\ The\ Seasons\ Regular.otf");
+  src: url("../font/My\ Creative\ Land\ -\ The\ Seasons\ Regular.otf");
 }
 @font-face {
   font-family: "Tillilium";
-  src: url("../src/assets/TitilliumWeb-Light.ttf");
+  src: url("../font/TitilliumWeb-Light.ttf");
 }
 @font-face {
   font-family: "Italic";
-  src: url("../src/assets/SwilyBright-Italic.otf");
+  src: url("../font/SwilyBright-Italic.otf");
 }
 *,
 html,
