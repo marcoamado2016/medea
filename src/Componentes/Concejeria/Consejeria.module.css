@@ -1,5 +1,5 @@
 .concejeria {
-    background-image: url(../../assets/Concejeria.jpg); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-image: url(../../assets/Concejeria.jpg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -8,14 +8,15 @@
     justify-content: end;
     height: 800px;
     padding: 20px;
+    position: relative; 
 }
-
 .texto {
     color: aliceblue;
     max-width: 400px;
     padding: 10px;
-    border-radius: 8px;
+    
     margin-right: 100px;
+    
 }
 
 .texto h1 {
@@ -32,7 +33,7 @@
     margin-bottom: 20px;
 }
 
-.concejeria button {
+.boton {
     font-family: "Tillilium", sans-serif;
     color: aliceblue;
     background-color: transparent;
@@ -42,10 +43,108 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-
 }
 
 .concejeria button:hover {
     background-color: #FFF;
     color: #000;
+}
+
+.botonFlotante {
+    position: absolute; 
+    margin: 0;
+    bottom: 20px; 
+    right: 20px;
+    font-family: "Tillilium", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #FFF;
+    height: 40px;
+    width: 160px;
+    border: 1px solid #0c0c0c;
+    border-radius: 20px 0px 20px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 100; 
+}
+
+.botonFlotante:hover {
+    background-color: #fffafa;
+    color: #000000;
+}
+@media (max-width: 768px) { /* Móviles */
+    .concejeria {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    .texto {
+        margin-right: 0;
+        text-align: center;
+        max-width: 100%; /* Texto ocupa toda la pantalla */
+    }
+
+    .texto h1 {
+        font-size: 28px; /* Reduce el tamaño del título */
+    }
+
+    .texto p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .boton {
+        height: 30px;
+        width: 100px; /* Botón más pequeño */
+    }
+
+    .botonFlotante {
+        bottom: 5px;
+        right: 5px;
+        height: 30px;
+        width: 120px; /* Más pequeño para móviles */
+        font-size: 12px; /* Reduce el tamaño del texto dentro del botón */
+    }
+}
+@media (max-width: 480px) { /* Móviles pequeños */
+    .concejeria {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 10px;
+    }
+
+    .texto {
+        margin-right: 0;
+        text-align: center; /* Centra el texto */
+        max-width: 100%; /* Texto ocupa todo el ancho disponible */
+        padding: 0 10px; /* Añade un margen interno para evitar que el texto toque los bordes */
+    }
+
+    .texto h1 {
+        font-size: 24px; /* Reduce el tamaño del título */
+    }
+
+    .texto p {
+        font-size: 12px; /* Reduce el tamaño del texto para que sea legible */
+        line-height: 1.4; /* Ajusta el espacio entre líneas */
+    }
+
+    .boton {
+        height: 25px;
+        width: 90px; /* Botón más compacto */
+        font-size: 12px; /* Reduce el tamaño del texto del botón */
+        border-radius: 15px; /* Botón más redondeado */
+    }
+
+    .botonFlotante {
+        bottom: 5px; /* Más cerca del borde inferior */
+        right: 5px; /* Reduce el margen desde el borde derecho */
+        height: 30px;
+        width: 100px; /* Botón más pequeño para pantallas estrechas */
+        font-size: 10px; /* Reduce el tamaño del texto dentro del botón */
+        border-radius: 15px 5px 15px 15px; /* Mantén un diseño atractivo */
+    }
 }

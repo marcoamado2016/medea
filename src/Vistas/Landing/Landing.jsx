@@ -8,20 +8,13 @@ import Slider from '../../Componentes/Silder/Silder';
 
 const Landing = () => {
   return (
-<div>
-<Parallax/>
- <div className='medios'>
-
-
- 
-  </div>
-     <div className='noticias'>
+    <div>
+     <Parallax/>
      <Slider/>
-     </div>
      <Concejeria/>
      <EstoSomos/>
      <SerasBendecido/>
-</div>
+   </div>
      
   );
 };

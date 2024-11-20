@@ -56,8 +56,8 @@ const Slider = () => {
                             <li key={item.id}>
                                 <img
                                     src={item.imgUrl}
-                                    width={550}
-                                    height={300}
+                                    width={1400}
+                                    height={700}
                                     alt=""
                                 />
                             </li>

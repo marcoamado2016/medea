@@ -1,7 +1,7 @@
 .mainContainer{
-    width: 550px;
-    height: 300px;
-    margin: 40px auto;
+   
+    height: 500px;
+    margin: 0px auto;
     
 }
 .sliderConteiner{
@@ -9,9 +9,9 @@
    height: 100%; 
 }
 .conteinerImg{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+    display: flex;
+    height: 500px;
+   
     
     overflow: hidden;
 }
@@ -25,7 +25,7 @@
     position: absolute;
     top:50%;
     transform: translate(0,-50%);
-    left: 32px;
+    left: 22px;
     font-size: 40px;
     font-weight:500;
     color: #fff0f0c2;
@@ -55,7 +55,10 @@ li {
 }
 .dotsContainer{
     display: flex;
+    background-color: transparent;
     justify-content: center;
+    align-items: end;
+    z-index: 10;
 }
 .dotsContainerItem{
  margin: 8px 3px;

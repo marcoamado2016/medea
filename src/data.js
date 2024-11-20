@@ -4,15 +4,15 @@
 
 export const data=[
 {
-    id:1 ,imgUrl:'../src/assets/Noticias-1.jpg'
+    id:1 ,imgUrl:'./pic/01 bis.png'
 },
 {
-    id:2,imgUrl:'../src/assets/Noticias-2.jpg'
+    id:2,imgUrl:'/pic/02 bis.png'
 },
 {
-    id:3 ,imgUrl:'../src/assets/Noticias-3-27.jpg'
+    id:3 ,imgUrl:'/pic/03 bis.png'
 },
 {
-    id:4,imgUrl:'../src/assets/Noticias-3.jpg'
+    id:4,imgUrl:'/pic/04 bis.png'
 },
 ];

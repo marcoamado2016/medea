@@ -19,8 +19,9 @@ const Concejeria=()=>{
                     poderosoque transforma tanto a quienes oran 
                     como aquellos por quienes se ora
                 </p>
-               <button>LO NECESITO</button>
+               <button  className={style.boton}>LO NECESITO</button>
             </div>
+          <button className={style.botonFlotante}>oramos por vos!</button>
         </div>
     )
 

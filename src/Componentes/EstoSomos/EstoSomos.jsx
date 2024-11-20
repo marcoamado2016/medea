@@ -7,9 +7,7 @@ const EstoSomos =()=>{
     return (
         <div className={style.estoSomos}>
             <ul className={style.miLista}>
-                <li>
-                    <a>Instituto Bíblico</a>
-                </li>
+            
                 <li>
                     <a>Centro Integral Educativo</a>
                 </li>
@@ -24,6 +22,9 @@ const EstoSomos =()=>{
                 </li>
                 <li>
                     <a>Cultos</a>
+                </li>
+                <li>
+                    <a>Liderazgo</a>
                 </li>
             </ul>
       
