@@ -51,7 +51,7 @@
 }
 
 .botonFlotante {
-    position: absolute; 
+    position: fixed; 
     margin: 0;
     bottom: 20px; 
     right: 20px;
@@ -64,87 +64,35 @@
     border-radius: 20px 0px 20px 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    z-index: 100; 
+    z-index: 999; 
 }
 
 .botonFlotante:hover {
     background-color: #fffafa;
     color: #000000;
 }
-@media (max-width: 768px) { /* Móviles */
+@media (max-width: 412px) {
+    /* Estilos específicos para pantallas muy pequeñas */
     .concejeria {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        padding: 10px;
+      padding: 5px;
     }
-
+  
     .texto {
-        margin-right: 0;
-        text-align: center;
-        max-width: 100%; /* Texto ocupa toda la pantalla */
+      padding: 5px;
     }
-
+  
     .texto h1 {
-        font-size: 28px; /* Reduce el tamaño del título */
+      font-size: 20px;
     }
-
+  
     .texto p {
-        font-size: 14px; /* Ajusta el tamaño del texto */
+      font-size: 12px;
     }
-
-    .boton {
-        height: 30px;
-        width: 100px; /* Botón más pequeño */
+  
+    .boton, .botonFlotante {
+      font-size: 12px;
+      padding: 5px 10px;
     }
-
-    .botonFlotante {
-        bottom: 5px;
-        right: 5px;
-        height: 30px;
-        width: 120px; /* Más pequeño para móviles */
-        font-size: 12px; /* Reduce el tamaño del texto dentro del botón */
-    }
-}
-@media (max-width: 480px) { /* Móviles pequeños */
-    .concejeria {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto; /* Ajusta la altura automáticamente */
-        padding: 10px;
-    }
-
-    .texto {
-        margin-right: 0;
-        text-align: center; /* Centra el texto */
-        max-width: 100%; /* Texto ocupa todo el ancho disponible */
-        padding: 0 10px; /* Añade un margen interno para evitar que el texto toque los bordes */
-    }
-
-    .texto h1 {
-        font-size: 24px; /* Reduce el tamaño del título */
-    }
-
-    .texto p {
-        font-size: 12px; /* Reduce el tamaño del texto para que sea legible */
-        line-height: 1.4; /* Ajusta el espacio entre líneas */
-    }
-
-    .boton {
-        height: 25px;
-        width: 90px; /* Botón más compacto */
-        font-size: 12px; /* Reduce el tamaño del texto del botón */
-        border-radius: 15px; /* Botón más redondeado */
-    }
-
-    .botonFlotante {
-        bottom: 5px; /* Más cerca del borde inferior */
-        right: 5px; /* Reduce el margen desde el borde derecho */
-        height: 30px;
-        width: 100px; /* Botón más pequeño para pantallas estrechas */
-        font-size: 10px; /* Reduce el tamaño del texto dentro del botón */
-        border-radius: 15px 5px 15px 15px; /* Mantén un diseño atractivo */
-    }
-}
+  }
+  
+  

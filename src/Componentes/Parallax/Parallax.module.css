@@ -17,9 +17,9 @@
     justify-content: center;
     overflow: hidden;
 }
-@media (max-width: 480px){
+@media (max-width: 412px){
     .parallax{
-        width: 100vh;
+        width: 100%;
     }
 }
 
@@ -177,24 +177,25 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 412px) {
   
     .titulo h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .titulo h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .card {
         
-        width: 200px;
-        height: 100px; 
+        width: 180px;
+        height: 90px; 
     }
 
     .textoLanding p {
-        font-size: 0.8rem; 
+        font-size: 0.7rem; 
+        line-height: 1.4;
     }
     .aquiEstamos{
         top: 350px;
