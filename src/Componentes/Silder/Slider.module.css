@@ -1,8 +1,6 @@
 .mainContainer{
-   
-    height: 500px;
+    height: 600px;
     margin: 0px auto;
-    
 }
 .sliderConteiner{
    position: relative;
@@ -10,9 +8,9 @@
 }
 .conteinerImg{
     display: flex;
-    height: 500px;
-   
-    
+    height: 600px;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 .conteinerImg ul {
@@ -49,9 +47,21 @@ ul {
     padding: 0;
     margin: 0;
     overflow: hidden; 
+   
+   
 }
 li {
     flex-shrink: 0; 
+    display: flex; /* Agregar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Ajustar al contenedor */
+
+}
+img {
+   
+    max-width: 100%; 
+    max-height: 100%; 
 }
 .dotsContainer{
     display: flex;
@@ -65,4 +75,42 @@ li {
  cursor: pointer;
  font-size: 12px;
  text-align: center;
+}
+@media (max-width: 716px) {
+    .mainContainer {
+        height: 400px;
+    }
+
+    .conteinerImg {
+        height: 400px;
+    }
+
+    .leftArrow, .rightArrow {
+        font-size: 30px;
+    }
+
+    .dotsContainerItem {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 412px) {
+    img {
+        object-fit: cover; 
+    }
+    .mainContainer {
+        height: 300px;
+    }
+
+    .conteinerImg {
+        height: 300px;
+    }
+
+    .leftArrow, .rightArrow {
+        font-size: 24px;
+    }
+
+    .dotsContainerItem {
+        font-size: 8px;
+    }
 }
