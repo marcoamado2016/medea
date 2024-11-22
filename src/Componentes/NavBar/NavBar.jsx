@@ -18,6 +18,7 @@ const NavBar = () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+    
 
     return (
         <div className={style.container}>
