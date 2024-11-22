@@ -5,11 +5,11 @@ import Logo from "../../assets/Medea.png";
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 412);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 480);
+            setIsMobile(window.innerWidth <= 412);
         };
 
         window.addEventListener("resize", handleResize);
