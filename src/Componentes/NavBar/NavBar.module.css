@@ -80,7 +80,7 @@
     background-color: #ffffff;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 412px) {
     .menuIcon {
         display: flex;
     }
@@ -92,7 +92,7 @@
         top: 4rem;
         right: 0;
         width: 100%;
-        background-color:rgba(29, 97, 129, 0.61);
+        background-color:rgba(86, 89, 90, 0.61);
         z-index: 99;
     }
 

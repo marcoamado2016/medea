@@ -19,7 +19,7 @@
 }
 @media (max-width: 412px){
     .parallax{
-        width: 100%;
+        width:100%;
     }
 }
 
@@ -146,6 +146,10 @@
     margin-top: 1rem;
 }
 @media (max-width: 768px) {
+    .titulo{
+        justify-content: center;
+    }
+
    
     .titulo h1 {
         font-size: 4rem; /* Reduce el tamaño en pantallas pequeñas */
@@ -156,17 +160,17 @@
     }
 
     .card {
-        width: 200px; /* Ajusta el tamaño de las tarjetas */
+        width: 200px; 
         height: 100px;
     }
 
     .medio {
         
-        gap: 0.5rem; /* Reduce el espacio entre elementos */
+        gap: 0.5rem; 
     }
 
     .textoLanding p {
-        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+        font-size: 0.9rem; 
     }
     .nube{
         top: 500px; 
