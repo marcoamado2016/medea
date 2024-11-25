@@ -1,10 +1,12 @@
 .mainContainer{
-    height: 600px;
+    height: 680px;
     margin: 0px auto;
+    
 }
 .sliderConteiner{
-   position: relative;
-   height: 100%; 
+    top: 20px;
+    position: relative;
+    height: 100%; 
 }
 .conteinerImg{
     display: flex;
@@ -14,7 +16,7 @@
     overflow: hidden;
 }
 .conteinerImg ul {
-    display: flex;
+    gap: 5px;
     flex-direction: row;
     width: 100%;
     height: 100%;
@@ -52,26 +54,42 @@ ul {
 }
 li {
     flex-shrink: 0; 
-    display: flex; /* Agregar flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100%; /* Ajustar al contenedor */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
 
 }
 img {
-   
+    cursor: pointer;
     max-width: 100%; 
     max-height: 100%; 
+    border-radius: 15px;
+    
+    
 }
+li img {
+    transition: transform 0.3s ease, border 0.3s ease;
+    border-radius: 2px solid  rgba(0, 0, 0, 0.637);
+    gap: 10px;
+}
+
+li img:hover {
+    transform: scale(1.1); 
+    border: 5px solid  #000000a6;
+}
+
+
 .dotsContainer{
+    bottom: 50px;
     display: flex;
-    background-color: transparent;
     justify-content: center;
-    align-items: end;
-    z-index: 10;
+    align-items: center;
+    z-index: 990;
 }
 .dotsContainerItem{
- margin: 8px 3px;
+ color: rgb(54, 61, 59);
+ margin: 12px 6px;
  cursor: pointer;
  font-size: 12px;
  text-align: center;

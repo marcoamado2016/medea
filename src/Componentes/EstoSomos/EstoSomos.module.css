@@ -8,29 +8,33 @@
     font-family:"TheSeason" ;
     align-items: center;
     justify-content: start;
+
 }
 .miLista{
     color: antiquewhite;
-    display:grid;
-    gap: 1;
+    flex-direction: column;
+    gap: 10px;
     font-size: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
     margin-left: 70px;
+    text-align: left;
+    
     
 }
 .miLista li {
+    
+    justify-content: start;
     margin: 5px 0; 
     padding: 5px 0; 
     cursor: pointer;
 }
 .miLista li a {
+    display: inline-block; 
     color: antiquewhite;
     text-decoration: none; 
     position: relative; 
-    display: inline-block; 
-    padding: 5px 0;
 }
 .miLista li a::before,
 .miLista li a::after {
@@ -41,7 +45,7 @@
     height: 1px; 
     background-color: yellow;
     opacity: 0; 
-    transition: opacity 0.3s; 
+    transition: opacity 0.3s, transform 0.3s; 
 }
 
 .miLista li a::before {
