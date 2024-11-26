@@ -60,3 +60,58 @@
 .miLista li a:hover::after {
     opacity: 1; 
 }
+@media (max-width: 768px) {
+    .estoSomos {
+        flex-direction: column;
+        height: auto; 
+        justify-content: center; 
+        padding: 70px 70px 0px 0px;
+        object-fit: cover; 
+    }
+
+    .miLista {
+        margin-left: 0;
+        gap: 15px;
+        font-size: 1.5rem;
+        text-align: center; 
+    }
+
+   
+}
+
+
+@media (max-width: 412px) {
+    .estoSomos {
+        background-size:cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        height: auto;
+        padding: 70px 70px 0px 0px;
+        
+    }
+ 
+
+    .miLista {
+        font-size: 1.2rem; 
+        gap:1px ;
+        padding: 2px;
+        margin-right:60px ;
+    }
+    .miLista ul{
+        padding: 0px;
+        
+    }
+    .miLista li {
+        margin: 2px 0; 
+        padding: 5px 10px;
+    
+    }
+    .miLista li a {
+        padding: 0px ;
+        margin:0;
+    }
+}
