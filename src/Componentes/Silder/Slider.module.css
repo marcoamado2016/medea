@@ -1,16 +1,17 @@
 .mainContainer{
-    height: 680px;
+    height:100vh;
     margin: 0px auto;
     
 }
 .sliderConteiner{
-    top: 20px;
     position: relative;
     height: 100%; 
+    width:98.9vw ;
+    
 }
 .conteinerImg{
-    display: flex;
-    height: 600px;
+   
+    height: 90%;
     justify-content: center;
     align-items: center;
     overflow: hidden;

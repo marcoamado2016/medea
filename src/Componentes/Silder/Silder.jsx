@@ -5,10 +5,14 @@ import { data } from '../../data';
 const Slider = () => {
     const listRef = useRef();
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
 
+    
+    
     useEffect(() => {
         const listNode = listRef.current;
-        if (listNode) {
+        
+        if (listNode && !isFirstLoad) {
             const imgNode = listNode.querySelectorAll('li > img')[currentIndex];
             if (imgNode) {
                 imgNode.scrollIntoView({
@@ -36,7 +40,7 @@ const Slider = () => {
     }
 
     return (
-        <div className={style.mainContainer}>
+        <div className={style.mainContainer} onMouseEnter={()=>setIsFirstLoad(false)}>
             <div className={style.sliderConteiner}>
                 <div
                     className={style.leftArrow}
@@ -56,8 +60,6 @@ const Slider = () => {
                             <li key={item.id}>
                                 <img
                                     src={item.imgUrl}
-                                    width={1300}
-                                    height={600}
                                     alt=""
                                 />
                             </li>
