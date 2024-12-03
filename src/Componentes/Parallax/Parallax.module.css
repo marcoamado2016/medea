@@ -57,7 +57,7 @@
 
 .parallax img {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -80,7 +80,7 @@
 }
 .nube {
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%; /* Tamaño inicial */

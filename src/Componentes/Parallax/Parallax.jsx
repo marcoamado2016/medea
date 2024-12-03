@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import style from './Parallax.module.css';
 import nube from '../../assets/nube 03.png';
 import radio from '../../assets/index_14.jpg';
@@ -35,14 +36,17 @@ const Parallax = () => {
                 </div>
 
                 <div className={style.medio}>
-                    <div className={style.card}>
+                    <Link to='/radio'>
+                     <div className={style.card}>
                         <img src={radio} alt="Radio" />
-                        <div className={style.icono}></div> 
-                    </div>
-                    <div className={style.card}>
+                     </div>
+                    </Link>
+
+                    <Link to='/tv'> 
+                     <div className={style.card}>
                         <img src={tv} alt="TV" />
-                        <div className={style.icono}></div> 
-                    </div>
+                     </div>
+                    </Link>
                 </div>
 
                 <div className={style.textoLanding}>

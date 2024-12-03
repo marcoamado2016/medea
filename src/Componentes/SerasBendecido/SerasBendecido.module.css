@@ -22,7 +22,7 @@
     cursor: pointer;
     background-color: #d6c90f; /* o cualquier otro estilo */
   }
-  
+
   @media screen and (max-width: 720px) {
     .container {
         height: 600px; /* Ajusta la altura */
@@ -36,8 +36,8 @@
 
 @media screen and (max-width: 412px) {
     .container {
-        height: 500px; /* Reduce aún más la altura */
-        background-position: center; /* Ajusta la posición del fondo */
+        height: 450px; /* Reduce aún más la altura */
+        background-position: center center; /* Ajusta la posición del fondo */
     }
 
     .container h1 {
