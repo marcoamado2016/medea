@@ -1,32 +1,92 @@
 .tvContainer{
-    height: 950px;
+    min-height: 100vh;
     background-image:url('../../assets/FONDO.png') ;
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    flex-direction: column;
     font-family:"TheSeason" ;
+    padding-top: 100px;
     
+}
+.firstSection{
+    display: flex;
+    padding-left: 40px;
+   
+
 }
 .imgPortada{
-    height: 400px;
+    height: 380px;
     width: 670px;
-    position: relative;
-    right: 180px;
-    bottom: 100px;
-    
+    border-radius: none;
+    transition: all ease 0.3s;
+    right: 280px;
+}
+.imgPortada:hover{
+    transform: scale(1.05);
 }
 .Links{
-    color: antiquewhite;
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-left: 70px;
-    text-align: left;
+    align-items: end;
+    flex-grow: 1;
+    padding-right: 40px;
+    
+}
+
+.Links a{
+    font-size: 5rem;
+    color: rgba(250, 235, 215, 0.534);
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+   
+}
+.Links a::after,
+.Links a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: yellow;
+    opacity: 0; 
+    transform: scaleX(0);
+    transition: opacity 0.3s, transform 0.3s; 
+}
+.Links a::after{
+    bottom: -2px; 
+}
+.Links a::before{
+    top: -2px;
+}
+.Links a:hover::after,
+.Links a:hover::before{
+    opacity: 1; 
+    transform: scaleX(1);
+}
+
+.word{
+    color: #fff;
+    font-family:"Tillilium";
+    padding: 10px;
+    margin: 10px;
+
+    
+}
+.word h1{
+    left: 50px;
+    font-weight: 600;
+    position: relative;
+}
+.words{
+    color:#fff;
+    font-family: "Tillilium" ;
+}
+
+.words h2{
+    font-weight: 100;
+    position: relative;
+    left: 50px;
 }
