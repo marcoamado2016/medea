@@ -90,3 +90,50 @@
     position: relative;
     left: 50px;
 }
+
+@media (max-width: 768px) {
+    .tvContainer {
+        padding-top: 150px; 
+    }
+
+    .firstSection {
+        flex-direction: column; 
+        align-items: center; 
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+
+    .imgPortada {
+        width: 100%;
+        height: auto;
+    }
+
+    .Links {
+        padding-right: 0;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .Links a {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 412px) {
+    .Links a {
+        font-size: 2rem; 
+    }
+    .word{
+        left:20px;
+    }
+
+    .word h1 {
+        font-size: 1.8rem; 
+        
+    }
+
+    .words h2 {
+        font-size: 1.2rem; 
+        
+    }
+}
