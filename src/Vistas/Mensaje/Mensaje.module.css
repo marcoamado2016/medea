@@ -1,0 +1,16 @@
+.ContainerForm{
+    min-width: 100vh;
+    background-image: url("../../assets//FONDO.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+    font-family:"TheSeason" ;
+    padding-top: 100px;
+}
+Section{
+    display: flex;
+    background-color: gray;
+    width: 500px;
+}

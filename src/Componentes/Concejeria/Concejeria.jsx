@@ -1,7 +1,15 @@
 import style from './Consejeria.module.css'
+import { useNavigate } from 'react-router'
+
+
 
 
 const Concejeria=()=>{
+
+
+
+
+
     return(
         <div className={style.concejeria}>
             <div className={style.texto}>
