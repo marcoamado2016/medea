@@ -6,7 +6,9 @@ const Tv =()=>{
     return(
     <div className={style.tvContainer}>
         <section className={style.firstSection}>
-         <img src={portada} className={style.imgPortada}></img>
+        <a href="https://www.youtube.com/@MEDEATVHD" target="_blank" rel="noopener noreferrer">
+          <img src={portada} className={style.imgPortada} ></img>
+        </a>
            <div className={style.Links}>
             
                     <a>MENSAJE</a>
