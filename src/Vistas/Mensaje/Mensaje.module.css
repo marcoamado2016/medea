@@ -94,69 +94,69 @@
 
   @media (max-width: 768px) {
     .SectionForm {
-      width: 100%; /* Reduce el tamaño de la sección */
-      min-height: auto; /* Permite que la altura sea dinámica */
+      width: 100%; 
+      min-height: auto; 
     }
   
     .tituloForm {
-      height: 120px; /* Reduce la altura del título en móviles */
+      height: 120px; 
     }
   
     .tituloForm h1 {
-      font-size: 1.5rem; /* Ajusta el tamaño del texto */
+      font-size: 1.5rem; 
     }
   
     .InputForm {
-      margin-top: 100px; /* Reduce el espacio superior */
+      margin-top: 100px; 
     }
   
     .InputForm input,
     .InputField {
-      width: 100%; /* Ocupa todo el ancho disponible */
+      width: 100%;
     }
   
     .TextArea {
-      height: 150px; /* Reduce el tamaño del área de texto */
+      height: 150px;
     }
   
     .ButtonContainer {
-      justify-content: center; /* Centra el botón en pantallas pequeñas */
+      justify-content: center; 
       margin-right: 0;
     }
   }
 
   @media (max-width: 1024px) {
     .SectionForm {
-      width: 100%; /* Reduce un poco el tamaño en tablets */
+      width: 100%; 
     }
   
     .InputForm {
-      margin-top: 120px; /* Ajusta el margen superior */
+      margin-top: 120px; 
     }
   
     .tituloForm h1 {
-      font-size: 1.7rem; /* Tamaño ligeramente más pequeño */
+      font-size: 1.7rem; 
     }
   }
   
 
   @media (max-width: 412px) {
     .SectionForm {
-      width: 100%; /* Aumenta el uso del ancho disponible */
-      padding: 0px; /* Reduce el padding */
-      min-height: 90%; /* Deja que la altura se ajuste dinámicamente */
+      width: 100%; 
+      padding: 0px; 
+      min-height: 90%;
     }
   
     .tituloForm {
-      height: 100px; /* Reduce la altura del título */
+      height: 100px; 
     }
   
     .tituloForm h1 {
-      font-size: 1.4rem; /* Reduce el tamaño del texto */
+      font-size: 1.4rem; 
     }
   
     .InputForm {
-      gap: 10px; /* Reduce el espacio entre inputs */
+      gap: 10px; 
       padding: 0;
       position: relative;
       display: flex;

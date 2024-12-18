@@ -13,7 +13,7 @@ const Tv =()=>{
                 
                     <a>EVENTO</a>
             
-                    <a>ARTICULOS</a>
+                    <a>ARTÍCULOS</a>
             
         
 

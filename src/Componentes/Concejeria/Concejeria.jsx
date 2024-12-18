@@ -3,8 +3,12 @@ import { useNavigate } from 'react-router'
 
 
 
-
 const Concejeria=()=>{
+    const navigate= useNavigate();
+
+    const handleNavigate =()=>{
+        navigate('/mensaje')
+    }
 
 
 
@@ -29,7 +33,9 @@ const Concejeria=()=>{
                 </p>
                <button  className={style.boton}>LO NECESITO</button>
             </div>
-          <button className={style.botonFlotante}>oramos por vos!</button>
+          <button className={style.botonFlotante}
+              onClick={handleNavigate}
+              >oramos por vos!</button>
         </div>
     )
 

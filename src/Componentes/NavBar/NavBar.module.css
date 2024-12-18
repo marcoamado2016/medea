@@ -7,17 +7,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(224, 211, 211);
+    color: rgba(224, 211, 211, 0);
     z-index: 100;
     margin: 0;
 }
+
 .linkWhite {
-    color: #ffffff !important;
+    color: #ffffff ;
     text-shadow: none;
 }
 
 .linkBlack {
-    color: #000000 !important;
+    color: #000000;
     text-shadow: none;
 }
 
@@ -45,20 +46,22 @@
 
 .link {
     margin-right: 60px;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
     cursor: pointer;
     text-decoration: none;
-    transition: 0.5s;
     color: rgb(255, 246, 246);
-    mix-blend-mode: difference;
-    
+    position: relative; 
+    transition: color 0.3s ease-in-out; 
 }
 
+
 .link:hover {
-    color: #c59e03;
-    text-shadow: 2px 2px 4px rgb(255, 204, 0);
-    transition: 0.2s;
+    border-bottom:2px solid rgb(150, 150, 0);
+    font-weight: 700;
+    color: #ffffff; 
 }
+
 
 .hide {
     top: 70px;

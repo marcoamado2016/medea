@@ -11,7 +11,7 @@ const Parallax = () => {
             const scrollPosition = window.scrollY;
             const tituloElement = document.querySelector(`.${style.titulo}`);
             if (tituloElement) {
-                tituloElement.style.transform = `translate(-50%, calc(-50% + ${scrollPosition * 0.8}px))`;
+                tituloElement.style.transform = `translate(-50%, calc(-35% + ${scrollPosition * 0.85}px))`;
             }
         };
 

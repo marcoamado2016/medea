@@ -21,6 +21,7 @@ const NavBar = () => {
     
 
     return (
+
         <div className={style.container}>
             <div>
                 <img src={Logo} className={style.logo} alt="Logo" />
@@ -37,15 +38,15 @@ const NavBar = () => {
                 <span></span>
             </div>
 
-            <ul className={`${style.menu} ${menuOpen ? style.open : ""}`}>
+            <ul className={`{${style.menu} ${menuOpen ? style.open : ""}`}>
                 <li className={style.menuItem}>
                     <Link to="/" className={style.link}>
-                        HOME
+                     HOME
                     </Link>
                 </li>
                 <li className={style.menuItem}>
                     <Link to="/quienes" className={style.link}>
-                        AQUI ESTAMOS
+                        AQUí ESTAMOS
                     </Link>
                 </li>
                 <li className={style.menuItem}>

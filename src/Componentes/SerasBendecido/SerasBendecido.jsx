@@ -7,7 +7,7 @@ const SerasBendecido =()=>{
      <div className={style.container} 
      >
       <h1>
-      <span>
+      <span >
       Ser 
       </span>
       <span>

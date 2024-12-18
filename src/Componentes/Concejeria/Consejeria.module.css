@@ -51,7 +51,7 @@
 }
 
 .botonFlotante {
-    position: sticky; 
+    position: fixed; 
     margin: 0;
     bottom: 20px; 
     right: 20px;
