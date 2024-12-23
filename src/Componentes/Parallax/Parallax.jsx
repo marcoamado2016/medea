@@ -9,9 +9,17 @@ const Parallax = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
+
+            // Mover el título hacia abajo
             const tituloElement = document.querySelector(`.${style.titulo}`);
             if (tituloElement) {
-                tituloElement.style.transform = `translate(-50%, calc(-35% + ${scrollPosition * 0.85}px))`;
+                tituloElement.style.transform = `translate(-50%, calc(-50% + ${scrollPosition * 0.85}px))`;
+            }
+
+            // Mover las nubes hacia arriba
+            const nubeElement = document.querySelector(`.${style.nube}`);
+            if (nubeElement) {
+                nubeElement.style.transform = `translate(-50%, calc(60% - ${scrollPosition * 0.85}px))`; // Ajusta la velocidad cambiando el multiplicador
             }
         };
 
@@ -28,8 +36,6 @@ const Parallax = () => {
                 </div>
             </div>
             <img src={nube} alt="Nube" className={style.nube} /> 
-
-           
             <div className={style.aquiEstamos}>
                 <div className={style.titulo2}>
                     <h1>AQUÍ ESTAMOS</h1>
@@ -60,6 +66,7 @@ const Parallax = () => {
 };
 
 export default Parallax;
+
 
 
 

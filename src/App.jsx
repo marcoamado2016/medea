@@ -7,6 +7,7 @@ import Radio from "./Vistas/Radio/Radio"
 import Landing from "./Vistas/Landing/Landing"
 import Tv from './Vistas/Tv/Tv'
 import Mensaje from './Vistas/Mensaje/Mensaje'
+import Rd from './Vistas/Radio/Rd'
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/radio" element={<Radio/>}/><Route />
       <Route path="/tv" element={<Tv/>}/><Route />
       <Route path="/mensaje" element={<Mensaje/>}/><Route />
+      <Route path="/rd" element={<Rd/>}/><Route />
     </Routes>
     <Footer/>
   </div>

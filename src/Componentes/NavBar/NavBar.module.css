@@ -1,19 +1,25 @@
 .container {
     font-family: "Tillilium";
     position: fixed;
-    top:0;
-    width:100%;   
+    top: 0;
+    width: 100%;   
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgba(224, 211, 211, 0);
     z-index: 100;
     margin: 0;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+
+.container.hidden {
+    transform: translateY(-100%); /* Oculta la navbar al hacer scroll hacia abajo */
 }
 
 .linkWhite {
-    color: #ffffff ;
+    color: #ffffff;
     text-shadow: none;
 }
 
@@ -23,11 +29,13 @@
 }
 
 .logo {
+   
+    height: 70px;
+    width: 98px;
+    margin: 10px;
+    padding: 10px;
+    margin-left:50px;
     
-    height: 90px;
-    width: 120px;
-    margin: 0;
-    padding: 0;
 }
 
 .menu {

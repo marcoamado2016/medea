@@ -22,6 +22,7 @@
     height: 100%;
 }
 .leftArrow{
+    height: 45px;
     position: absolute;
     top:50%;
     transform: translate(0,-50%);
@@ -33,6 +34,7 @@
     cursor: pointer;
 }
 .rightArrow{
+    height: 45px;
     position: absolute;
     top:50%;
     transform: translate(0,-50%);
@@ -64,36 +66,46 @@ img {
     cursor: pointer;
     max-width: 100%; 
     max-height: 100%; 
-    border-radius: 15px;
+    border-radius: none;
     
     
 }
 li img {
     transition: transform 0.3s ease, border 0.3s ease;
-    border-radius: 2px solid  rgba(0, 0, 0, 0.637);
-    gap: 10px;
+    
+  
 }
 
 li img:hover {
-    transform: scale(1.1); 
-    border: 5px solid  #000000a6;
+    transform: scale(1.05); 
+    
 }
 
 
-.dotsContainer{
-    bottom: 50px;
+.dotsContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 990;
+    gap: 20px; /* Espacio entre los dots */
+    margin-top:25px;
+ 
+   
 }
-.dotsContainerItem{
- color: rgb(54, 61, 59);
- margin: 12px 6px;
- cursor: pointer;
- font-size: 12px;
- text-align: center;
+
+.dotsContainerItem {
+    
+    width: 10px; /* Tamaño del dot */
+    height: 10px; /* Tamaño del dot */
+    border-radius: 50%; /* Forma circular */
+    background-color: #666565a6; /* Color gris claro */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.dotsContainerItem.active {
+    background-color: #333; /* Color oscuro para el dot activo */
+}
+
 @media (max-width: 716px) {
     .mainContainer {
         height: 400px;

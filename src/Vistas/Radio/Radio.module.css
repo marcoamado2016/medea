@@ -1,0 +1,51 @@
+.containerRadio {
+    background-image: url("../../assets/FONDORadio.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .Fm {
+    display: flex;
+    height: 300px;
+    width: 200px;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    left: 320px;
+    top: 70px;
+  }
+  
+  .radioFuncion {
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 50px;
+    left: 320px;
+    top: 130px;
+  }
+  
+  .button {
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  .button.active {
+    filter: grayscale(100%);
+  }
+  
+  
