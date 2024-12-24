@@ -1,4 +1,5 @@
 import style from './EstoSomos.module.css'
+import { Link } from 'react-router-dom'
 
 
 
@@ -9,23 +10,27 @@ const EstoSomos =()=>{
             <ul className={style.miLista}>
             
                 <li>
-                    <a>Centro Integral Educativo</a>
+                    <Link to="/ciem">Centro Integral Educativo</Link>
                 </li>
                 <li>
-                    <a>Atlético</a>
+                <Link to="/atletico">
+                    Atlético
+                </Link>
                 </li>
                 <li>
-                    <a>Radio Libertad</a>
+                <Link to='/radio'>
+                    Radio Libertad
+                </Link>
                 </li>
                 <li>
-                    <a>Canal</a>
+                <Link to='/tv'>
+                    Canal
+                </Link>
                 </li>
                 <li>
                     <a>Cultos</a>
                 </li>
-                <li>
-                    <a>Liderazgo</a>
-                </li>
+               
             </ul>
       
 

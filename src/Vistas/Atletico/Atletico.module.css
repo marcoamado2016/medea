@@ -1,0 +1,34 @@
+.atleticoContainer{
+    min-height: 140vh;
+    min-width: 98vw;
+    background-image: url('../../assets/atletico.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+}
+.atleticoText{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin:5px;
+    padding: 15px;
+    justify-content:center ;
+    align-items: center;
+}
+.atleticoText h1{
+    font-size: 2.5rem;
+    font-weight: 100;
+    font-family:"TheSeason" ;
+    margin-right: 300px;
+ 
+    
+}
+.atleticoText img{
+    width: 600px;
+    padding: 30px;
+    margin-right: 40px;
+}

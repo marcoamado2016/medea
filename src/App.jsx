@@ -7,8 +7,10 @@ import Radio from "./Vistas/Radio/Radio"
 import Landing from "./Vistas/Landing/Landing"
 import Tv from './Vistas/Tv/Tv'
 import Mensaje from './Vistas/Mensaje/Mensaje'
-import Rd from './Vistas/Radio/Rd'
-
+import Ciem from './Vistas/CIEM/Ciem'
+import Atletico from './Vistas/Atletico/Atletico'
+import EstoSomos from './Componentes/EstoSomos/EstoSomos'
+import SerasBendecido from './Componentes/SerasBendecido/SerasBendecido'
 
 
 
@@ -23,11 +25,13 @@ function App() {
   <NavBar/>
     <Routes>
       <Route path="/" element={<Landing/>}/><Route />
-      <Route path="/quienes" element={<QuienesSomos/>}/><Route />
+      <Route path="/quienes" element={<EstoSomos/>}/><Route />
       <Route path="/radio" element={<Radio/>}/><Route />
       <Route path="/tv" element={<Tv/>}/><Route />
       <Route path="/mensaje" element={<Mensaje/>}/><Route />
-      <Route path="/rd" element={<Rd/>}/><Route />
+      <Route path="/ciem" element={<Ciem/>}/><Route />
+      <Route path="/atletico" element={<Atletico/>}/><Route />
+      <Route path="/ser" element={<SerasBendecido/>}/><Route />
     </Routes>
     <Footer/>
   </div>
