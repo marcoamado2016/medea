@@ -16,17 +16,16 @@ const Footer =()=>{
            <div className={style.titulos}> 
             <h4>AQUÍ ESTAMOS</h4>
                 <p>Libertad en la red</p>
-                <p>Un mensaje al corzaon</p>
+                <p>Un mensaje al corazón</p>
                 <p>Noticias</p>
            </div>
            <div className={style.titulos}>
              <h4>SOMOS</h4>
                 <p>Instituto Bíblico</p>
                 <p>Centro Integral Educativo</p>
-                <p>Atletico</p>
-                <p>Concejeria</p>
+                <p>Atlético</p>
                 <p>Cultos</p>
-                <p>Ubicacion</p>
+                <p>Ubicación</p>
             
             </div>
            <div className={style.titulos}> 

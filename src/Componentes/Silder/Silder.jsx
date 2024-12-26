@@ -37,7 +37,7 @@ const Slider = () => {
     };
 
     return (
-        <div className={style.mainContainer} onMouseEnter={() => setIsFirstLoad(false)}>
+        <div className={style.mainContainer} onMouseEnter={() => setIsFirstLoad(false)} id='slider'>
             <div className={style.sliderConteiner}>
                 <div
                     className={style.leftArrow}

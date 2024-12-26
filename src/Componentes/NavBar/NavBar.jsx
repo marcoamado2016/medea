@@ -5,13 +5,13 @@ import Logo from "../../assets/logocupula.png";
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 390);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 412);
 
     const location = useLocation(); // Para obtener la ruta actual
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 390);
+            setIsMobile(window.innerWidth <= 412);
         };
 
         window.addEventListener("resize", handleResize);
@@ -22,7 +22,7 @@ const NavBar = () => {
     }, []);
 
     // Determina si la ruta actual requiere letras negras
-    const isBlackTextRoute = ["/ciem", "/atletico","/radio","/ser"].includes(location.pathname);
+    const isBlackTextRoute = ["/ciem", "/atletico","/radio","/ser","/ibm","/cultos"].includes(location.pathname);
 
     console.log("Ruta actual:", location.pathname); // Depuración
 
@@ -45,32 +45,34 @@ const NavBar = () => {
 
             <ul className={`${style.menu} ${menuOpen ? style.open : ""}`}>
                 <li className={style.menuItem}>
-                    <Link 
-                        to="/" 
+                    <Link
+                    to="/" 
                         className={`${style.link} ${isBlackTextRoute ? style.linkBlack : style.linkWhite}`}
                     >
                         HOME
                     </Link>
                 </li>
                 <li className={style.menuItem}>
-                    <Link 
-                        to="/ciem" 
+                    <a
+
+                         href="#aquiEstamos"
                         className={`${style.link} ${isBlackTextRoute ? style.linkBlack : style.linkWhite}`}
                     >
                         AQUÍ ESTAMOS
-                    </Link>
+                    
+                    </a>
                 </li>
                 <li className={style.menuItem}>
-                    <Link 
-                        to="/atletico" 
+                    <a 
+                        href="#slider" 
                         className={`${style.link} ${isBlackTextRoute ? style.linkBlack : style.linkWhite}`}
                     >
                         NOTICIAS
-                    </Link>
+                    </a>
                 </li>
                 <li className={style.menuItem}>
-                    <Link 
-                        to="/quienes" 
+                    <Link
+                        to="/quienes"
                         className={`${style.link} ${isBlackTextRoute ? style.linkBlack : style.linkWhite}`}
                     >
                         ESTO SOMOS

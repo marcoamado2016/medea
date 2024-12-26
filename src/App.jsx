@@ -1,7 +1,6 @@
 import './App.css'
 import { Routes,Route, Form, } from "react-router-dom"
 import NavBar from "./Componentes/NavBar/NavBar"
-import QuienesSomos from "./Vistas/QuienesSomos/QuienesSomos"
 import Footer from "./Componentes/Footer/Footer"
 import Radio from "./Vistas/Radio/Radio"
 import Landing from "./Vistas/Landing/Landing"
@@ -11,7 +10,8 @@ import Ciem from './Vistas/CIEM/Ciem'
 import Atletico from './Vistas/Atletico/Atletico'
 import EstoSomos from './Componentes/EstoSomos/EstoSomos'
 import SerasBendecido from './Componentes/SerasBendecido/SerasBendecido'
-
+import Ibm from './Vistas/Ibm/ibm'
+import Cultos from './Vistas/Cultos/Cultos'
 
 
 function App() {
@@ -32,6 +32,8 @@ function App() {
       <Route path="/ciem" element={<Ciem/>}/><Route />
       <Route path="/atletico" element={<Atletico/>}/><Route />
       <Route path="/ser" element={<SerasBendecido/>}/><Route />
+      <Route path="/ibm" element={<Ibm/>}/><Route />
+      <Route path="/cultos" element={<Cultos/>}/><Route />
     </Routes>
     <Footer/>
   </div>

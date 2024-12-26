@@ -1,0 +1,82 @@
+.ibmContainer{
+    background-image: url('../../assets/FONDOIBM.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 125vh;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: flex-end;
+    
+}
+.textIbm{
+    margin-bottom: 100px;
+    width: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    padding: 20px;
+    text-align: left; 
+    margin-right: 90px;
+}
+.textIbm h1{
+    font-family: "TheSeason";
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    margin-right: 220px;
+}  
+.textIbm p{
+    font-family:"Tillilium" ;
+    font-size: 1rem;
+    gap: 20px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: justify;
+
+}
+
+@media (max-width: 760px) {
+    .textIbm {
+        width: 85%;
+        padding: 15px;
+    }
+    .textIbm h1 {
+        font-size: 1.6rem;
+    }
+    .textIbm p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .ibmContainer{
+        display: flex;
+    }
+    .textIbm {
+        background-color: rgba(103, 104, 105, 0.603);
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-right:40px;
+        margin-bottom: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        
+        
+
+    }
+    .textIbm h1 {
+        font-size: 1.4rem;
+
+    }
+    .textIbm p {
+       font-size: 0.7rem;
+       font-weight: 300;
+
+    }
+}

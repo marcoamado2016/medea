@@ -37,7 +37,7 @@ const Parallax = () => {
             </div>
             <img src={nube} alt="Nube" className={style.nube} /> 
             <div className={style.aquiEstamos}>
-                <div className={style.titulo2}>
+                <div className={style.titulo2} id='aquiEstamos'>
                     <h1>AQUÍ ESTAMOS</h1>
                 </div>
 

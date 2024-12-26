@@ -50,7 +50,7 @@
 }
 
 .link {
-    margin-right: 60px;
+    margin-right:54px;
     font-weight: 400;
     font-size: 1.4rem;
     cursor: pointer;
@@ -88,7 +88,7 @@
     background-color: #ffffff;
 }
 
-@media (max-width: 412px) {
+@media (max-width: 450px) {
     .menuIcon {
         display: flex;
     }
