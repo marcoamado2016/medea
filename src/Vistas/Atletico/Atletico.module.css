@@ -13,24 +13,38 @@
 .atleticoText{
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    margin:5px;
-    padding: 15px;
-    justify-content:center ;
-    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 70px;
 }
 .atleticoText h1{
     font-size: 2.5rem;
     font-weight: 100;
     font-family:"TheSeason" ;
-    margin-right: 300px;
+    margin-left: 45px;
  
     
 }
-.atleticoText img{
-    width: 600px;
-    padding: 30px;
-    margin-right: 40px;
+.textoAtletico{
+    height: 500px;
+    width: 80%;
+    align-items:center ;
+    margin-left: 45px;
+    line-height: 1.5;
+    
+}
+
+.textoAtletico p {
+    font-family:"Tillilium" ;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #000000;
+;
 }
 @media (max-width: 760px) {
     .atleticoContainer {
@@ -43,25 +57,41 @@
         font-size: 2rem;
         margin-right: 0;
     }
-    .atleticoText img {
-        width: 400px;
-        margin-right: 0;
-    }
+    
 }
 
 @media (max-width: 450px) {
     .atleticoContainer {
         min-height: 100vh;
-        min-width: 100vw;
+        min-width: 90vw;
         align-items: center;
         justify-content: center;
     }
     .atleticoText h1 {
         font-size: 1.5rem;
-        margin-right: 0;
+        margin-top: 80px;
+        ;
+       
     }
-    .atleticoText img {
-        width: 300px;
-        margin-right: 0;
+    .textoAtletico {
+        background-color: rgba(105, 105, 105, 0.342);
+        border-radius: 20px;
+        min-width: 250px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 80px;
+        margin-right:120px;
+        height: auto;
+    }
+    .textoAtletico p {
+        font-size: 0.875rem;
+        margin: 10px 0;
+    }
+    .atleticoText {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px;
     }
 }

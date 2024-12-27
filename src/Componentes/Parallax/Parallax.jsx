@@ -31,7 +31,7 @@ const Parallax = () => {
         <div className={style.parallax}>
             <div className={style.outerParallax}>
                 <div className={style.titulo}>
-                    <h2>una institucion</h2>
+                    <h2>una institución</h2>
                     <h1>con Vida</h1>
                 </div>
             </div>

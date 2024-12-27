@@ -2,7 +2,7 @@ import style from './Footer.module.css'
 import {Link} from 'react-router-dom'
 import facebook from '../../assets/facebook_icon-icons.com_53612.png'
 import insta from '../../assets/instagram_logo_icon_229292.png'
-import twitter from '../../assets/twitter_x_new_logo_square_x_icon_256075.png'
+import tiktok from '../../assets/tiktok_icon.png'
 import whats from '../../assets/whatsapp_icon-icons.com_53606.png'
 import gmail from '../../assets/google_plus_icon-icons.com_53608.png'
 import you from '../../assets/youtube.png'
@@ -30,7 +30,6 @@ const Footer =()=>{
            <div className={style.titulos}>
              <h4>SOMOS</h4>
              <Link to="/ibm">
-
                 <p>Instituto Bíblico</p>
              </Link>
              <Link to="/ciem">
@@ -49,21 +48,23 @@ const Footer =()=>{
             </div>
            <div className={style.titulos}> 
              <h4>COLABORAR</h4>
+             <Link to="/colaborar">
                 <p>Trasnsferencia bancaria</p>
+             </Link>
                 <p>Mercado pago</p>
            </div>
            <div className={style.titulos}> 
            <h4>AYUDA</h4>
-               <p>Preguntas Frecuentes</p>
+         
                <p>Contacto</p>
 
            <h4>REDES SOCIALES</h4>
-             <a href="https://www.facebook.com/medeatv/?locale=br_FR"> <img src={facebook}></img></a>
-              <img src={insta}></img>
-              <img src={twitter}></img>
-              <img src={whats}></img>
-              <img src={gmail}></img>
-              <img src={you}></img>
+              <a href="https://www.facebook.com/medeatv/?locale=br_FR" target='_blank'> <img src={facebook}></img></a>
+              <a href='https://www.instagram.com/medea_ok/' target='_blank'><img src={insta}></img></a>
+              <a href='https://www.tiktok.com/@medeatvhd' target='_blank'><img src={tiktok}></img></a>
+              <a href='https://wa.link/s6hyvz' target='_blank'> <img src={whats}></img></a>
+              <a><img src={gmail}></img></a>
+              <a href='https://www.youtube.com/@MEDEATVHD' target='_blank'><img src={you}></img></a>
 
             <p>Recibe contenido exclusivo</p>
         </div>

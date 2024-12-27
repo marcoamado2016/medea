@@ -11,9 +11,9 @@
     
 }
 .textIbm{
-    margin-bottom: 100px;
-    width: 500px;
-    height: auto;
+    margin-top:50px;
+    width: 600px;
+    height:600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
     font-weight: 100;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    margin-right: 220px;
+    margin-right: 200px;
 }  
 .textIbm p{
     font-family:"Tillilium" ;
@@ -36,8 +36,16 @@
     margin-bottom: 15px;
     line-height: 1.8;
     text-align: justify;
+    margin-left: 60px;
 
 }
+@media (max-width: 1450px) {
+    .textIbm{
+        margin-bottom: 230px;
+    }
+
+}
+
 
 @media (max-width: 760px) {
     .textIbm {

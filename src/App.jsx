@@ -12,6 +12,7 @@ import EstoSomos from './Componentes/EstoSomos/EstoSomos'
 import SerasBendecido from './Componentes/SerasBendecido/SerasBendecido'
 import Ibm from './Vistas/Ibm/ibm'
 import Cultos from './Vistas/Cultos/Cultos'
+import Colaborar from './Vistas/Colaborar/Colaborar'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/ser" element={<SerasBendecido/>}/><Route />
       <Route path="/ibm" element={<Ibm/>}/><Route />
       <Route path="/cultos" element={<Cultos/>}/><Route />
+      <Route path="/colaborar" element={<Colaborar/>}/><Route />
     </Routes>
     <Footer/>
   </div>

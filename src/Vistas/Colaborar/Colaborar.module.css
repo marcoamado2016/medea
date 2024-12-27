@@ -1,0 +1,23 @@
+.colaborar{
+    background-image: url('../../assets/ColaborarFondo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 98vw;
+    align-items: center;
+    justify-content: end;
+    display: flex;
+}
+.texto{
+   
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+    margin: 20px;
+    padding: 10px;
+
+}
