@@ -31,4 +31,41 @@
     width: 500px;
     margin-right: 60px;
 }
+@media (max-width: 760px) {
+    .containerCiem {
+        min-height: 100vh;
+        min-width: 100vw;
+        align-items: center;
+    }
+    .textCiem {
+        margin-top: 90px;
+        gap: 20px;
+        background-color: rgba(169, 169, 169, 0.459);
+        border-radius: 10px;
+    }
+    .textCiem h1 {
+        font-size: 2rem;
+        margin-right: 0;
+        text-align: center;
+    }
+    .text {
+        width: 90%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .textCiem {
+        margin-top: 80px;
+        gap: 15px;
+        background-color: rgba(169, 169, 169, 0.459);
+        border-radius: 10px;
+    }
+    .textCiem h1 {
+        font-size: 1.5rem;
+    }
+    .text {
+        width: 100%;
+    }
+}
 
