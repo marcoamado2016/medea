@@ -12,20 +12,21 @@
 }
 .miLista{
     color: antiquewhite;
+    width: 80%;
     flex-direction: column;
     gap: 10px;
     font-size: 2rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
+  
     margin-left: 70px;
-    text-align: left;
+   
     
     
 }
 .miLista li {
     
     justify-content: start;
+    
     display: flex;
     margin: 5px 0; 
     padding: 5px 0; 
@@ -33,6 +34,7 @@
 }
 .miLista li a {
     display: inline-block; 
+    width: 100%;
     color: antiquewhite;
     text-decoration: none; 
     position: relative; 
@@ -51,10 +53,12 @@
 
 .miLista li a::before {
     top: -2px; 
+    width: 100%;
 }
 
 .miLista li a::after {
     bottom: -2px; 
+    width: 100%;
 }
 
 .miLista li a:hover::before,
