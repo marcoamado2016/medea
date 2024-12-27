@@ -9,23 +9,25 @@
     flex-direction: column;
     font-family:"TheSeason" ;
     padding-top: 100px;
-    padding: 100px;
+    
+    
 }
 .SectionForm{
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.534);
     width: 700px;
-    min-height: 100vh;
+    height: 95vh;
     position: relative;
     justify-content:center ;
     align-items: center;
     gap: 20px;
     border-radius: 20px;
+    bottom: 20px;
 }
 .tituloForm{
     min-width:100%;
-    height: 150px;
+    height: 130px;
     position:absolute;
     font-size: 2rem;
     color:#FFF;
@@ -74,7 +76,7 @@
     justify-content: flex-end;
     width: 100%;
     margin-right: 190px;
-    margin-top: 20px;
+   
   }
   .SubmitButton {
     background-color: black;
@@ -94,8 +96,9 @@
 
   @media (max-width: 768px) {
     .SectionForm {
+      padding: 0px;
+      max-width: 350px;
       width: 100%; 
-      min-height: auto; 
     }
   
     .tituloForm {
@@ -103,7 +106,8 @@
     }
   
     .tituloForm h1 {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
+      right: 40px; 
     }
   
     .InputForm {
@@ -125,26 +129,15 @@
     }
   }
 
-  @media (max-width: 1024px) {
-    .SectionForm {
-      width: 100%; 
-    }
-  
-    .InputForm {
-      margin-top: 120px; 
-    }
-  
-    .tituloForm h1 {
-      font-size: 1.7rem; 
-    }
-  }
-  
+
 
   @media (max-width: 412px) {
     .SectionForm {
+      
+      top: 50px;
       width: 100%; 
       padding: 0px; 
-      min-height: 90%;
+      max-height: 90%;
     }
   
     .tituloForm {
@@ -183,8 +176,8 @@
        margin: 0 auto; /* Elimina márgenes fijos */
        margin-top: 10px; /* Ajusta la posición superior */
        width: 100%; /* Asegura que el contenedor sea flexible */
-       margin-top: 15px; /* Ajuste del espacio superior */
-       padding: 50px;
+       margin-top: 18px; /* Ajuste del espacio superior */
+       padding: 10px;
     }
   
     .SubmitButton {
