@@ -13,7 +13,7 @@
 .atleticoText{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
     margin:5px;
     padding: 15px;
     justify-content:center ;
@@ -31,4 +31,37 @@
     width: 600px;
     padding: 30px;
     margin-right: 40px;
+}
+@media (max-width: 760px) {
+    .atleticoContainer {
+        min-height: 100vh;
+        min-width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .atleticoText h1 {
+        font-size: 2rem;
+        margin-right: 0;
+    }
+    .atleticoText img {
+        width: 400px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .atleticoContainer {
+        min-height: 100vh;
+        min-width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .atleticoText h1 {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+    .atleticoText img {
+        width: 300px;
+        margin-right: 0;
+    }
 }

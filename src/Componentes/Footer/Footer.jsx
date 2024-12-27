@@ -1,4 +1,5 @@
 import style from './Footer.module.css'
+import {Link} from 'react-router-dom'
 import facebook from '../../assets/facebook_icon-icons.com_53612.png'
 import insta from '../../assets/instagram_logo_icon_229292.png'
 import twitter from '../../assets/twitter_x_new_logo_square_x_icon_256075.png'
@@ -15,16 +16,34 @@ const Footer =()=>{
         <div className={style.row}>
            <div className={style.titulos}> 
             <h4>AQUÍ ESTAMOS</h4>
+            <Link>
                 <p>Libertad en la red</p>
+            </Link>
+            <Link to="/mensaje">
                 <p>Un mensaje al corazón</p>
-                <p>Noticias</p>
+            </Link>
+            
+                <p href="#slider">Noticias</p>
+            
+
            </div>
            <div className={style.titulos}>
              <h4>SOMOS</h4>
+             <Link to="/ibm">
+
                 <p>Instituto Bíblico</p>
+             </Link>
+             <Link to="/ciem">
                 <p>Centro Integral Educativo</p>
+             </Link>
+             <Link to="/atletico">
+
                 <p>Atlético</p>
+             </Link>
+             <Link to="/cultos">
+
                 <p>Cultos</p>
+             </Link>
                 <p>Ubicación</p>
             
             </div>
@@ -39,7 +58,7 @@ const Footer =()=>{
                <p>Contacto</p>
 
            <h4>REDES SOCIALES</h4>
-              <img src={facebook}></img>
+             <a href="https://www.facebook.com/medeatv/?locale=br_FR"> <img src={facebook}></img></a>
               <img src={insta}></img>
               <img src={twitter}></img>
               <img src={whats}></img>
