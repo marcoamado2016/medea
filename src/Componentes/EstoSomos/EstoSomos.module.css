@@ -65,23 +65,13 @@
     opacity: 1; 
 }
 @media (max-width: 768px) {
-    .estoSomos {
-        background-size:cover;
-        /* background-attachment: fixed; */
-        background-position:center center;
-        background-repeat: no-repeat;
-        flex-direction: column;
-        height: auto; 
-        justify-content: center; 
-        padding: 70px 70px 0px 0px;
-        object-fit: cover; 
-    }
+  
 
     .miLista {
-        margin-left: 0;
+       
         gap: 15px;
         font-size: 1.5rem;
-        text-align: center; 
+        
     }
 
    
@@ -95,7 +85,7 @@
         justify-content: center; 
         align-items: center;
         height: auto;
-        padding: 70px 70px 0px 0px;
+        
         
     }
  
