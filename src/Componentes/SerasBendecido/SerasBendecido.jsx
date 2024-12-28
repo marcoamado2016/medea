@@ -19,7 +19,7 @@ const SerasBendecido =()=>{
       Ser 
       </span>
       <span>
-      bendicido
+      bendecido
       </span>
       </h1>
       
