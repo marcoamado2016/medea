@@ -21,7 +21,7 @@
     width: 670px;
     border-radius: none;
     transition: all ease 0.3s;
-    right: 280px;
+    margin-left: 20px;
 }
 .imgPortada:hover{
     transform: scale(1.05);
@@ -31,7 +31,7 @@
     flex-direction: column;
     align-items: end;
     flex-grow: 1;
-    padding-right: 40px;
+    padding-right:50px;
     
 }
 

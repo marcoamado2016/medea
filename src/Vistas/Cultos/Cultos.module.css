@@ -1,45 +1,150 @@
-.containerCultos{
+.containerCultos {
     min-height: 130vh;
     min-width: 98vw;
     background-image: url('../../assets/cultos.png');
     background-size: cover;
-    background-position:center ;
+    background-position: center;
     background-repeat: no-repeat;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: end;
+    overflow: hidden; /* Para mantener el diseño limpio */
 }
-.cultosText{
-    width: 500px;
+
+.cultosText {
+    width: 550px;
     height: 600px;
     display: flex;
     justify-content: end;
     flex-direction: column;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 75px;
     margin-top: 70px;
-}
-.cultosText h1{
-   display: flex;
-   font-family:"TheSeason" ;
-   margin: 20px;
-   justify-content: flex-start;
+    /* overflow-y: auto; Habilitar scroll interno */
+    scrollbar-width: 1px; /* Personalizar ancho del scrollbar */
+    scrollbar-color: #000000 transparent;
 
-   
 }
-.cultos{
-    display: row;
-    justify-content: center;
-    align-items: center;
+
+
+.cultosText h1 {
+    display: flex;
+    font-family: "TheSeason";
+    margin: 50px;
+    margin-right: 350px;
+}
+
+.cultos {
+    width: 100%; /* O ajusta según lo necesites, ej. 80% */
+    height: 300px; /* Define una altura fija para que no crezca indefinidamente */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    overflow-x: hidden; /* Oculta desplazamiento horizontal, si no es necesario */
+    display: flex;
     flex-direction: column;
     font-family: "Tillilium";
+    gap: 15px; /* Espaciado entre actividades */
+    padding-right: 10px; /* Añade espacio interno para separar contenido del scroll */
+    margin-bottom: 180px;
 }
-.cultos p{
-    flex-direction: row;
+
+.actividad {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px; /* Separación entre día y texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    padding: 10px 0; /* Espaciado interno en cada actividad */
+
+}
+
+
+.actividad p {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000000;
+    margin: 0;
+}
+
+.actividad span {
     font-weight: 300;
     font-size: 1rem;
-    gap: 20px;
-    margin-bottom: 15px;
-    line-height: 1.8;
+    color: #0f0f0f;
     text-align: justify;
+    margin: 0;
+    text-decoration: none; /* Quitar subrayado */
 }
+@media (max-width: 1450px) {
+    .containerCultos {
+        min-height: 120vh;
+        min-width: 95vw;
+    }
+
+    .cultosText {
+        width: 450px;
+        height: 550px;
+        margin-right: 80px;
+        margin-top: 60px;
+    }
+
+    .cultosText h1 {
+        margin-right: 400px;
+    }
+
+    .cultos {
+        height: 280px;
+        margin-bottom: 160px;
+    }
+}
+
+@media (max-width: 760px) {
+    .containerCultos {
+        min-height: 110vh;
+        min-width: 90vw;
+        align-items: center;
+    }
+
+    .cultosText {
+        width: 400px;
+        height: 500px;
+        margin-right: 0;
+        margin-top: 50px;
+    }
+
+    .cultosText h1 {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .cultos {
+        width: 90%;
+        height: 260px;
+        margin-bottom: 140px;
+    }
+}
+
+@media (max-width: 450px) {
+    .containerCultos {
+        min-height: 100vh;
+        min-width: 85vw;
+        align-items: center;
+    }
+
+    .cultosText {
+        width: 300px;
+        height: 350px;
+        margin-right: 0;
+        margin-top: 70px;
+        background-color: rgba(105, 105, 105, 0.445);
+    }
+
+    .cultosText h1 {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .cultos {
+        width: 85%;
+        height: 240px;
+        margin-bottom: 120px;
+    }
+}
+
