@@ -3,6 +3,21 @@ import style from './Tv.module.css';
 import portada from '../../assets/portada.png';
 
 const Tv = () => {
+
+    const handleDownloadClick=()=>{
+
+        const link= document.createElement('a')
+        link.href= '/public/Dios.pdf';
+        link.download='Dios.pdf';
+        // document.body.appendChild(link);
+        link.click()
+        // document.body.removeChild(link);
+      };
+
+
+
+
+
     return (
         <div className={style.tvContainer}>
             <section className={style.firstSection}>
@@ -12,7 +27,7 @@ const Tv = () => {
                 <div className={style.Links}>
                     <Link to="/mensaje">MENSAJE</Link>
                     <a href="/eventos">EVENTO</a>
-                    <a href="/public/Dios.pdf" download>ARTÍCULOS</a>
+                    <a onClick={handleDownloadClick}>ARTÍCULOS</a>
                 </div>
             </section>
             <section className={style.word}>
