@@ -14,7 +14,7 @@ const SerasBendecido =()=>{
      <div className={style.container} 
      onClick={handleNavigate}
      >
-      <h1>
+      <h1 onClick={handleNavigate}>
       <span >
       Ser 
       </span>
