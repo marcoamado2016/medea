@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    overflow: hidden; /* Para mantener el diseño limpio */
+    overflow: hidden; 
 }
 
 .cultosText {
@@ -20,7 +20,7 @@
     align-items: center;
     margin-right: 75px;
     margin-top: 70px;
-    scrollbar-width: 1px; /* Personalizar ancho del scrollbar */
+    scrollbar-width: 1px; 
     scrollbar-color: #000000 transparent;
 
 }
@@ -34,15 +34,15 @@
 }
 
 .cultos {
-    width: 100%; /* O ajusta según lo necesites, ej. 80% */
-    height: 300px; /* Define una altura fija para que no crezca indefinidamente */
-    overflow-y: auto; /* Habilita el scroll vertical */
-    overflow-x: hidden; /* Oculta desplazamiento horizontal, si no es necesario */
+    width: 100%; 
+    height: 300px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
     display: flex;
     flex-direction: column;
     font-family: "Tillilium";
-    gap: 15px; /* Espaciado entre actividades */
-    padding-right: 10px; /* Añade espacio interno para separar contenido del scroll */
+    gap: 15px; 
+    padding-right: 10px; 
     margin-bottom: 180px;
 }
 
