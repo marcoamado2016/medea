@@ -20,7 +20,6 @@
     align-items: center;
     margin-right: 75px;
     margin-top: 70px;
-    /* overflow-y: auto; Habilitar scroll interno */
     scrollbar-width: 1px; /* Personalizar ancho del scrollbar */
     scrollbar-color: #000000 transparent;
 
@@ -72,6 +71,7 @@
     margin: 0;
     text-decoration: none; /* Quitar subrayado */
 }
+
 @media (max-width: 1450px) {
     .containerCultos {
         min-height: 120vh;
@@ -81,8 +81,8 @@
     .cultosText {
         width: 450px;
         height: 550px;
-        margin-right: 80px;
-        margin-top: 60px;
+        margin-right: 160px;
+        margin-top: 90px;
     }
 
     .cultosText h1 {
@@ -92,6 +92,7 @@
     .cultos {
         height: 280px;
         margin-bottom: 160px;
+       
     }
 }
 
