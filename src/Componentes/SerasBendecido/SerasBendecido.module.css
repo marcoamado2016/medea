@@ -23,13 +23,13 @@
 }
 .brillante {
     cursor: pointer;
-    background-color: #d6c90f; /* o cualquier otro estilo */
+    background-color: #d6c90f; 
   }
 
   @media screen and (max-width: 720px) {
     .container {
-        height: 600px; /* Ajusta la altura */
-        background-position: center; /* Centra mejor la imagen */
+        height: 600px; 
+        background-position: center; 
     }
 
     .container h1 {

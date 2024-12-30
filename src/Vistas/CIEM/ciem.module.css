@@ -31,6 +31,27 @@
     width: 500px;
     margin-right: 60px;
 }
+@media(max-width: 1450px){
+    .containerCiem{
+        min-height: 120vh;
+        min-width: 90vw;
+        background-image: url('../../assets/Ciem.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        margin-right: 50px;
+        width: 100%;
+    }
+    .textCiem{
+        margin-top: 25px;
+        gap: 50px;
+    }
+    
+}
 @media (max-width: 760px) {
     .containerCiem {
         min-height: 100vh;
