@@ -12,7 +12,7 @@ const Tv = () => {
                 <div className={style.Links}>
                     <Link to="/mensaje">MENSAJE</Link>
                     <a href="/eventos">EVENTO</a>
-                    <a href="/public/Diosguarda.pdf" download>ARTÍCULOS</a>
+                    <a href="/public/Dios.pdf" download>ARTÍCULOS</a>
                 </div>
             </section>
             <section className={style.word}>
