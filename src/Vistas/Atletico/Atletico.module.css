@@ -19,7 +19,7 @@
     align-items: flex-start;
     width: 50%;
     height: 100%;
-    margin-bottom: 70px;
+   
 }
 .atleticoText h1{
     font-size: 2.5rem;
@@ -47,7 +47,7 @@
 ;
 }
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1025px) {
         .atleticoContainer {
             min-height: 130vh;
             min-width: 95vw;
