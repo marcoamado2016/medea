@@ -62,6 +62,7 @@ const RadioPlayer = () => {
           alt={isPlaying ? "Pausar" : "Reproducir"}
           onClick={togglePlay}
           className={style.button}
+          target="_blank"
         />
         <img
           src={stop}
