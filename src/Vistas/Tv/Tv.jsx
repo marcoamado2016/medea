@@ -7,7 +7,7 @@ const Tv = () => {
     const handleDownloadClick=()=>{
 
         const link= document.createElement('a')
-        link.href= '/public/Dios.pdf';
+        link.href= '/Dios.pdf';
         link.download='Dios.pdf';
         // document.body.appendChild(link);
         link.click()

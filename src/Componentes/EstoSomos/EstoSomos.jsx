@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 
 const EstoSomos =()=>{
 
+
+    const Onclick =()=>{   window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
         <div className={style.estoSomos} id='Estos'>
 
@@ -35,7 +39,7 @@ const EstoSomos =()=>{
                 </li>
 
                 <li>
-                <Link to='/cultos'>
+                <Link to='/cultos' onClick={Onclick}>
                     <a>Cultos</a>
                 </Link>
                 </li>
