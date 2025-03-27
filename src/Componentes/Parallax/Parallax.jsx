@@ -27,6 +27,9 @@ const Parallax = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const Onclick =()=>{   window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
         <div className={style.parallax}>
             <div className={style.outerParallax}>
@@ -42,13 +45,13 @@ const Parallax = () => {
                 </div>
 
                 <div className={style.medio}>
-                    <Link to='/radio'>
+                    <Link to='/radio' onClick={Onclick}>
                      <div className={style.card}>
                         <img src={radio} alt="Radio" />
                      </div>
                     </Link>
 
-                    <Link to='/tv'> 
+                    <Link to='/tv' onClick={Onclick}> 
                      <div className={style.card}>
                         <img src={tv} alt="TV" />
                      </div>

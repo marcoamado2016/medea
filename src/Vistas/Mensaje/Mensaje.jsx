@@ -1,31 +1,55 @@
-import React, { useState } from 'react';
-import style from './Mensaje.module.css';
+import React, { useState } from "react";
+import axios from "axios";
+import style from "./Mensaje.module.css";
+
+
+
+
 
 const Mensaje = () => {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    telefono: '',
-    peticion: '',
-  });
+  const [formData, setFormData] = useState({ nombre: "", telefono: "", peticion: "" });
+  const [isSending, setIsSending] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
+  const requestData = {
+    nombre: formData.nombre,
+    telefono: formData.telefono,
+    peticion: formData.peticion,
+  }
+  const handleSubmit = async () => {
+    if (!formData.nombre || !formData.telefono || !formData.peticion) {
+      alert("Por favor, completa todos los campos.");
+      return;
+  
+    }
+    console.log(formData)
+    setIsSending(true);
 
-  const handleSubmit = () => {
     
-    console.log('Formulario enviado:', formData);
-
-    
-    setFormData({
-      nombre: '',
-      telefono: '',
-      peticion: '',
-    });
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbzDQya6aF64rUtd8D90RjDEC7nlWRM8LJwAuW_S_Gw4tstC1mvgWSszYjL3Epl7umY/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: "Juan Pérez",
+          telefono: "123456789",
+          peticion: "Solicito información"
+        }),
+      })
+      const data = await response.json();
+      console.log(data);
+      alert("Datos enviados correctamente.");
+      setFormData({ nombre: "", telefono: "", peticion: "" });
+    } catch (error) {
+      console.error("Error al enviar los datos:", error);
+      alert("Hubo un error al enviar los datos. Inténtalo de nuevo.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -58,8 +82,8 @@ const Mensaje = () => {
           ></textarea>
         </div>
         <div className={style.ButtonContainer}>
-          <button className={style.SubmitButton} onClick={handleSubmit}>
-            Enviar
+          <button className={style.SubmitButton} onClick={handleSubmit} disabled={isSending}>
+            {isSending ? "Enviando..." : "Enviar"}
           </button>
         </div>
       </section>
@@ -68,3 +92,5 @@ const Mensaje = () => {
 };
 
 export default Mensaje;
+
+

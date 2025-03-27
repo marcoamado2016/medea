@@ -16,24 +16,24 @@ const EstoSomos =()=>{
             <ul className={style.miLista}>
             
                 <li>
-                    <Link to="/ciem">Centro Integral Educativo</Link>
+                    <Link to="/ciem" onClick={Onclick}>Centro Integral Educativo</Link>
                 </li>
 
                 <li>
-                    <Link to="/ibm">Instituto Bíblico</Link>
+                    <Link to="/ibm" onClick={Onclick}>Instituto Bíblico</Link>
                 </li>
                 <li>
-                <Link to="/atletico">
+                <Link to="/atletico" onClick={Onclick}>
                     Atlético
                 </Link>
                 </li>
                 <li>
-                <Link to='/radio'>
+                <Link to='/radio' onClick={Onclick}>
                     Radio Libertad
                 </Link>
                 </li>
                 <li>
-                <Link to='/tv'>
+                <Link to='/tv' onClick={Onclick}>
                     Canal
                 </Link>
                 </li>
