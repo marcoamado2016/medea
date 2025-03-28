@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import style from './Mensaje.module.css';
+import style from './Button.module.css';
 
 const Mensaje = () => {
   const [formData, setFormData] = useState({ nombre: '', telefono: '', peticion: '' });
@@ -61,9 +61,9 @@ const Mensaje = () => {
           <button className={style.SubmitButton} onClick={handleSubmit}>
             Enviar
           </button>
-          {/* <button className={style.DownloadButton} onClick={handleDownload}>
+          <button className={style.DownloadButton} onClick={handleDownload}>
             Descargar Excel
-          </button> */}
+          </button>
         </div>
       </section>
     </div>
@@ -71,3 +71,5 @@ const Mensaje = () => {
 };
 
 export default Mensaje;
+
+

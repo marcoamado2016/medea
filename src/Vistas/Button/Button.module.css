@@ -1,0 +1,187 @@
+.ContainerForm{
+    min-height: 100vh;
+    background-image: url("../../assets//FONDO.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-family:"TheSeason" ;
+    padding-top: 100px;
+    
+    
+}
+.SectionForm{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.534);
+    width: 700px;
+    height: 95vh;
+    position: relative;
+    justify-content:center ;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    bottom: 20px;
+}
+.tituloForm{
+    min-width:100%;
+    height: 130px;
+    position:absolute;
+    font-size: 2rem;
+    color:#FFF;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.459);
+    border-radius: 20px 20px 0px 0px;
+    top:0px;
+
+}
+.tituloForm h1{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+}
+.InputForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    margin-top: 150px;
+}
+.InputForm input{
+    width: 600px;
+    height: 30px;
+}
+.InputField{
+    width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    border: solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.TextArea {
+    height: 180px;
+    resize: none;
+    
+  }
+  .ButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 190px;
+   
+  }
+  .SubmitButton {
+    background-color: black;
+    justify-content: flex-end;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .SubmitButton:hover {
+    background-color: #444;
+  }
+
+  @media (max-width: 768px) {
+    .SectionForm {
+      padding: 0px;
+      max-width: 350px;
+      width: 100%; 
+    }
+  
+    .tituloForm {
+      height: 120px; 
+    }
+  
+    .tituloForm h1 {
+      font-size: 1.5rem;
+      right: 40px; 
+    }
+  
+    .InputForm {
+      margin-top: 100px; 
+    }
+  
+    .InputForm input,
+    .InputField {
+      width: 100%;
+    }
+  
+    .TextArea {
+      height: 150px;
+    }
+  
+    .ButtonContainer {
+      justify-content: center; 
+      margin-right: 0;
+    }
+  }
+
+
+
+  @media (max-width: 412px) {
+    .SectionForm {
+      
+      top: 50px;
+      width: 100%; 
+      padding: 0px; 
+      max-height: 90%;
+    }
+  
+    .tituloForm {
+      height: 100px; 
+    }
+  
+    .tituloForm h1 {
+      font-size: 1.4rem; 
+    }
+  
+    .InputForm {
+      gap: 10px; 
+      padding: 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+     
+    }
+  
+    .InputForm input,
+    .InputField {
+      width: 100%; /* Ocupa todo el ancho */
+      padding: 8px; /* Reduce el padding para inputs más compactos */
+    }
+  
+    .TextArea {
+      height: 120px; /* Área de texto más pequeña */
+    }
+  
+    .ButtonContainer {
+       display: flex;
+       justify-content: center; /* Botón completamente centrado */
+       align-items: center; /* Centrado verticalmente */
+       margin: 0 auto; /* Elimina márgenes fijos */
+       margin-top: 10px; /* Ajusta la posición superior */
+       width: 100%; /* Asegura que el contenedor sea flexible */
+       margin-top: 18px; /* Ajuste del espacio superior */
+       padding: 10px;
+    }
+  
+    .SubmitButton {
+      padding: 8px 16px; /* Botón más compacto */
+      font-size: 0.9rem; /* Tamaño de fuente reducido */
+    }
+  }

@@ -55,15 +55,16 @@ const RadioPlayer = () => {
           src={favorito}
           alt="Favorito"
           onClick={handleFavorite}
-          className={style.button}
+          className={style.buttonFav}
         />
         <img
           src={isPlaying ? pausa : play}
           alt={isPlaying ? "Pausar" : "Reproducir"}
           onClick={togglePlay}
-          className={style.button}
+          className={style.buttonPlay}
           target="_blank"
         />
+        
         <img
           src={stop}
           alt="Detener"
@@ -74,7 +75,7 @@ const RadioPlayer = () => {
           src={mute}
           alt="Silenciar"
           onClick={handleMute}
-          className={`${style.button} ${isMuted ? style.active : ""}`}
+          className={`${style.buttonMute} ${isMuted ? style.active : ""}`}
         />
       </div>
 

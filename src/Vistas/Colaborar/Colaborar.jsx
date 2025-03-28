@@ -3,10 +3,16 @@ import texto from "../../assets/TEXTOColaborar.png"
 
 
 const Colaborar = () => {
+
+
+const upScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
     return(
-        <div className={style.colaborar}>
-        <div className={style.texto}>
-        <img src={texto}>
+        <div className={style.colaborar} >
+        <div className={style.texto} onClick={upScroll}>
+        <img src={texto} >
 
         </img>
 

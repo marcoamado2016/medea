@@ -32,11 +32,63 @@
     gap: 50px;
     left: 320px;
     top: 130px;
+    margin-left: 100px;
+    
   }
-  
+  .buttonPlay{
+    height: 40px;
+    gap: 50px;
+    left: 320px;
+    top: 130px;
+    
+  }
+  .buttonPlay:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  .buttonPlay.active {
+    filter: grayscale(100%);
+  }
+  .buttonFav{
+    height: 40px;
+    gap: 50px;
+    left: 320px;
+    margin-right: 100px;
+    top: 130px;
+    
+  }
+  .buttonFav:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  .buttonFav.active {
+    filter: grayscale(100%);
+  }
+  .buttonMute{
+    height: 40px;
+    gap: 50px;
+    left: 320px;
+    margin-right: 100px;
+    top: 130px;
+  }
+  .buttonMute:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  .buttonMute.active {
+    filter: grayscale(100%);
+  }
+  .buttonMute{
+    height: 40px;
+    gap: 50px;
+    left: 320px;
+    margin-left: 80px;
+    top: 130px;
+  }
   .button {
     cursor: pointer;
     transition: transform 0.2s, filter 0.2s;
+    
   }
   
   .button:hover {
