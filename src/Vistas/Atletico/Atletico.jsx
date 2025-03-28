@@ -21,6 +21,7 @@ const Atletico=()=>{
         perseverancia y confianza, reflejando principios cristianos dentro y fuera
         del campo
         </p>
+        
         <p>
         La vision de "Atlético M.E.D.E.A" trasciende los resultados deportivos:
         busca compartir evangelio de Cristo y llevar esperanza a la comunidad.Cada 
