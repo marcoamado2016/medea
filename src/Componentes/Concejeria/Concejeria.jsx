@@ -5,15 +5,9 @@ import { useNavigate } from 'react-router'
 
 const Concejeria=()=>{
     const navigate= useNavigate();
-
     const handleNavigate =()=>{
         navigate('/mensaje')
     }
-
-
-
-
-
     return(
         <div className={style.concejeria}>
             <div className={style.texto}>

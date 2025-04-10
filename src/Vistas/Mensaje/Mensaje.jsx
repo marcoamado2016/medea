@@ -1,31 +1,48 @@
-import React, { useState } from 'react';
-import * as XLSX from 'xlsx';
-import style from './Mensaje.module.css';
+import React, { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
+import style from "./Mensaje.module.css";
 
 const Mensaje = () => {
-  const [formData, setFormData] = useState({ nombre: '', telefono: '', peticion: '' });
-  const [entries, setEntries] = useState([]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const [formData, setFormData] = useState({
+    nombre: "",
+    telefono: "",
+    peticion: "",
+  });
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
-    console.log("Input cambiado:", name, value);
   };
 
   const handleSubmit = () => {
-    console.log("Formulario enviado:", formData);
-    setEntries([...entries, formData]);
-    setFormData({ nombre: '', telefono: '', peticion: '' });
-  };
-
-  const handleDownload = () => {
-    const worksheet = XLSX.utils.json_to_sheet(entries);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Datos");
-    XLSX.writeFile(workbook, "datos.xlsx");
+    emailjs
+      .send(
+        "service_3j4fucc",
+        "template_ucq3dla",
+        {
+          title: "Nuevo pedido de oración",
+          name: formData.nombre,
+          time: new Date().toLocaleString(),
+          message: formData.peticion,
+          email: "marcos242016@gmail.com",
+          telefono: formData.telefono,
+        },
+        "1A4pExR15gOAYEkYl"
+      )
+      .then(() => {
+        alert("Tu oración fue enviada correctamente ❤️");
+        setFormData({ nombre: "", telefono: "", peticion: "" });
+      })
+      .catch((error) => {
+        console.error("Error al enviar el correo ❌", error);
+        alert("Hubo un problema al enviar el correo.");
+      });
+    setFormData({ nombre: "", telefono: "", peticion: "" });
   };
 
   return (
@@ -61,9 +78,6 @@ const Mensaje = () => {
           <button className={style.SubmitButton} onClick={handleSubmit}>
             Enviar
           </button>
-          {/* <button className={style.DownloadButton} onClick={handleDownload}>
-            Descargar Excel
-          </button> */}
         </div>
       </section>
     </div>

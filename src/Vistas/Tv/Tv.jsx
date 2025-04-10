@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import style from './Tv.module.css';
 import portada from '../../assets/portada.png';
-
+import { useEffect } from 'react';
 const Tv = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     const handleDownloadClick=()=>{
 
         const link= document.createElement('a')

@@ -55,7 +55,7 @@ const Slider = () => {
                     <ul ref={listRef}>
                         {data.map((item) => (
                             <li key={item.id}>
-                                <img src={item.imgUrl} alt="" />
+                                <img src={item.imgUrl} style={{ width: '1920px', height: '958px' }} alt="" />
                             </li>
                         ))}
                     </ul>

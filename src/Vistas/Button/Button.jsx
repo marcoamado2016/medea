@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import * as XLSX from 'xlsx';
-import style from './Button.module.css';
+import React, { useState } from "react";
+import * as XLSX from "xlsx";
+import style from "./Button.module.css";
 
 const Mensaje = () => {
-  const [formData, setFormData] = useState({ nombre: '', telefono: '', peticion: '' });
+  const [formData, setFormData] = useState({
+    nombre: "",
+    telefono: "",
+    peticion: "",
+  });
   const [entries, setEntries] = useState([]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -18,7 +24,7 @@ const Mensaje = () => {
   const handleSubmit = () => {
     console.log("Formulario enviado:", formData);
     setEntries([...entries, formData]);
-    setFormData({ nombre: '', telefono: '', peticion: '' });
+    setFormData({ nombre: "", telefono: "", peticion: "" });
   };
 
   const handleDownload = () => {
@@ -71,5 +77,3 @@ const Mensaje = () => {
 };
 
 export default Mensaje;
-
-

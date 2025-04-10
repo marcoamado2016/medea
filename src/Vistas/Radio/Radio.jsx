@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./Radio.module.css";
 import fm from "../../assets/logolibertad.png";
 import favorito from "../../assets/FAVORITO.png";
@@ -9,6 +9,9 @@ import stop from "../../assets/STOP_.png";
 import mute from "../../assets/MUTE.png";
 
 const RadioPlayer = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef(null);
@@ -64,7 +67,7 @@ const RadioPlayer = () => {
           className={style.buttonPlay}
           target="_blank"
         />
-        
+
         <img
           src={stop}
           alt="Detener"
@@ -85,12 +88,6 @@ const RadioPlayer = () => {
   );
 };
 
-
-
-
-
-
 export default RadioPlayer;
-
 
 // src="https://cdn.instream.audio/AudioPlayer/steven?mount=&"

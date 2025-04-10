@@ -13,7 +13,6 @@ import SerasBendecido from './Componentes/SerasBendecido/SerasBendecido';
 import Ibm from './Vistas/Ibm/ibm';
 import Cultos from './Vistas/Cultos/Cultos';
 import Colaborar from './Vistas/Colaborar/Colaborar';
-import Loguin from './Vistas/Loguin/Loguin';
 import Button from './Vistas/Button/Button';
 
 // Importamos el Contexto Global
@@ -37,7 +36,6 @@ function App() {
           <Route path="/ibm" element={<Ibm />} />
           <Route path="/cultos" element={<Cultos />} />
           <Route path="/colaborar" element={<Colaborar />} />
-          <Route path="/loguin" element={<Loguin />} />
           <Route path="/button" element={<Button />} />
         </Routes>
         <Footer/>

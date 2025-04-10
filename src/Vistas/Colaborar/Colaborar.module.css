@@ -14,11 +14,10 @@
     width: 400px;
     height: 400px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     margin-top:50px;
     margin: 20px;
     padding: 10px;
-    margin-right: 200px;
-
+    margin-right: 235px;
 }
