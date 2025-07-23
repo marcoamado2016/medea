@@ -34,6 +34,24 @@
     z-index: 1;
     cursor: pointer;
 }
+.downButton {
+    position: absolute;
+    bottom: 15px; /* distancia desde el fondo */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.downButton img {
+    width: 40px;
+    height: 40px;
+}
+
+.downButton:hover {
+    transform: translateX(-50%) scale(1.1);
+}
 .rightArrow{
     height: 45px;
     position: absolute;

@@ -3,6 +3,7 @@ import style from './Loguin.module.css';
 
 
 const Loguin = () => {
+    console.log("HOLA LOGUIN")
     const [formData, setFormData] = useState({ username: '', password: '' });
 
     const handleChange = (e) => {
