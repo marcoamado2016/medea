@@ -14,7 +14,7 @@ import Ibm from "./Vistas/Ibm/ibm";
 import Cultos from "./Vistas/Cultos/Cultos";
 import Colaborar from "./Vistas/Colaborar/Colaborar";
 import Button from "./Vistas/Button/Button";
-import Loguin from "./Vistas/Loguin/Loguin";
+import Login from "./Vistas/Login/Login";
 
 // Importamos el Contexto Global
 
@@ -36,7 +36,7 @@ function App() {
         <Route path="/cultos" element={<Cultos />} />
         <Route path="/colaborar" element={<Colaborar />} />
         <Route path="/button" element={<Button />} />
-        <Route path="/loguin" element={<Loguin />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>

@@ -7,8 +7,17 @@ import whats from "../../assets/whatsapp_icon-icons.com_53606.png";
 import gmail from "../../assets/google_plus_icon-icons.com_53608.png";
 import you from "../../assets/youtube.png";
 import medea from "../../assets/logocupula.png";
-
+import subir from "../../assets/subir.png";
+import { useSelector } from "react-redux";
+import SubirFotosModal from "../../Vistas/subirFotos/subirFotos.jsx";
+import { useState } from "react";
 const Footer = () => {
+  const status = useSelector((state) => state.auth.estado);
+  const [modal, setModal] = useState(false);
+  console.log("STATUS ", status);
+  const subirFotos = () => {
+    setModal(status);
+  };
   return (
     <div className={style.footer}>
       <div className={style.row}>
@@ -30,12 +39,17 @@ const Footer = () => {
           <h4>COLABORAR</h4>
           <Link to="/colaborar">Transferencia bancaria</Link>
           <p>Mercado pago</p>
-          <Link to="/loguin">Loguin</Link>
+          <Link to="/login">Login</Link>
         </div>
         <div className={style.titulos}>
           <h4>AYUDA</h4>
           <p>Contacto</p>
           <h4 className={style.redesTitle}>REDES SOCIALES</h4>
+          {status && (
+            <div onClick={subirFotos}>
+              <img src={subir} className={style.redes} />
+            </div>
+          )}
           <div className={style.redes}>
             <a
               href="https://www.facebook.com/medeatv/?locale=br_FR"
@@ -80,6 +94,7 @@ const Footer = () => {
         <img src={medea} alt="Medea logo" />
         <h2>Copyright©2024. Todos los derechos reservados</h2>
       </div>
+      {modal && <SubirFotosModal open={true} onClose={() => setModal(false)} />}
     </div>
   );
 };

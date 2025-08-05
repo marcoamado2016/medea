@@ -4,11 +4,13 @@ import { data } from "../../data";
 import izqu from "../../assets/flechaiz_.png";
 import derec from "../../assets/flechader.png";
 import abajo from "../../assets/botonAbajo.png";
-const Slider = () => {
+import ImageGalleryModal from "../../Vistas/galeria/galeria";
+import Animacion from "../../Vistas/galeria/galeria.animacion";
+const Slider = ({ open, setOpen }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
-
+  const [images, setImages] = useState(null);
   useEffect(() => {
     const listNode = listRef.current;
 
@@ -36,49 +38,76 @@ const Slider = () => {
     setCurrentIndex(slideIndex);
   };
 
-  const  scrollDown= ()=>{
-    alert("HOLA")
-  }
+  const scrollDown = () => {
+    const data = [
+      {
+        id: 1,
+        imgUrl: "/pic/flyer-pascua.jpg",
+      },
+      {
+        id: 2,
+        imgUrl: "/pic/02 bis.png",
+      },
+      {
+        id: 3,
+        imgUrl: "/pic/03 bis.png",
+      },
+      {
+        id: 4,
+        imgUrl: "/pic/04 bis.png",
+      },
+    ];
+    setImages(data);
+    setOpen(true);
+  };
   return (
-    <div
-      className={style.mainContainer}
-      onMouseEnter={() => setIsFirstLoad(false)}
-      id="slider"
-    >
-      <div className={style.sliderConteiner}>
-        <div className={style.leftArrow} onClick={() => scrollToImage("prev")}>
-          <img src={izqu} alt="Prev" className={style.arrowImage} />
-        </div>
-        <div className={style.rightArrow} onClick={() => scrollToImage("next")}>
-          <img src={derec} alt="Next" className={style.arrowImage} />
-        </div>
-        <div className={style.downButton} onClick={() => scrollDown()}>
-          <img src={abajo} alt="Down" />
-        </div>
-        <div className={style.conteinerImg}>
-          <ul ref={listRef}>
-            {data.map((item) => (
-              <li key={item.id}>
-                <img
-                  src={item.imgUrl}
-                  style={{ width: "1920px", height: "958px" }}
-                  alt=""
-                />
-              </li>
+    <>
+      <div
+        className={style.mainContainer}
+        onMouseEnter={() => setIsFirstLoad(false)}
+        id="slider"
+      >
+        <div className={style.sliderConteiner}>
+          <div
+            className={style.leftArrow}
+            onClick={() => scrollToImage("prev")}
+          >
+            <img src={izqu} alt="Prev" className={style.arrowImage} />
+          </div>
+          <div
+            className={style.rightArrow}
+            onClick={() => scrollToImage("next")}
+          >
+            <img src={derec} alt="Next" className={style.arrowImage} />
+          </div>
+          <div className={style.downButton} onClick={() => scrollDown()}>
+            <img src={abajo} alt="Down" />
+          </div>
+          <div className={style.conteinerImg}>
+            <ul ref={listRef}>
+              {data.map((item) => (
+                <li key={item.id}>
+                  <img
+                    src={item.imgUrl}
+                    style={{ width: "1920px", height: "958px" }}
+                    alt=""
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={style.dotsContainer}>
+            {data.map((_, idx) => (
+              <div
+                key={idx}
+                className={style.dotsContainerItem}
+                onClick={() => goToslide(idx)}
+              ></div>
             ))}
-          </ul>
-        </div>
-        <div className={style.dotsContainer}>
-          {data.map((_, idx) => (
-            <div
-              key={idx}
-              className={style.dotsContainerItem}
-              onClick={() => goToslide(idx)}
-            ></div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

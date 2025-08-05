@@ -1,0 +1,23 @@
+/* SliderAnimacion.module.css */
+.modal {
+  position: absolute;
+  top: 958px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/pic/flyer-pascua.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
