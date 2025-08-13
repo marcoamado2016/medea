@@ -9,6 +9,7 @@ const Slider = ({ open, setOpen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const [images, setImages] = useState(null);
+  const [imagenBase, setImagen] = useState(null);
   useEffect(() => {
     const listNode = listRef.current;
 
@@ -21,7 +22,23 @@ const Slider = ({ open, setOpen }) => {
       }
     }
   }, [currentIndex]);
-
+  useEffect(() => {
+    fetch("https://medea.com.ar/obtenerImagenes.php")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          const imgs = data?.data?.map((item) => ({
+            id: item.id,
+            imgUrl: item.url_imagen,
+            titulo: item.titulo,
+            noticia: item.noticia,
+          }));
+          setImages(imgs);
+        }
+      })
+      .catch((error) => { console.log("ERROR ", error) })
+  }, [])
+  console.log("imagenBase ",imagenBase)
   const scrollToImage = (direction) => {
     setCurrentIndex((curr) => {
       if (direction === "prev") {
@@ -57,6 +74,7 @@ const Slider = ({ open, setOpen }) => {
     ];
     setImages(data);
     setOpen(true);
+    console.log("ADD ", imagenBase)
   };
   return (
     <>
@@ -83,7 +101,7 @@ const Slider = ({ open, setOpen }) => {
           </div>
           <div className={style.conteinerImg}>
             <ul ref={listRef}>
-              {data.map((item) => (
+              {imagenBase?.map((item) => (
                 <li key={item.id}>
                   <img
                     src={item.imgUrl}
@@ -95,7 +113,7 @@ const Slider = ({ open, setOpen }) => {
             </ul>
           </div>
           <div className={style.dotsContainer}>
-            {data.map((_, idx) => (
+            {imagenBase?.map((_, idx) => (
               <div
                 key={idx}
                 className={style.dotsContainerItem}
