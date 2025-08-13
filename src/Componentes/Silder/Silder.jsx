@@ -101,7 +101,7 @@ const Slider = ({ open, setOpen }) => {
           </div>
           <div className={style.conteinerImg}>
             <ul ref={listRef}>
-              {data?.map((item) => (
+              {imagenBase?.map((item) => (
                 <li key={item.id}>
                   <img
                     src={item.imgUrl}
@@ -113,7 +113,7 @@ const Slider = ({ open, setOpen }) => {
             </ul>
           </div>
           <div className={style.dotsContainer}>
-            {data?.map((_, idx) => (
+            {imagenBase?.map((_, idx) => (
               <div
                 key={idx}
                 className={style.dotsContainerItem}
