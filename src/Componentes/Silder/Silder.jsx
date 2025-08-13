@@ -33,7 +33,7 @@ const Slider = ({ open, setOpen }) => {
             titulo: item.titulo,
             noticia: item.noticia,
           }));
-          setImages(imgs);
+          setImagen(imgs);
         }
       })
       .catch((error) => { console.log("ERROR ", error) })
@@ -101,7 +101,7 @@ const Slider = ({ open, setOpen }) => {
           </div>
           <div className={style.conteinerImg}>
             <ul ref={listRef}>
-              {imagenBase?.map((item) => (
+              {data?.map((item) => (
                 <li key={item.id}>
                   <img
                     src={item.imgUrl}
@@ -113,7 +113,7 @@ const Slider = ({ open, setOpen }) => {
             </ul>
           </div>
           <div className={style.dotsContainer}>
-            {imagenBase?.map((_, idx) => (
+            {data?.map((_, idx) => (
               <div
                 key={idx}
                 className={style.dotsContainerItem}
