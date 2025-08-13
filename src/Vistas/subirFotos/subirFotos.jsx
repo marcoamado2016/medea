@@ -11,7 +11,11 @@ import {
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import { useState } from "react";
 const SubirFotosModal = ({ open, onClose }) => {
-  const [formData, setFormData] = useState({ imagen: null, noticia: "" });
+  const [formData, setFormData] = useState({
+    imagen: null,
+    noticia: "",
+    titulo: "",
+  });
   const handleChange = (nombre, valor) => {
     setFormData((value) => ({
       ...value,
@@ -22,13 +26,13 @@ const SubirFotosModal = ({ open, onClose }) => {
     const data = new FormData();
     data.append("imagen", formData.imagen);
     data.append("noticia", formData.noticia);
+    data.append("titulo", formData.titulo);
     try {
       const response = await fetch("https://medea.com.ar/files.php", {
         method: "POST",
 
         body: data,
       });
-      console.log("RESPONSE ", response);
     } catch (error) {
       console.log("ERROR SUBIR FOTOS ", error);
     }
@@ -51,7 +55,6 @@ const SubirFotosModal = ({ open, onClose }) => {
               type="file"
               name="imagen"
               onChange={(e) => {
-                console.log("e.target.files[0] ", e.target);
                 handleChange("imagen", e.target.files[0]);
               }}
             />
@@ -63,6 +66,15 @@ const SubirFotosModal = ({ open, onClose }) => {
           )}
         </Box>
         <Box sx={{ mt: 4 }}>
+          <Typography variant="subtitle1">Titulo</Typography>
+          <TextField
+            fullWidth
+            name="titulo"
+            value={formData.titulo}
+            onChange={(e) => {
+              handleChange("titulo", e.target.value);
+            }}
+          />
           <Typography variant="subtitle1">Noticias</Typography>
           <TextField
             multiline
@@ -71,9 +83,9 @@ const SubirFotosModal = ({ open, onClose }) => {
             name="noticia"
             value={formData.noticia}
             onChange={(e) => {
-              console.log("NOTICIA ", e.target.value);
               handleChange("noticia", e.target.value);
             }}
+            rows={10}
           />
         </Box>
       </DialogContent>

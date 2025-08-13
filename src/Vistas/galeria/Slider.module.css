@@ -2,29 +2,25 @@
   height: 100vh;
   margin: 0px auto;
 }
+
 .sliderConteiner {
   position: relative;
   height: 100%;
   width: 98.9vw;
 }
-.conteinerImg ul {
-  gap: 5px;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-}
+
 .conteinerImg ul {
   gap: 0px;
   flex-direction: row;
   width: 100%;
   height: 100%;
 }
+
 .leftArrow {
   height: 45px;
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 80%; /* Cambiado de 50% a 80% */
+  transform: translateY(-50%); /* Solo movimiento vertical */
   left: 22px;
   font-size: 40px;
   font-weight: 500;
@@ -32,9 +28,23 @@
   z-index: 1;
   cursor: pointer;
 }
+
+.rightArrow {
+  height: 45px;
+  position: absolute;
+  top: 80%; /* Cambiado de 50% a 80% */
+  transform: translateY(-50%);
+  right: 32px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff0f0c2;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .downButton {
   position: absolute;
-  bottom: 15px; /* distancia desde el fondo */
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -50,18 +60,7 @@
 .downButton:hover {
   transform: translateX(-50%) scale(1.1);
 }
-.rightArrow {
-  height: 45px;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
-  font-size: 40px;
-  font-weight: 500;
-  color: #fff0f0c2;
-  z-index: 1;
-  cursor: pointer;
-}
+
 ul {
   display: flex;
   list-style: none;
@@ -69,6 +68,7 @@ ul {
   margin: 0;
   overflow: hidden;
 }
+
 li {
   flex-shrink: 0;
   display: flex;
@@ -77,13 +77,15 @@ li {
   height: 100%;
   width: 100%;
 }
+
 img {
   cursor: pointer;
-  width: 100%; /* ocupa todo el contenedor li */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* recorta la imagen si es necesario para llenar el espacio */
+  object-fit: cover;
   border-radius: none;
 }
+
 li img {
   transition: transform 0.3s ease, border 0.3s ease;
 }
@@ -96,23 +98,24 @@ li img:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espacio entre los dots */
+  gap: 20px;
   margin-top: 25px;
 }
 
 .dotsContainerItem {
-  width: 10px; /* Tamaño del dot */
-  height: 10px; /* Tamaño del dot */
-  border-radius: 50%; /* Forma circular */
-  background-color: #666565a6; /* Color gris claro */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #666565a6;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .dotsContainerItem.active {
-  background-color: #333; /* Color oscuro para el dot activo */
+  background-color: #333;
 }
 
+/* Responsive styles */
 @media (max-width: 716px) {
   .mainContainer {
     height: 400px;
@@ -125,6 +128,7 @@ li img:hover {
   .leftArrow,
   .rightArrow {
     font-size: 30px;
+    top: 85%; /* También más abajo en mobile */
   }
 
   .dotsContainerItem {
@@ -136,6 +140,7 @@ li img:hover {
   img {
     object-fit: cover;
   }
+
   .mainContainer {
     height: 300px;
   }
@@ -147,6 +152,7 @@ li img:hover {
   .leftArrow,
   .rightArrow {
     font-size: 24px;
+    top: 85%;
   }
 
   .dotsContainerItem {

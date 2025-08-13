@@ -16,7 +16,7 @@ const Landing = () => {
     <div>
       <Parallax />
       <Slider open={open} setOpen={setOpen} />
-      {open && <Galeria />}
+      {open && <Galeria setOpen={setOpen}/>}
       <Concejeria />
       <EstoSomos />
       <SerasBendecido />

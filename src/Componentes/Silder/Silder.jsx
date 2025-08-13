@@ -4,8 +4,6 @@ import { data } from "../../data";
 import izqu from "../../assets/flechaiz_.png";
 import derec from "../../assets/flechader.png";
 import abajo from "../../assets/botonAbajo.png";
-import ImageGalleryModal from "../../Vistas/galeria/galeria";
-import Animacion from "../../Vistas/galeria/galeria.animacion";
 const Slider = ({ open, setOpen }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
