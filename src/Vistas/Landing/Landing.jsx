@@ -9,14 +9,15 @@ import Galeria from "../galeria/galeria";
 
 const Landing = () => {
   const [open, setOpen] = useState(false);
+  const [noticia, setNoticia] = useState();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div>
       <Parallax />
-      <Slider open={open} setOpen={setOpen} />
-      {open && <Galeria setOpen={setOpen}/>}
+      <Slider setOpen={setOpen} setNoticia={setNoticia} />
+      {open && <Galeria setOpen={setOpen} noticia={noticia} />}
       <Concejeria />
       <EstoSomos />
       <SerasBendecido />

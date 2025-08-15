@@ -10,12 +10,14 @@ import {
   Alert,
 } from "@mui/material";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { login } from "../../slice/authSlice";
 const Login = () => {
   const [formData, setFormData] = useState({ usuario: "", contrasenia: "" });
   const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
   const [snackbar, setSnackbar] = useState("success");
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleChange = (nombre, valor) => {
     setFormData((value) => ({
@@ -40,6 +42,9 @@ const Login = () => {
         setMessage("Bienvenido al sistema");
         setOpen(true);
         setSnackbar("success");
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
       }
       if (response.status == 404) {
         dispatch(login({ estado: false }));
@@ -54,6 +59,20 @@ const Login = () => {
 
   return (
     <>
+      <Snackbar
+        open={open}
+        autoHideDuration={4000}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setOpen(false)}
+          severity={snackbar}
+          sx={{ width: "100%" }}
+        >
+          {message}
+        </Alert>
+      </Snackbar>
       <Container component="main" maxWidth="xs">
         <Paper elevation={3} sx={{ p: 4, mt: 8 }}>
           <Typography component="h1" variant="h5" align="center">
@@ -86,20 +105,6 @@ const Login = () => {
           </Box>
         </Paper>
       </Container>
-      <Snackbar
-        open={open}
-        autoHideDuration={4000}
-        onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-      >
-        <Alert
-          onClose={() => setOpen(false)}
-          severity={snackbar}
-          sx={{ width: "100%" }}
-        >
-          {message}
-        </Alert>
-      </Snackbar>
     </>
   );
 };

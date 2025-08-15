@@ -13,10 +13,9 @@ import SubirFotosModal from "../../Vistas/subirFotos/subirFotos.jsx";
 import { useState } from "react";
 const Footer = () => {
   const status = useSelector((state) => state.auth.estado);
-  const [modal, setModal] = useState(false);
-  console.log("STATUS ", status);
+  const [modal, setOpen] = useState(false);
   const subirFotos = () => {
-    setModal(status);
+    setOpen(status);
   };
   return (
     <div className={style.footer}>
@@ -94,7 +93,7 @@ const Footer = () => {
         <img src={medea} alt="Medea logo" />
         <h2>Copyright©2024. Todos los derechos reservados</h2>
       </div>
-      {modal && <SubirFotosModal open={true} onClose={() => setModal(false)} />}
+      {modal && <SubirFotosModal open={modal} setOpen={setOpen} />}
     </div>
   );
 };

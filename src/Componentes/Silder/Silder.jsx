@@ -4,7 +4,7 @@ import { data } from "../../data";
 import izqu from "../../assets/flechaiz_.png";
 import derec from "../../assets/flechader.png";
 import abajo from "../../assets/botonAbajo.png";
-const Slider = ({ open, setOpen }) => {
+const Slider = ({ setOpen, setNoticia }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
@@ -36,9 +36,11 @@ const Slider = ({ open, setOpen }) => {
           setImagen(imgs);
         }
       })
-      .catch((error) => { console.log("ERROR ", error) })
-  }, [])
-  console.log("imagenBase ",imagenBase)
+      .catch((error) => {
+        console.log("ERROR ", error);
+      });
+  }, []);
+  console.log("imagenBase ", imagenBase);
   const scrollToImage = (direction) => {
     setCurrentIndex((curr) => {
       if (direction === "prev") {
@@ -53,28 +55,13 @@ const Slider = ({ open, setOpen }) => {
     setCurrentIndex(slideIndex);
   };
 
-  const scrollDown = () => {
-    const data = [
-      {
-        id: 1,
-        imgUrl: "/pic/flyer-pascua.jpg",
-      },
-      {
-        id: 2,
-        imgUrl: "/pic/02 bis.png",
-      },
-      {
-        id: 3,
-        imgUrl: "/pic/03 bis.png",
-      },
-      {
-        id: 4,
-        imgUrl: "/pic/04 bis.png",
-      },
-    ];
+  const scrollDown = (item) => {
     setImages(data);
-    setOpen(true);
-    console.log("ADD ", imagenBase)
+    if (item.noticia !== "" && item.titulo !== "") {
+      setOpen(true);
+    }
+    setNoticia(item);
+    console.log("ITEM ", item);
   };
   return (
     <>
@@ -96,19 +83,25 @@ const Slider = ({ open, setOpen }) => {
           >
             <img src={derec} alt="Next" className={style.arrowImage} />
           </div>
-          <div className={style.downButton} onClick={() => scrollDown()}>
-            <img src={abajo} alt="Down" />
-          </div>
+
           <div className={style.conteinerImg}>
             <ul ref={listRef}>
               {imagenBase?.map((item) => (
-                <li key={item.id}>
-                  <img
-                    src={item.imgUrl}
-                    style={{ width: "1920px", height: "958px" }}
-                    alt=""
-                  />
-                </li>
+                <>
+                  <li key={item.id}>
+                    <img
+                      src={item.imgUrl}
+                      style={{ width: "1920px", height: "958px" }}
+                      alt=""
+                    />
+                  </li>
+                  <div
+                    className={style.downButton}
+                    onClick={() => scrollDown(item)}
+                  >
+                    <img src={abajo} alt="Down" />
+                  </div>
+                </>
               ))}
             </ul>
           </div>
