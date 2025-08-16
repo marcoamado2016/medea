@@ -34,7 +34,7 @@
 }
 .downButton {
   position: absolute;
-  bottom: 15px; /* distancia desde el fondo */
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -46,7 +46,16 @@
   width: 40px;
   height: 40px;
 }
-
+.upButton {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  bottom: 550px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
 .downButton:hover {
   transform: translateX(-50%) scale(1.1);
 }

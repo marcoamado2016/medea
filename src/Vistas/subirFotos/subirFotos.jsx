@@ -33,7 +33,6 @@ const SubirFotosModal = ({ open, setOpen }) => {
     try {
       fetch("https://medea.com.ar/files.php", {
         method: "POST",
-
         body: data,
       })
         .then((response) => response.json())

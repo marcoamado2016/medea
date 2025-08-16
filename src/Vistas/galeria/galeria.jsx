@@ -5,7 +5,6 @@ import izqu from "../../assets/galeriaDerecha.png";
 import derec from "../../assets/galeriaIzquierda.png";
 import abajo from "../../assets/subir.png";
 const Slider = ({ setOpen, noticia, open }) => {
-  console.log("noticia ", noticia);
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
@@ -30,10 +29,6 @@ const Slider = ({ setOpen, noticia, open }) => {
         return curr === data1.length - 1 ? 0 : curr + 1;
       }
     });
-  };
-
-  const goToslide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
   };
 
   const scrollDown = () => {
@@ -69,7 +64,13 @@ const Slider = ({ setOpen, noticia, open }) => {
                         borderRadius: "8px",
                       }}
                     >
-                      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+                      <h1
+                        style={{
+                          textAlign: "center",
+                          marginBottom: "20px",
+                          color: "#000",
+                        }}
+                      >
                         {noticia?.titulo}
                       </h1>
 
@@ -81,7 +82,6 @@ const Slider = ({ setOpen, noticia, open }) => {
                           textAlign: "justify",
                         }}
                       >
-                        <p>{noticia?.noticia}</p>
                         <p>{noticia?.noticia}</p>
                       </div>
                     </div>

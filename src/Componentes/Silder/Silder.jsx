@@ -4,27 +4,21 @@ import { data } from "../../data";
 import izqu from "../../assets/flechaiz_.png";
 import derec from "../../assets/flechader.png";
 import abajo from "../../assets/botonAbajo.png";
+import { Snackbar, Alert } from "@mui/material";
 const Slider = ({ setOpen, setNoticia }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
-  const [images, setImages] = useState(null);
-  const [imagenBase, setImagen] = useState(null);
-  useEffect(() => {
-    const listNode = listRef.current;
-
-    if (listNode && !isFirstLoad) {
-      const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
-      if (imgNode) {
-        imgNode.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    }
-  }, [currentIndex]);
+  const [imagenBase, setImagen] = useState([]);
+  const [modal, setModal] = useState(false);
   useEffect(() => {
     fetch("https://medea.com.ar/obtenerImagenes.php")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
       .then((data) => {
         if (data.success) {
           const imgs = data?.data?.map((item) => ({
@@ -37,16 +31,31 @@ const Slider = ({ setOpen, setNoticia }) => {
         }
       })
       .catch((error) => {
-        console.log("ERROR ", error);
+        console.error("Error fetching images: ", error);
       });
   }, []);
-  console.log("imagenBase ", imagenBase);
+  useEffect(() => {
+    const listNode = listRef.current;
+
+    if (listNode && !isFirstLoad) {
+      const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+      if (imgNode) {
+        imgNode.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }
+    }
+  }, [currentIndex, isFirstLoad]);
+
   const scrollToImage = (direction) => {
+    if (!imagenBase || imagenBase.length === 0) return;
+
     setCurrentIndex((curr) => {
       if (direction === "prev") {
-        return curr === 0 ? data.length - 1 : curr - 1;
+        return curr === 0 ? imagenBase.length - 1 : curr - 1;
       } else {
-        return curr === data.length - 1 ? 0 : curr + 1;
+        return curr === imagenBase.length - 1 ? 0 : curr + 1;
       }
     });
   };
@@ -55,16 +64,51 @@ const Slider = ({ setOpen, setNoticia }) => {
     setCurrentIndex(slideIndex);
   };
 
-  const scrollDown = (item) => {
-    setImages(data);
-    if (item.noticia !== "" && item.titulo !== "") {
+  const scrollDown = () => {
+    const noticiaSeleccionada = imagenBase[currentIndex];
+    if (
+      noticiaSeleccionada.noticia !== "" &&
+      noticiaSeleccionada.titulo !== ""
+    ) {
       setOpen(true);
     }
-    setNoticia(item);
-    console.log("ITEM ", item);
+    setNoticia(noticiaSeleccionada);
+  };
+  const scrollDelete = () => {
+    const noticiaSeleccionada = imagenBase[currentIndex];
+    const data = new FormData();
+    data.append("id", noticiaSeleccionada?.id);
+    try {
+      fetch("https://medea.com.ar/deleteFile.php", {
+        method: "POST",
+        body: data,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data?.success === true) {
+            setModal(true);
+          }
+        });
+    } catch (error) {
+      console.log("ERROR DELETE ", error);
+    }
   };
   return (
     <>
+      <Snackbar
+        open={modal}
+        autoHideDuration={3000}
+        onClose={() => setModal(false)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setError(false)}
+          severity={"success"}
+          sx={{ width: "100%" }}
+        >
+          {"Imagen borrada"}
+        </Alert>
+      </Snackbar>
       <div
         className={style.mainContainer}
         onMouseEnter={() => setIsFirstLoad(false)}
@@ -87,21 +131,25 @@ const Slider = ({ setOpen, setNoticia }) => {
           <div className={style.conteinerImg}>
             <ul ref={listRef}>
               {imagenBase?.map((item) => (
-                <>
-                  <li key={item.id}>
-                    <img
-                      src={item.imgUrl}
-                      style={{ width: "1920px", height: "958px" }}
-                      alt=""
-                    />
-                  </li>
+                <li key={item.id}>
+                  <div
+                    className={style.upButton}
+                    onClick={() => scrollDelete()}
+                  >
+                    <img src={abajo} alt="Ver noticia" />
+                  </div>
+                  <img
+                    src={item.imgUrl}
+                    style={{ width: "1920px", height: "958px" }}
+                    alt={item.titulo || "Slider Image"}
+                  />
                   <div
                     className={style.downButton}
-                    onClick={() => scrollDown(item)}
+                    onClick={() => scrollDown()}
                   >
-                    <img src={abajo} alt="Down" />
+                    <img src={abajo} alt="Ver noticia" />
                   </div>
-                </>
+                </li>
               ))}
             </ul>
           </div>
@@ -109,7 +157,9 @@ const Slider = ({ setOpen, setNoticia }) => {
             {imagenBase?.map((_, idx) => (
               <div
                 key={idx}
-                className={style.dotsContainerItem}
+                className={`${style.dotsContainerItem} ${
+                  idx === currentIndex ? style.activeDot : ""
+                }`}
                 onClick={() => goToslide(idx)}
               ></div>
             ))}
