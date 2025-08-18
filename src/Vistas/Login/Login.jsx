@@ -39,6 +39,7 @@ const Login = () => {
 
       if (response.status == 200) {
         dispatch(login({ estado: true }));
+        localStorage.setItem("estado", "true");
         setMessage("Bienvenido al sistema");
         setOpen(true);
         setSnackbar("success");
@@ -48,6 +49,7 @@ const Login = () => {
       }
       if (response.status == 404) {
         dispatch(login({ estado: false }));
+        localStorage.setItem("estado", "false");
         setMessage("No tiene permiso");
         setOpen(true);
         setSnackbar("error");

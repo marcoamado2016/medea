@@ -5,15 +5,38 @@ import izqu from "../../assets/flechaiz_.png";
 import derec from "../../assets/flechader.png";
 import abajo from "../../assets/botonAbajo.png";
 import { Snackbar, Alert } from "@mui/material";
+import { useSelector } from "react-redux";
 const Slider = ({ setOpen, setNoticia }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const [imagenBase, setImagen] = useState([]);
   const [modal, setModal] = useState(false);
+  const [refresh, setRefresh] = useState(false);
+  const status = useSelector((state) => state.auth.estado);
   useEffect(() => {
+    cargarImage();
+  }, []);
+  useEffect(() => {
+    cargarImage();
+  }, [refresh]);
+  useEffect(() => {
+    const listNode = listRef.current;
+
+    if (listNode && !isFirstLoad) {
+      const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+      if (imgNode) {
+        imgNode.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }
+    }
+  }, [currentIndex, isFirstLoad]);
+  const cargarImage = () => {
     fetch("https://medea.com.ar/obtenerImagenes.php")
       .then((res) => {
+        setRefresh(false);
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
@@ -33,21 +56,7 @@ const Slider = ({ setOpen, setNoticia }) => {
       .catch((error) => {
         console.error("Error fetching images: ", error);
       });
-  }, []);
-  useEffect(() => {
-    const listNode = listRef.current;
-
-    if (listNode && !isFirstLoad) {
-      const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
-      if (imgNode) {
-        imgNode.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-        });
-      }
-    }
-  }, [currentIndex, isFirstLoad]);
-
+  };
   const scrollToImage = (direction) => {
     if (!imagenBase || imagenBase.length === 0) return;
 
@@ -86,6 +95,7 @@ const Slider = ({ setOpen, setNoticia }) => {
         .then((response) => response.json())
         .then((data) => {
           if (data?.success === true) {
+            setRefresh(true);
             setModal(true);
           }
         });
@@ -132,12 +142,14 @@ const Slider = ({ setOpen, setNoticia }) => {
             <ul ref={listRef}>
               {imagenBase?.map((item) => (
                 <li key={item.id}>
-                  <div
-                    className={style.upButton}
-                    onClick={() => scrollDelete()}
-                  >
-                    <img src={abajo} alt="Ver noticia" />
-                  </div>
+                  {status && (
+                    <div
+                      className={style.upButton}
+                      onClick={() => scrollDelete()}
+                    >
+                      <img src={abajo} alt="Ver noticia" />
+                    </div>
+                  )}
                   <img
                     src={item.imgUrl}
                     style={{ width: "1920px", height: "958px" }}

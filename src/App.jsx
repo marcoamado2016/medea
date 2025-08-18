@@ -15,10 +15,18 @@ import Cultos from "./Vistas/Cultos/Cultos";
 import Colaborar from "./Vistas/Colaborar/Colaborar";
 import Button from "./Vistas/Button/Button";
 import Login from "./Vistas/Login/Login";
-
-// Importamos el Contexto Global
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { login } from "./slice/authSlice";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const saveEstado = localStorage.getItem("estado");
+    if (saveEstado === "true") {
+      dispatch(login({ estado: true }));
+    }
+  }, []);
   return (
     <div>
       <div className="app"></div>

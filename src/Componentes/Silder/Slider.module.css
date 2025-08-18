@@ -51,7 +51,7 @@
   top: 15px;
   left: 50%;
   bottom: 550px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(45deg);
   cursor: pointer;
   z-index: 2;
   transition: transform 0.3s ease;

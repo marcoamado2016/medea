@@ -11,11 +11,18 @@ import subir from "../../assets/subir.png";
 import { useSelector } from "react-redux";
 import SubirFotosModal from "../../Vistas/subirFotos/subirFotos.jsx";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../../slice/authSlice.js";
 const Footer = () => {
+    const dispatch = useDispatch();
   const status = useSelector((state) => state.auth.estado);
   const [modal, setOpen] = useState(false);
   const subirFotos = () => {
     setOpen(status);
+  };
+  const cerraSesion = () => {
+    dispatch(login({ estado: false }));
+    localStorage.setItem("estado", "false");
   };
   return (
     <div className={style.footer}>
@@ -47,6 +54,11 @@ const Footer = () => {
           {status && (
             <div onClick={subirFotos}>
               <img src={subir} className={style.redes} />
+            </div>
+          )}
+          {status && (
+            <div onClick={cerraSesion}>
+              <p>cerra sesión</p>
             </div>
           )}
           <div className={style.redes}>
