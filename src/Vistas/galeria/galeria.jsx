@@ -83,6 +83,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                         }}
                       >
                         <p>{noticia?.noticia}</p>
+                        <button>Ver mas </button>
                       </div>
                     </div>
                   )}

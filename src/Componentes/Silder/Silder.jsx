@@ -49,8 +49,12 @@ const Slider = ({ setOpen, setNoticia }) => {
             imgUrl: item.url_imagen,
             titulo: item.titulo,
             noticia: item.noticia,
+            imagenesRelacionadas: item.imagenesRelacionadas
+
           }));
+          console.log("imgsimgsimgs ",imgs)
           setImagen(imgs);
+          console.log("IMAGENES ", imagenBase)
         }
       })
       .catch((error) => {
@@ -169,9 +173,8 @@ const Slider = ({ setOpen, setNoticia }) => {
             {imagenBase?.map((_, idx) => (
               <div
                 key={idx}
-                className={`${style.dotsContainerItem} ${
-                  idx === currentIndex ? style.activeDot : ""
-                }`}
+                className={`${style.dotsContainerItem} ${idx === currentIndex ? style.activeDot : ""
+                  }`}
                 onClick={() => goToslide(idx)}
               ></div>
             ))}
