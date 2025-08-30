@@ -32,7 +32,7 @@
 .rightArrow {
   height: 45px;
   position: absolute;
-  top: 80%; /* Cambiado de 50% a 80% */
+  top: 80%;
   transform: translateY(-50%);
   right: 32px;
   font-size: 40px;
@@ -44,18 +44,20 @@
 
 .downButton {
   position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 80%;                /* igual que la flecha */
+  transform: translateY(-50%);
+  right: 85px;             /* separa del borde derecho */
+  width: 45px;
+  height: 45px;
+  background: #2b2b2b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   z-index: 2;
-  transition: transform 0.3s ease;
 }
 
-.downButton img {
-  width: 40px;
-  height: 40px;
-}
 
 .downButton:hover {
   transform: translateX(-50%) scale(1.1);

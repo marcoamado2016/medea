@@ -1,9 +1,9 @@
 import style from "./Slider.module.css";
 import { useRef, useState, useEffect } from "react";
-import { data } from "../../data";
 import izqu from "../../assets/flechaiz_.png";
 import derec from "../../assets/flechader.png";
 import abajo from "../../assets/botonAbajo.png";
+import editar from "../../assets/editar.png";
 import { Snackbar, Alert } from "@mui/material";
 import { useSelector } from "react-redux";
 const Slider = ({ setOpen, setNoticia }) => {
@@ -49,12 +49,9 @@ const Slider = ({ setOpen, setNoticia }) => {
             imgUrl: item.url_imagen,
             titulo: item.titulo,
             noticia: item.noticia,
-            imagenesRelacionadas: item.imagenesRelacionadas
-
+            imagenesRelacionadas: item.imagenesRelacionadas,
           }));
-          console.log("imgsimgsimgs ",imgs)
           setImagen(imgs);
-          console.log("IMAGENES ", imagenBase)
         }
       })
       .catch((error) => {
@@ -151,7 +148,7 @@ const Slider = ({ setOpen, setNoticia }) => {
                       className={style.upButton}
                       onClick={() => scrollDelete()}
                     >
-                      <img src={abajo} alt="Ver noticia" />
+                      <img src={editar} alt="Ver noticia" />
                     </div>
                   )}
                   <img
@@ -173,8 +170,9 @@ const Slider = ({ setOpen, setNoticia }) => {
             {imagenBase?.map((_, idx) => (
               <div
                 key={idx}
-                className={`${style.dotsContainerItem} ${idx === currentIndex ? style.activeDot : ""
-                  }`}
+                className={`${style.dotsContainerItem} ${
+                  idx === currentIndex ? style.activeDot : ""
+                }`}
                 onClick={() => goToslide(idx)}
               ></div>
             ))}
