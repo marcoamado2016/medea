@@ -90,55 +90,42 @@ const Slider = ({ setOpen, noticia, open }) => {
                   }}
                 >
                   {noticia && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "20%",
-                        left: "10%",
-                        right: "10%",
-                        color: "white",
-                        padding: "20px",
-                        borderRadius: "8px",
-                      }}
-                    >
+                    <>
                       <div
                         style={{
-                          position: "absolute",
-                          top: "20%",
-                          left: "10%",
-                          color: "white",
-                          padding: "20px",
-                          borderRadius: "8px",
                           display: "flex",
-                          flexDirection: "column",
-                          alignItems: "flex-start", // alinea todo a la izquierda
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "10px",
+                          paddingLeft: "180px",
+                          marginTop: "150px",
                         }}
                       >
-                        <h1
-                          style={{
-                            fontFamily: "'The Seasons', sans-serif",
-                            fontWeight: 400,
-                            fontSize: "32px",
-                            lineHeight: "1.2",
-                            textAlign: "left", // ahora a la izquierda
-                            marginBottom: "20px",
-                            color: "#0c0c0cff",
-                          }}
-                        >
-                          {noticia?.titulo}
-                        </h1>
+                        <div style={{ flex: 1, maxWidth: "500px" }}>
+                          <h1
+                            style={{
+                              fontFamily: "'The Seasons', sans-serif",
+                              fontWeight: 400,
+                              fontSize: "32px",
+                              lineHeight: "1.2",
+                              textAlign: "left", // ahora a la izquierda
+                              marginBottom: "20px",
+                              color: "#0c0c0cff",
+                            }}
+                          >
+                            {noticia?.titulo}
+                          </h1>
 
-                        <div style={{ maxWidth: "500px" }}>
                           <p
                             style={{
-                              fontFamily: "'Titillium Web', sans-serif",
-                              fontWeight: 100,
+                              fontWeight: 400,
                               fontSize: "16px",
                               lineHeight: "1.6",
-                              color: "#020202ff",
-                              columnGap: "40px",
+                              color: "#020202",
+                              columnGap: "20px",
                               columnCount: 2,
-                              columnWidth: "465px", // ancho más razonable por columna
+                              columnWidth: "240px",
                               textAlign: "justify",
                               margin: 0,
                             }}
@@ -147,30 +134,71 @@ const Slider = ({ setOpen, noticia, open }) => {
                           </p>
                         </div>
                       </div>
-
                       <div
                         style={{
-                          justifyContent: "flex-end",
                           display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-end",
+                          marginTop: "-455px",
+                          marginRight: "400px",
                         }}
                       >
                         <button
                           onClick={() =>
                             albunFotos(noticia.imagenesRelacionadas)
                           }
+                          style={{
+                            marginBottom: "20px",
+                            background: "transparent",
+                            border: "none",
+                            cursor: "pointer",
+                          }}
                         >
                           <img
                             src={galeria}
                             alt="ver más"
                             style={{
-                              width: "100%",
+                              width: "80%",
                               height: "auto",
                               objectFit: "contain",
                             }}
                           />
                         </button>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "20px",
+                            alignItems: "flex-end",
+                            marginRight: "-112px",
+                            border: "1px",
+                          }}
+                        >
+                          {noticia.imagenesRelacionadas[0] && (
+                            <img
+                              src={noticia.imagenesRelacionadas[0]?.url_imagen}
+                              alt="Imagen 1"
+                              style={{
+                                width: "200px",
+                                height: "150px",
+                                backgroundColor: "#000",
+                              }}
+                            />
+                          )}
+                          {noticia.imagenesRelacionadas[1] && (
+                            <img
+                              src={noticia.imagenesRelacionadas[1]?.url_imagen}
+                              alt="Imagen 2"
+                              style={{
+                                width: "200px",
+                                height: "150px",
+                                backgroundColor: "#000",
+                              }}
+                            />
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    </>
                   )}
                 </li>
               ))}
