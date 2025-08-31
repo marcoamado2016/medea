@@ -6,6 +6,7 @@ import abajo from "../../assets/botonAbajo.png";
 import editar from "../../assets/editar.png";
 import { Snackbar, Alert } from "@mui/material";
 import { useSelector } from "react-redux";
+import ModalEdit from "./modal.edit";
 const Slider = ({ setOpen, setNoticia }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,12 +15,18 @@ const Slider = ({ setOpen, setNoticia }) => {
   const [modal, setModal] = useState(false);
   const [refresh, setRefresh] = useState(false);
   const status = useSelector((state) => state.auth.estado);
+  const [edit, setEdit] = useState(false);
+
   useEffect(() => {
     cargarImage();
   }, []);
   useEffect(() => {
     cargarImage();
   }, [refresh]);
+
+  useEffect(()=>{
+    cargarImage();
+  },[edit])
   useEffect(() => {
     const listNode = listRef.current;
 
@@ -84,25 +91,8 @@ const Slider = ({ setOpen, setNoticia }) => {
     }
     setNoticia(noticiaSeleccionada);
   };
-  const scrollDelete = () => {
-    const noticiaSeleccionada = imagenBase[currentIndex];
-    const data = new FormData();
-    data.append("id", noticiaSeleccionada?.id);
-    try {
-      fetch("https://medea.com.ar/deleteFile.php", {
-        method: "POST",
-        body: data,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data?.success === true) {
-            setRefresh(true);
-            setModal(true);
-          }
-        });
-    } catch (error) {
-      console.log("ERROR DELETE ", error);
-    }
+  const scrollEdit = () => {
+    setEdit(true);
   };
   return (
     <>
@@ -146,7 +136,7 @@ const Slider = ({ setOpen, setNoticia }) => {
                   {status && (
                     <div
                       className={style.upButton}
-                      onClick={() => scrollDelete()}
+                      onClick={() => scrollEdit()}
                     >
                       <img src={editar} alt="Ver noticia" />
                     </div>
@@ -179,6 +169,11 @@ const Slider = ({ setOpen, setNoticia }) => {
           </div>
         </div>
       </div>
+      <ModalEdit
+        edit={edit}
+        setEdit={setEdit}
+        imagenEdit={imagenBase[currentIndex]}
+      />
     </>
   );
 };
