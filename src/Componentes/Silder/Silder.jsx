@@ -20,6 +20,7 @@ const Slider = ({ setOpen, setNoticia }) => {
   useEffect(() => {
     cargarImage();
   }, []);
+  
   useEffect(() => {
     cargarImage();
   }, [refresh]);
@@ -107,7 +108,7 @@ const Slider = ({ setOpen, setNoticia }) => {
           severity={"success"}
           sx={{ width: "100%" }}
         >
-          {"Imagen borrada"}
+          {"Imagen Modificada"}
         </Alert>
       </Snackbar>
       <div

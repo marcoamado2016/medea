@@ -47,7 +47,7 @@ const SubirFotosModal = ({ open, setOpen }) => {
   });
   const [error, setError] = useState(false);
   const handleChange = (nombre, valor) => {
-    console.log("NOMBRE ", nombre, " valor ", valor);
+    // console.log("NOMBRE ", nombre, " valor ", valor);
     setFormData((value) => ({
       ...value,
       [nombre]: valor,
@@ -110,6 +110,7 @@ const SubirFotosModal = ({ open, setOpen }) => {
             setError(false);
             onClose();
           }
+          window.location.reload();
         });
     } catch (error) {
       console.log("ERROR SUBIR FOTOS ", error);
@@ -153,6 +154,10 @@ const SubirFotosModal = ({ open, setOpen }) => {
                       onChange={(e) => {
                         handleChange("checked1", e.target.checked);
                       }}
+                      disabled={
+                        formData.noticia1.length < 1150 &&
+                        formData.noticia1 != ""
+                      }
                     />
                   }
                 />
@@ -199,8 +204,15 @@ const SubirFotosModal = ({ open, setOpen }) => {
                   fullWidth
                   name="noticia"
                   value={formData.noticia1}
-                  onChange={(e) => handleChange("noticia1", e.target.value)}
+                  onChange={(e) => {
+                    const valor = e.target.value.slice(0, 1150);
+                    handleChange("noticia1", valor);
+                  }}
                   rows={10}
+                  label={
+                    "Para enviar la noticia debera ingresar 1150 caracteres"
+                  }
+                  inputProps={{ maxLength: 1150 }}
                 />
               </Grid>
               <Grid item>
@@ -246,6 +258,10 @@ const SubirFotosModal = ({ open, setOpen }) => {
                       onChange={(e) => {
                         handleChange("checked2", e.target.checked);
                       }}
+                      disabled={
+                        formData.noticia2.length < 1150 &&
+                        formData.noticia2 != ""
+                      }
                     />
                   }
                 />
@@ -292,8 +308,12 @@ const SubirFotosModal = ({ open, setOpen }) => {
                   fullWidth
                   name="noticia"
                   value={formData.noticia2}
-                  onChange={(e) => handleChange("noticia2", e.target.value)}
+                  onChange={(e) => {
+                    const valor = e.target.value.slice(0, 1150);
+                    handleChange("noticia2", valor);
+                  }}
                   rows={10}
+                  inputProps={{ maxLength: 1150 }}
                 />
               </Grid>
               <Grid item>
@@ -339,6 +359,10 @@ const SubirFotosModal = ({ open, setOpen }) => {
                       onChange={(e) => {
                         handleChange("checked3", e.target.checked);
                       }}
+                      disabled={
+                        formData.noticia3.length < 1150 &&
+                        formData.noticia3 != ""
+                      }
                     />
                   }
                 />
@@ -385,8 +409,12 @@ const SubirFotosModal = ({ open, setOpen }) => {
                   fullWidth
                   name="noticia"
                   value={formData.noticia3}
-                  onChange={(e) => handleChange("noticia3", e.target.value)}
+                  onChange={(e) => {
+                    const valor = e.target.value.slice(0, 1150);
+                    handleChange("noticia3", valor);
+                  }}
                   rows={10}
+                  inputProps={{ maxLength: 1150 }}
                 />
               </Grid>
               <Grid item>
@@ -432,6 +460,10 @@ const SubirFotosModal = ({ open, setOpen }) => {
                       onChange={(e) => {
                         handleChange("checked4", e.target.checked);
                       }}
+                      disabled={
+                        formData.noticia4.length < 1150 &&
+                        formData.noticia4 != ""
+                      }
                     />
                   }
                 />
@@ -478,8 +510,12 @@ const SubirFotosModal = ({ open, setOpen }) => {
                   fullWidth
                   name="noticia"
                   value={formData.noticia4}
-                  onChange={(e) => handleChange("noticia4", e.target.value)}
+                  onChange={(e) => {
+                    const valor = e.target.value.slice(0, 1150);
+                    handleChange("noticia4", valor);
+                  }}
                   rows={10}
+                  inputProps={{ maxLength: 1150 }}
                 />
               </Grid>
               <Grid item>
@@ -525,6 +561,10 @@ const SubirFotosModal = ({ open, setOpen }) => {
                       onChange={(e) => {
                         handleChange("checked5", e.target.checked);
                       }}
+                      disabled={
+                        formData.noticia5.length < 1150 &&
+                        formData.noticia5 != ""
+                      }
                     />
                   }
                 />
@@ -571,8 +611,12 @@ const SubirFotosModal = ({ open, setOpen }) => {
                   fullWidth
                   name="noticia"
                   value={formData.noticia5}
-                  onChange={(e) => handleChange("noticia5", e.target.value)}
+                  onChange={(e) => {
+                    const valor = e.target.value.slice(0, 1150);
+                    handleChange("noticia5", valor);
+                  }}
                   rows={10}
+                  inputProps={{ maxLength: 1150 }}
                 />
               </Grid>
               <Grid item>
