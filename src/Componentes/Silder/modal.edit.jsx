@@ -15,6 +15,7 @@ import { grey, red } from "@mui/material/colors";
 import { useEffect, useState } from "react";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
+  console.log("EDIT ", imagenEdit);
   const [formData, setFormData] = useState({
     imagen1: null,
     noticia1: "",
@@ -37,8 +38,8 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
     if (imagenEdit) {
       setFormData({
         imagen1: imagenEdit?.imgUrl?.split("/")[4]?.split("_")[1],
-        noticia1: imagenEdit?.noticia1,
-        titulo1: imagenEdit?.titulo1,
+        noticia1: imagenEdit?.noticia,
+        titulo1: imagenEdit?.titulo,
         imagenes1: [],
         id: imagenEdit?.id,
       });
@@ -127,7 +128,7 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
               <TextField
                 fullWidth
                 name="titulo"
-                value={formData.titulo1 || imagenEdit?.titulo}
+                value={formData.titulo1}
                 onChange={(e) => handleChange("titulo1", e.target.value)}
               />
             </Grid>
@@ -138,11 +139,11 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
                 multiline
                 fullWidth
                 name="noticia"
-                value={formData.noticia1 || imagenEdit?.noticia}
+                value={formData.noticia1}
                 onChange={(e) =>
                   handleChange(
                     "noticia1",
-                    e.target.value || imagenEdit?.noticia
+                    e.target.value 
                   )
                 }
                 rows={10}
