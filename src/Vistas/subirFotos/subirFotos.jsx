@@ -156,7 +156,7 @@ const SubirFotosModal = ({ open, setOpen }) => {
                       }}
                       disabled={
                         formData.noticia1.length < 1150 &&
-                        formData.noticia1 != ""
+                        formData.noticia1 != "" 
                       }
                     />
                   }

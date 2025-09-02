@@ -12,7 +12,6 @@ const Slider = ({ setOpen, noticia, open }) => {
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const [album, setAlbum] = useState(false);
   const [albumIndex, setAlbumIndex] = useState(0);
-
   useEffect(() => {
     const listNode = listRef.current;
 
@@ -47,7 +46,6 @@ const Slider = ({ setOpen, noticia, open }) => {
   };
 
   const albunFotos = (imagenesRelacionadas) => {
-    console.log("imagenesRelacionadas ", imagenesRelacionadas);
     setAlbum(true);
   };
 
@@ -89,8 +87,8 @@ const Slider = ({ setOpen, noticia, open }) => {
                     display: index === currentIndex ? "block" : "none", // mostramos solo la actual
                   }}
                 >
-                  {noticia && (
-                    <>
+                  <>
+                    {noticia.noticia != "" && noticia.titulo != "" && (
                       <div
                         style={{
                           display: "flex",
@@ -98,7 +96,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                           alignItems: "flex-start",
                           justifyContent: "flex-start",
                           gap: "10px",
-                          paddingLeft: "180px",
+                          paddingLeft: "250px",
                           marginTop: "150px",
                         }}
                       >
@@ -109,7 +107,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                               fontWeight: 400,
                               fontSize: "32px",
                               lineHeight: "1.2",
-                              textAlign: "left", // ahora a la izquierda
+                              textAlign: "left", 
                               marginBottom: "20px",
                               color: "#0c0c0cff",
                             }}
@@ -134,72 +132,83 @@ const Slider = ({ setOpen, noticia, open }) => {
                           </p>
                         </div>
                       </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "flex-end",
-                          marginTop: "-455px",
-                          marginRight: "400px",
-                        }}
-                      >
-                        <button
-                          onClick={() =>
-                            albunFotos(noticia.imagenesRelacionadas)
-                          }
-                          style={{
-                            marginBottom: "20px",
-                            background: "transparent",
-                            border: "none",
-                            cursor: "pointer",
-                          }}
-                        >
-                          <img
-                            src={galeria}
-                            alt="ver más"
-                            style={{
-                              width: "80%",
-                              height: "auto",
-                              objectFit: "contain",
-                            }}
-                          />
-                        </button>
+                    )}
+                    {noticia.imagenesRelacionadas?.length > 0 && (
+                      <>
                         <div
                           style={{
                             display: "flex",
                             flexDirection: "column",
-                            gap: "20px",
                             alignItems: "flex-end",
-                            marginRight: "-112px",
-                            border: "1px",
+                            marginTop:
+                              noticia.noticia != "" && noticia.titulo != ""
+                                ? "-455px"
+                                : "150px",
+                            marginRight: "400px",
                           }}
                         >
-                          {noticia.imagenesRelacionadas[0] && (
+                          <button
+                            onClick={() =>
+                              albunFotos(noticia.imagenesRelacionadas)
+                            }
+                            style={{
+                              marginBottom: "20px",
+                              background: "transparent",
+                              border: "none",
+                              cursor: "pointer",
+                            }}
+                          >
                             <img
-                              src={noticia.imagenesRelacionadas[0]?.url_imagen}
-                              alt="Imagen 1"
+                              src={galeria}
+                              alt="ver más"
                               style={{
-                                width: "200px",
-                                height: "150px",
-                                backgroundColor: "#000",
+                                width: "80%",
+                                height: "auto",
+                                objectFit: "contain",
                               }}
                             />
-                          )}
-                          {noticia.imagenesRelacionadas[1] && (
-                            <img
-                              src={noticia.imagenesRelacionadas[1]?.url_imagen}
-                              alt="Imagen 2"
-                              style={{
-                                width: "200px",
-                                height: "150px",
-                                backgroundColor: "#000",
-                              }}
-                            />
-                          )}
+                          </button>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "20px",
+                              alignItems: "flex-end",
+                              marginRight: "-112px",
+                              border: "1px",
+                            }}
+                          >
+                            {noticia.imagenesRelacionadas[0] && (
+                              <img
+                                src={
+                                  noticia.imagenesRelacionadas[0]?.url_imagen
+                                }
+                                alt="Imagen 1"
+                                style={{
+                                  width: "200px",
+                                  height: "150px",
+                                  backgroundColor: "#000",
+                                }}
+                              />
+                            )}
+                            {noticia.imagenesRelacionadas[1] && (
+                              <img
+                                src={
+                                  noticia.imagenesRelacionadas[1]?.url_imagen
+                                }
+                                alt="Imagen 2"
+                                style={{
+                                  width: "200px",
+                                  height: "150px",
+                                  backgroundColor: "#000",
+                                }}
+                              />
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    </>
-                  )}
+                      </>
+                    )}
+                  </>
                 </li>
               ))}
             </ul>

@@ -20,14 +20,14 @@ const Slider = ({ setOpen, setNoticia }) => {
   useEffect(() => {
     cargarImage();
   }, []);
-  
+
   useEffect(() => {
     cargarImage();
   }, [refresh]);
 
-  useEffect(()=>{
+  useEffect(() => {
     cargarImage();
-  },[edit])
+  }, [edit]);
   useEffect(() => {
     const listNode = listRef.current;
 
@@ -84,12 +84,7 @@ const Slider = ({ setOpen, setNoticia }) => {
 
   const scrollDown = () => {
     const noticiaSeleccionada = imagenBase[currentIndex];
-    if (
-      noticiaSeleccionada.noticia !== "" &&
-      noticiaSeleccionada.titulo !== ""
-    ) {
-      setOpen(true);
-    }
+    setOpen(true);
     setNoticia(noticiaSeleccionada);
   };
   const scrollEdit = () => {

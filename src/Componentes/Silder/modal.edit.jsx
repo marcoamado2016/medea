@@ -82,6 +82,9 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
             style={{ background: grey[100] }}
           >
             <Grid item>
+              <Typography> Para editar no dejar campos vacios </Typography>
+            </Grid>
+            <Grid item>
               <DialogTitle>Noticia </DialogTitle>
             </Grid>
             <Grid container item justifyContent={"flex-end"}>
@@ -140,12 +143,10 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
                 fullWidth
                 name="noticia"
                 value={formData.noticia1}
-                onChange={(e) =>
-                  handleChange(
-                    "noticia1",
-                    e.target.value 
-                  )
-                }
+                onChange={(e) => {
+                  const valor = e.target.value.slice(0, 1150);
+                  handleChange("noticia1", valor);
+                }}
                 rows={10}
               />
             </Grid>
@@ -188,7 +189,11 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
         >
           Cancelar
         </Button>
-        <Button onClick={() => handleGuardar(formData)} variant="contained">
+        <Button
+          onClick={() => handleGuardar(formData)}
+          variant="contained"
+          disabled={formData.noticia1.length < 1150 && formData.noticia1 != ""}
+        >
           Guardar
         </Button>
       </DialogActions>
