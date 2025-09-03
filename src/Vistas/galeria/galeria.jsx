@@ -176,6 +176,8 @@ const Slider = ({ setOpen, noticia, open }) => {
                               alignItems: "flex-end",
                               marginRight: "-112px",
                               border: "1px",
+                              cursor:"default",
+                              pointerEvents:"none"
                             }}
                           >
                             {noticia.imagenesRelacionadas[0] && (

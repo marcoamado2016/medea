@@ -2,11 +2,13 @@
   height: 100vh;
   margin: 0px auto;
 }
+
 .sliderConteiner {
   position: relative;
   height: 100%;
   width: 98.9vw;
 }
+
 .conteinerImg ul {
   gap: 5px;
   flex-direction: row;
@@ -14,14 +16,17 @@
   height: 100%;
   max-height: 100%;
 }
+
 .conteinerImg ul {
   gap: 0px;
   flex-direction: row;
   width: 100%;
   height: 100%;
 }
+
 .leftArrow {
-  height: 45px;
+  width: 33px;
+  height: 33px;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -32,6 +37,7 @@
   z-index: 1;
   cursor: pointer;
 }
+
 .downButton {
   position: absolute;
   bottom: 15px;
@@ -39,28 +45,35 @@
   transform: translateX(-50%);
   cursor: pointer;
   z-index: 2;
+  width: 73px;
+  height: 73px;
   transition: transform 0.3s ease;
 }
 
 .downButton img {
-  width: 40px;
-  height: 40px;
+  width: 73px;
+  height: 73px;
 }
+
 .upButton {
   position: absolute;
   top: 15px;
   left: 50%;
-  bottom: 550px;
-  transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%);
+  width: 73px;
+  height: 73px;
   cursor: pointer;
   z-index: 2;
   transition: transform 0.3s ease;
 }
+
 .downButton:hover {
   transform: translateX(-50%) scale(1.1);
 }
+
 .rightArrow {
-  height: 45px;
+  width: 33px;
+  height: 33px;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -71,6 +84,7 @@
   z-index: 1;
   cursor: pointer;
 }
+
 ul {
   display: flex;
   list-style: none;
@@ -78,6 +92,7 @@ ul {
   margin: 0;
   overflow: hidden;
 }
+
 li {
   flex-shrink: 0;
   display: flex;
@@ -86,13 +101,17 @@ li {
   height: 100%;
   width: 100%;
 }
+
 img {
   cursor: pointer;
-  width: 100%; /* ocupa todo el contenedor li */
+  width: 100%;
+  /* ocupa todo el contenedor li */
   height: 100%;
-  object-fit: cover; /* recorta la imagen si es necesario para llenar el espacio */
+  object-fit: cover;
+  /* recorta la imagen si es necesario para llenar el espacio */
   border-radius: none;
 }
+
 li img {
   transition: transform 0.3s ease, border 0.3s ease;
 }
@@ -105,21 +124,27 @@ li img:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espacio entre los dots */
+  gap: 20px;
+  /* Espacio entre los dots */
   margin-top: 25px;
 }
 
 .dotsContainerItem {
-  width: 10px; /* Tamaño del dot */
-  height: 10px; /* Tamaño del dot */
-  border-radius: 50%; /* Forma circular */
-  background-color: #666565a6; /* Color gris claro */
+  width: 10px;
+  /* Tamaño del dot */
+  height: 10px;
+  /* Tamaño del dot */
+  border-radius: 50%;
+  /* Forma circular */
+  background-color: #666565a6;
+  /* Color gris claro */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .dotsContainerItem.active {
-  background-color: #333; /* Color oscuro para el dot activo */
+  background-color: #333;
+  /* Color oscuro para el dot activo */
 }
 
 @media (max-width: 716px) {
@@ -145,6 +170,7 @@ li img:hover {
   img {
     object-fit: cover;
   }
+
   .mainContainer {
     height: 300px;
   }

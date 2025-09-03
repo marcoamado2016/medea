@@ -49,7 +49,6 @@ const NavBar = () => {
       <div
         className={style.menuIcon}
         onClick={() => {
-          console.log("HOLA");
           setMenuOpen(!menuOpen);
         }}
       >

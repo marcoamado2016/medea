@@ -17,10 +17,13 @@
 }
 
 .leftArrow {
-  height: 45px;
+  width: 33px;
+  height: 33px;
   position: absolute;
-  top: 80%; /* Cambiado de 50% a 80% */
-  transform: translateY(-50%); /* Solo movimiento vertical */
+  top: 80%;
+  /* Cambiado de 50% a 80% */
+  transform: translateY(-50%);
+  /* Solo movimiento vertical */
   left: 80px;
   font-size: 40px;
   font-weight: 500;
@@ -30,11 +33,13 @@
 }
 
 .rightArrow {
-  height: 45px;
+  width: 33px;
+  height: 33px;
   position: absolute;
   top: 80%;
   transform: translateY(-50%);
-  right: 120px;     /* antes 32px → más a la izquierda */
+  right: 120px;
+  /* antes 32px → más a la izquierda */
   font-size: 40px;
   font-weight: 500;
   color: #fff0f0c2;
@@ -46,9 +51,10 @@
   position: absolute;
   top: 80%;
   transform: translateY(-50%);
-  right: 200px;      /* antes 85px → ahora queda más separado de la flecha derecha */
-  width: 45px;
-  height: 45px;
+  right: 200px;
+  /* antes 85px → ahora queda más separado de la flecha derecha */
+  width: 33px;
+  height: 33px;
   background: #2b2b2b;
   border-radius: 50%;
   display: flex;
@@ -129,7 +135,8 @@ li img:hover {
   .leftArrow,
   .rightArrow {
     font-size: 30px;
-    top: 85%; /* También más abajo en mobile */
+    top: 85%;
+    /* También más abajo en mobile */
   }
 
   .dotsContainerItem {
