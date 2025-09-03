@@ -67,6 +67,9 @@ const Slider = ({ setOpen, setNoticia }) => {
       });
   };
   const scrollToImage = (direction) => {
+    const noticiaSeleccionada = imagenBase[currentIndex];
+    setOpen(true);
+    setNoticia(noticiaSeleccionada);
     if (!imagenBase || imagenBase.length === 0) return;
 
     setCurrentIndex((curr) => {
@@ -139,8 +142,12 @@ const Slider = ({ setOpen, setNoticia }) => {
                   )}
                   <img
                     src={item.imgUrl}
-                    style={{ width: "1920px", height: "958px" }}
+                    style={{
+                      width: "100%", height: "958px", cursor: "default",
+                      pointerEvents: "none"
+                    }}
                     alt={item.titulo || "Slider Image"}
+
                   />
                   <div
                     className={style.downButton}
@@ -156,9 +163,8 @@ const Slider = ({ setOpen, setNoticia }) => {
             {imagenBase?.map((_, idx) => (
               <div
                 key={idx}
-                className={`${style.dotsContainerItem} ${
-                  idx === currentIndex ? style.activeDot : ""
-                }`}
+                className={`${style.dotsContainerItem} ${idx === currentIndex ? style.activeDot : ""
+                  }`}
                 onClick={() => goToslide(idx)}
               ></div>
             ))}

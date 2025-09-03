@@ -107,7 +107,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                               fontWeight: 400,
                               fontSize: "32px",
                               lineHeight: "1.2",
-                              textAlign: "left", 
+                              textAlign: "left",
                               marginBottom: "20px",
                               color: "#0c0c0cff",
                             }}
@@ -124,8 +124,9 @@ const Slider = ({ setOpen, noticia, open }) => {
                               columnGap: "20px",
                               columnCount: 2,
                               columnWidth: "240px",
-                              textAlign: "justify",
+                              
                               margin: 0,
+                              fontFamily: "'Titillium Web', sans-serif"
                             }}
                           >
                             {noticia?.noticia}
@@ -176,8 +177,8 @@ const Slider = ({ setOpen, noticia, open }) => {
                               alignItems: "flex-end",
                               marginRight: "-112px",
                               border: "1px",
-                              cursor:"default",
-                              pointerEvents:"none"
+                              cursor: "default",
+                              pointerEvents: "none"
                             }}
                           >
                             {noticia.imagenesRelacionadas[0] && (
@@ -215,22 +216,24 @@ const Slider = ({ setOpen, noticia, open }) => {
               ))}
             </ul>
           </div>
+          <div className={style.controlsContainer}>
+            <div
+              className={style.leftArrow}
+              onClick={() => scrollToImage("prev")}
+            >
+              <img src={izqu} alt="Prev" className={style.arrowImage} />
+            </div>
+            <div
+              className={style.rightArrow}
+              onClick={() => scrollToImage("next")}
+            >
+              <img src={derec} alt="Next" className={style.arrowImage} />
+            </div>
+            <div className={style.downButton} onClick={() => scrollDown()}>
+              <img src={abajo} alt="Down" />
+            </div>
+          </div>
 
-          <div
-            className={style.leftArrow}
-            onClick={() => scrollToImage("prev")}
-          >
-            <img src={izqu} alt="Prev" className={style.arrowImage} />
-          </div>
-          <div
-            className={style.rightArrow}
-            onClick={() => scrollToImage("next")}
-          >
-            <img src={derec} alt="Next" className={style.arrowImage} />
-          </div>
-          <div className={style.downButton} onClick={() => scrollDown()}>
-            <img src={abajo} alt="Down" />
-          </div>
         </div>
       </div>
 

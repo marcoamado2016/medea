@@ -3,6 +3,20 @@
   margin: 0px auto;
 }
 
+.controlsContainer {
+
+  top: 80%;
+  /* altura de todos los botones */
+  left: 50%;
+  /* centrado horizontal */
+
+  display: flex;
+  gap: 30px;
+  /* espacio entre botones */
+  align-items: center;
+  z-index: 2;
+}
+
 .sliderConteiner {
   position: relative;
   height: 100%;
@@ -50,9 +64,8 @@
 .downButton {
   position: absolute;
   top: 80%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   right: 200px;
-  /* antes 85px → ahora queda más separado de la flecha derecha */
   width: 33px;
   height: 33px;
   background: #2b2b2b;
@@ -62,10 +75,8 @@
   align-items: center;
   cursor: pointer;
   z-index: 2;
-}
+  cursor: "default";
 
-.downButton:hover {
-  transform: translateX(-50%) scale(1.1);
 }
 
 ul {
@@ -129,7 +140,7 @@ li img:hover {
   }
 
   .conteinerImg {
-    height: 400px;
+    height: 40px;
   }
 
   .leftArrow,
