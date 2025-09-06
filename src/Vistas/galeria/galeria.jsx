@@ -96,11 +96,12 @@ const Slider = ({ setOpen, noticia, open }) => {
                           alignItems: "flex-start",
                           justifyContent: "flex-start",
                           gap: "10px",
-                          paddingLeft: "250px",
+                          paddingLeft: "80px",
                           marginTop: "150px",
+                          
                         }}
                       >
-                        <div style={{ flex: 1, maxWidth: "500px" }}>
+                        <div style={{ flex: 1, maxWidth: "900px" }}>
                           <h1
                             style={{
                               fontFamily: "'The Seasons', sans-serif",
@@ -117,16 +118,15 @@ const Slider = ({ setOpen, noticia, open }) => {
 
                           <p
                             style={{
-                              fontWeight: 400,
-                              fontSize: "16px",
-                              lineHeight: "1.6",
+                              fontWeight: 500,
+                              fontSize: "22px",
                               color: "#020202",
-                              columnGap: "20px",
+                              columnGap: "10px",
                               columnCount: 2,
                               columnWidth: "240px",
-                              
+                              lineHeight: "24px",
                               margin: 0,
-                              fontFamily: "'Titillium Web', sans-serif"
+                              fontFamily: "'Titillium Web', sans-serif",
                             }}
                           >
                             {noticia?.noticia}
@@ -143,7 +143,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                             alignItems: "flex-end",
                             marginTop:
                               noticia.noticia != "" && noticia.titulo != ""
-                                ? "-455px"
+                                ? "-310px"
                                 : "150px",
                             marginRight: "400px",
                           }}
@@ -157,6 +157,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                               background: "transparent",
                               border: "none",
                               cursor: "pointer",
+                              marginRight: "-200px"
                             }}
                           >
                             <img
@@ -175,10 +176,10 @@ const Slider = ({ setOpen, noticia, open }) => {
                               flexDirection: "column",
                               gap: "20px",
                               alignItems: "flex-end",
-                              marginRight: "-112px",
+                              marginRight: "-319px",
                               border: "1px",
                               cursor: "default",
-                              pointerEvents: "none"
+                              pointerEvents: "none",
                             }}
                           >
                             {noticia.imagenesRelacionadas[0] && (
@@ -233,7 +234,6 @@ const Slider = ({ setOpen, noticia, open }) => {
               <img src={abajo} alt="Down" />
             </div>
           </div>
-
         </div>
       </div>
 

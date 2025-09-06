@@ -38,7 +38,7 @@
   /* Cambiado de 50% a 80% */
   transform: translateY(-50%);
   /* Solo movimiento vertical */
-  left: 80px;
+  left: 40px;
   font-size: 40px;
   font-weight: 500;
   color: #fff0f0c2;
@@ -52,7 +52,7 @@
   position: absolute;
   top: 80%;
   transform: translateY(-50%);
-  right: 120px;
+  right: 65px;
   /* antes 32px → más a la izquierda */
   font-size: 40px;
   font-weight: 500;
@@ -65,7 +65,7 @@
   position: absolute;
   top: 80%;
   transform: translateY(-40%);
-  right: 200px;
+  right:130px;
   width: 33px;
   height: 33px;
   background: #2b2b2b;
