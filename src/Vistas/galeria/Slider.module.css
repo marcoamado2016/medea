@@ -34,7 +34,7 @@
   width: 33px;
   height: 33px;
   position: absolute;
-  top: 80%;
+  top: 85%;
   /* Cambiado de 50% a 80% */
   transform: translateY(-50%);
   /* Solo movimiento vertical */
@@ -50,10 +50,9 @@
   width: 33px;
   height: 33px;
   position: absolute;
-  top: 80%;
+  top: 85%;
   transform: translateY(-50%);
   right: 65px;
-  /* antes 32px → más a la izquierda */
   font-size: 40px;
   font-weight: 500;
   color: #fff0f0c2;
@@ -63,7 +62,7 @@
 
 .downButton {
   position: absolute;
-  top: 80%;
+  top: 85%;
   transform: translateY(-40%);
   right:130px;
   width: 33px;

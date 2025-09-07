@@ -96,12 +96,12 @@ const Slider = ({ setOpen, noticia, open }) => {
                           alignItems: "flex-start",
                           justifyContent: "flex-start",
                           gap: "10px",
-                          paddingLeft: "80px",
-                          marginTop: "150px",
+                          paddingLeft: "150px",
+                          marginTop: "200px",
                           
                         }}
                       >
-                        <div style={{ flex: 1, maxWidth: "900px" }}>
+                        <div style={{ flex: 1, maxWidth: "800px" }}>
                           <h1
                             style={{
                               fontFamily: "'The Seasons', sans-serif",
@@ -109,7 +109,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                               fontSize: "32px",
                               lineHeight: "1.2",
                               textAlign: "left",
-                              marginBottom: "20px",
+                              marginBottom: "50px",
                               color: "#0c0c0cff",
                             }}
                           >
@@ -119,9 +119,9 @@ const Slider = ({ setOpen, noticia, open }) => {
                           <p
                             style={{
                               fontWeight: 500,
-                              fontSize: "22px",
+                              fontSize: "16px",
                               color: "#020202",
-                              columnGap: "10px",
+                              columnGap: "30px",
                               columnCount: 2,
                               columnWidth: "240px",
                               lineHeight: "24px",
