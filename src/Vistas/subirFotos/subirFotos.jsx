@@ -212,7 +212,7 @@ const SubirFotosModal = ({ open, setOpen }) => {
                   label={
                     "Para enviar la noticia debera ingresar 1673 caracteres"
                   }
-                  inputProps={{ maxLength: 1150 }}
+                  inputProps={{ maxLength: 1673 }}
                 />
               </Grid>
               <Grid item>
