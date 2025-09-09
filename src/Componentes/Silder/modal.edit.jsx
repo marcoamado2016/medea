@@ -144,10 +144,12 @@ const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
                 name="noticia"
                 value={formData.noticia1}
                 onChange={(e) => {
-                  const valor = e.target.value.slice(0, 1150);
+                  const valor = e.target.value.slice(0, 1673);
                   handleChange("noticia1", valor);
                 }}
                 rows={10}
+                inputProps={{ maxLength: 1673 }}
+                label={"Para enviar la noticia debera ingresar 1673 caracteres"}
               />
             </Grid>
             <Grid item>
