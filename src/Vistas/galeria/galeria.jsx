@@ -68,7 +68,7 @@ const Slider = ({ setOpen, noticia, open }) => {
           width: "100%",
           position: "relative",
           boxShadow: `
-      inset 0 4px 6px rgba(255, 255, 255, 0.6),  
+  
       inset 0 -4px 6px rgba(0, 0, 0, 0.4),       
       0 6px 10px rgba(0, 0, 0, 0.5)          
     `,
@@ -143,7 +143,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                             alignItems: "flex-end",
                             marginTop:
                               noticia.noticia != "" && noticia.titulo != ""
-                                ? "-310px"
+                                ? "-590px"
                                 : "150px",
                             marginRight: "400px",
                           }}
