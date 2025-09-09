@@ -143,7 +143,7 @@ const Slider = ({ setOpen, noticia, open }) => {
                             alignItems: "flex-end",
                             marginTop:
                               noticia.noticia != "" && noticia.titulo != ""
-                                ? "-590px"
+                                ? "-390px"
                                 : "150px",
                             marginRight: "400px",
                           }}
