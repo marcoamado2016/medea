@@ -15,7 +15,6 @@ import { grey, red } from "@mui/material/colors";
 import { useEffect, useState } from "react";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 const ModalEdit = ({ edit, setEdit, imagenEdit }) => {
-  console.log("EDIT ", imagenEdit);
   const [formData, setFormData] = useState({
     imagen1: null,
     noticia1: "",

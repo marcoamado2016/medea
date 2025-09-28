@@ -47,7 +47,6 @@ const SubirFotosModal = ({ open, setOpen }) => {
   });
   const [error, setError] = useState(false);
   const handleChange = (nombre, valor) => {
-    // console.log("NOMBRE ", nombre, " valor ", valor);
     setFormData((value) => ({
       ...value,
       [nombre]: valor,

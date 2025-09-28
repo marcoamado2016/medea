@@ -13,12 +13,24 @@ import SubirFotosModal from "../../Vistas/subirFotos/subirFotos.jsx";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../slice/authSlice.js";
+import SubirPdf from "../../Vistas/subirPdf/subirPdf.jsx";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import { Button } from "@mui/material";
 const Footer = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const status = useSelector((state) => state.auth.estado);
   const [modal, setOpen] = useState(false);
+  const [pdf, setPdf] = useState(false);
   const subirFotos = () => {
-    setOpen(status);
+    setOpen(true);
+    setPdf(false);
+    console.log("SOY FUNCION SUBIR");
+  };
+  const subirPdf = () => {
+    setOpen(false);
+    setPdf(true);
+    console.log("SOY FUNCION PDF");
+    console.log("PDDDD pdf ", pdf);
   };
   const cerraSesion = () => {
     dispatch(login({ estado: false }));
@@ -56,6 +68,18 @@ const Footer = () => {
               <img src={subir} className={style.redes} />
             </div>
           )}
+
+          {status && (
+            <Button
+              onClick={subirPdf}
+              variant="contained"
+              startIcon={<PictureAsPdfIcon />}
+              style={{ background: "black" }}
+            >
+              Predicas
+            </Button>
+          )}
+
           {status && (
             <div onClick={cerraSesion}>
               <p>cerra sesión</p>
@@ -106,6 +130,7 @@ const Footer = () => {
         <h2>Copyright©2024. Todos los derechos reservados</h2>
       </div>
       {modal && <SubirFotosModal open={modal} setOpen={setOpen} />}
+      {pdf && <SubirPdf pdf={pdf} setPdf={setPdf} />}
     </div>
   );
 };

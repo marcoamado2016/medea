@@ -18,6 +18,7 @@ import Login from "./Vistas/Login/Login";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { login } from "./slice/authSlice";
+import Articulo from "./Vistas/Articulo/Articulo";
 
 function App() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ function App() {
         <Route path="/colaborar" element={<Colaborar />} />
         <Route path="/button" element={<Button />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/articulo" element={<Articulo/>}/>
       </Routes>
       <Footer />
     </div>
