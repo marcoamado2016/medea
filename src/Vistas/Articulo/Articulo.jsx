@@ -15,10 +15,12 @@ import play from "./play.png";
 import style from "./Pdf.module.css";
 import { useEffect, useState } from "react";
 import ModificarPdf from "../modificarPdf/modificar";
+import { useSelector } from "react-redux";
 
 const Articulo = () => {
   const [pdfs, setPdfs] = useState([]);
   const [open, setOpen] = useState(false);
+  const status = useSelector((state) => state.auth.estado);
   const [pdfSeleccionado, setPdfSeleccionado] = useState({
     titulo: "",
     url_pdf: "",
@@ -69,16 +71,30 @@ const Articulo = () => {
       >
         {/* Columna izquierda: texto */}
         <Grid item xs={12} md={6}>
-          <Box sx={{ maxWidth: "400px", marginTop: "100px" }}>
+          <Box
+            sx={{ maxWidth: "400px", marginTop: "200px", marginLeft: "80px" }}
+          >
             <Typography variant="h3">ARTÍCULOS</Typography>
-            <Typography variant="body1" sx={{ marginTop: "100px" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                marginTop: "100px",
+                fontFamily: "Titillium Web', sans-serif",
+              }}
+            >
               Cada resumen es una semilla de lo que Dios nos habló durante la
               semana. Sabemos que hay mensajes que tocan el corazón de forma
               especial, y por eso creemos en la importancia de volver a ellos,
               repasarlos, compartirlos o simplemente dejar que sigan obrando en
               nuestro interior.
             </Typography>
-            <Typography variant="body1" sx={{ marginTop: "40px" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                marginTop: "40px",
+                fontFamily: "Titillium Web', sans-serif",
+              }}
+            >
               Cada prédica que subimos lleva un mensaje con propósito, palabras
               que sanan, desafían y animan. Este espacio está pensado para vos,
               para que no te pierdas nada y puedas llevarte algo de Dios a donde
@@ -86,33 +102,42 @@ const Articulo = () => {
             </Typography>
           </Box>
         </Grid>
-
-        {/* Columna derecha: imagen + lista */}
         <Grid item xs={12} md={6}>
-          <Card>
-            {/* Imagen */}
+          <Card
+            sx={{
+              bgcolor: "#222",
+              borderRadius: 3,
+              overflow: "hidden",
+              width: "40%",
+              marginLeft: "730px",
+              marginTop: "-500px",
+            }}
+          >
             <img
               src={contenedorarticulo}
               alt="Desierto"
-              style={{ width: "100%", height: 200, objectFit: "cover" }}
+              style={{ width: "100%", height: 100, objectFit: "cover" }}
             />
 
             {/* Lista de artículos */}
             <CardContent>
               {pdfs?.map((art) => (
-                <List sx={{ bgcolor: "#1c1c1c"}}>
+                <List sx={{ bgcolor: "#1c1c1c" }}>
                   <ListItem
                     key={art.id}
                     divider
                     secondaryAction={
                       <div className={style.botones}>
-                        <div className={style.descarga}>
-                          <img
-                            src={editar}
-                            alt="editar"
-                            onClick={() => modificarPredica(art)}
-                          />
-                        </div>
+                        {status && (
+                          <div className={style.descarga}>
+                            <img
+                              src={editar}
+                              alt="editar"
+                              onClick={() => modificarPredica(art)}
+                            />
+                          </div>
+                        )}
+
                         <div>
                           <img
                             src={pdf}
@@ -151,6 +176,7 @@ const Articulo = () => {
                             fontWeight: "bold",
                             color: art.destacado ? "#f9b233" : "#fff",
                             textTransform: "uppercase",
+                            fontFamily: "Akira Expanded, sans-serif",
                           }}
                         >
                           {art.titulo}

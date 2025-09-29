@@ -10,25 +10,28 @@
   font-family: "Italic";
   src: url("../font/SwilyBright-Italic.otf");
 }
+@font-face {
+  font-family: "Akira Expanded";
+  src: url("/font/Akira Expanded Demo.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 *,
 html,
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
 }
-::-webkit-scrollbar-track{
-  background-color:grey
+::-webkit-scrollbar-track {
+  background-color: grey;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   height: 35%;
   background-color: rgba(66, 66, 66, 0.658);
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.438);
 }
-
-
