@@ -16,7 +16,7 @@ import style from "./Pdf.module.css";
 import { useEffect, useState } from "react";
 import ModificarPdf from "../modificarPdf/modificar";
 import { useSelector } from "react-redux";
-
+import articulos from "./articulos.png";
 const Articulo = () => {
   const [pdfs, setPdfs] = useState([]);
   const [open, setOpen] = useState(false);
@@ -74,27 +74,18 @@ const Articulo = () => {
           <Box
             sx={{ maxWidth: "400px", marginTop: "200px", marginLeft: "80px" }}
           >
-            <Typography
-              variant="h3"
-              style={{
-                fontFamily: "'The Seasons', serif",
-                color: "#fcf8f8ff",
-                fontWeight: 400,
-                fontSize: "64px",
-                lineHeight: "1.2",
-                textAlign: "left",
-                marginBottom: "50px",
-              }}
-            >
-              ARTÍCULOS
+            <Typography variant="h3">
+              <img src={articulos} alt="articulos" />
             </Typography>
             <Typography
               variant="body1"
               sx={{
-                marginTop: "100px",
+                marginTop: "50px",
                 fontFamily: "'Titillium Web', sans-serif",
                 fontWeight: 500,
                 fontSize: "16px",
+                color: "#bbb8be",
+                width: 430,
               }}
             >
               Cada resumen es una semilla de lo que Dios nos habló durante la
@@ -110,6 +101,8 @@ const Articulo = () => {
                 fontFamily: "'Titillium Web', sans-serif",
                 fontWeight: 500,
                 fontSize: "16px",
+                color: "#bbb8be",
+                width: 430,
               }}
             >
               Cada prédica que subimos lleva un mensaje con propósito, palabras
@@ -125,15 +118,15 @@ const Articulo = () => {
               bgcolor: "#222",
               borderRadius: 3,
               overflow: "hidden",
-              width: "40%",
-              marginLeft: "730px",
+              width: "50%",
+              marginLeft: "700px",
               marginTop: "-500px",
             }}
           >
             <img
               src={contenedorarticulo}
               alt="Desierto"
-              style={{ width: "100%", height: 100, objectFit: "cover" }}
+              style={{ width: "100%", height: 150, objectFit: "cover" }}
             />
 
             {/* Lista de artículos */}
@@ -175,7 +168,9 @@ const Articulo = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        fontWeight: "bold",
+                        fontFamily: "'The Seasons', sans-serif",
+                        fontWeight: 400,
+                        fontSize: "32px",
                         width: "50px",
                         color: art.destacado ? "#f9b233" : "#fff",
                       }}
@@ -194,10 +189,10 @@ const Articulo = () => {
                             color: art.destacado ? "#f9b233" : "#fff",
                             textTransform: "uppercase",
                             fontFamily: "Akira Expanded, sans-serif",
+                            marginLeft:"20px"
                           }}
                         >
                           {art.titulo}
-                          {console.log("ARTICULO", art.titulo)}
                         </Typography>
                       }
                     />
