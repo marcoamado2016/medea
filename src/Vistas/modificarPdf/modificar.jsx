@@ -74,7 +74,6 @@ const ModificarPdf = ({ open, setOpen, articulo }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("PDF data ", data);
         if (data.success == true) {
           limpiarCampos();
           alert("La predica ok");

@@ -115,12 +115,14 @@ const Articulo = () => {
         <Grid item xs={12} md={6}>
           <Card
             sx={{
-              bgcolor: "#222",
+              bgcolor: "#7e0a0aff",
               borderRadius: 3,
               overflow: "hidden",
               width: "50%",
               marginLeft: "700px",
               marginTop: "-500px",
+              background: "transparent",
+              mixBlendMode: "lighten",
             }}
           >
             <img
@@ -132,7 +134,7 @@ const Articulo = () => {
             {/* Lista de artículos */}
             <CardContent>
               {pdfs?.map((art) => (
-                <List sx={{ bgcolor: "#1c1c1c" }}>
+                <List >
                   <ListItem
                     key={art.id}
                     divider
@@ -189,7 +191,7 @@ const Articulo = () => {
                             color: art.destacado ? "#f9b233" : "#fff",
                             textTransform: "uppercase",
                             fontFamily: "Akira Expanded, sans-serif",
-                            marginLeft:"20px"
+                            marginLeft: "20px",
                           }}
                         >
                           {art.titulo}

@@ -3,14 +3,14 @@
 }
 
 .botones {
-  display: flex;           /* activa flexbox */
-  flex-direction: row;     /* en fila horizontal */
-  align-items: center;     /* centra verticalmente */
-  gap: 30px;               /* separación entre botones */
+  display: flex; /* activa flexbox */
+  flex-direction: row; /* en fila horizontal */
+  align-items: center; /* centra verticalmente */
+  gap: 30px; /* separación entre botones */
 }
 
 .botones img {
-  width: 20px;             /* ajustá el tamaño si hace falta */
+  width: 20px; 
   height: 20px;
   cursor: pointer;
 }

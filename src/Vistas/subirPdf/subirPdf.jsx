@@ -27,6 +27,7 @@ const SubirPdf = ({ pdf, setPdf }) => {
   });
   const onClose = () => {
     setPdf(false);
+    location.reload();
   };
   const limpiarCampos = () => {
     setFormData({
