@@ -74,12 +74,27 @@ const Articulo = () => {
           <Box
             sx={{ maxWidth: "400px", marginTop: "200px", marginLeft: "80px" }}
           >
-            <Typography variant="h3">ARTÍCULOS</Typography>
+            <Typography
+              variant="h3"
+              style={{
+                fontFamily: "'The Seasons', serif",
+                color: "#fcf8f8ff",
+                fontWeight: 400,
+                fontSize: "64px",
+                lineHeight: "1.2",
+                textAlign: "left",
+                marginBottom: "50px",
+              }}
+            >
+              ARTÍCULOS
+            </Typography>
             <Typography
               variant="body1"
               sx={{
                 marginTop: "100px",
-                fontFamily: "Titillium Web', sans-serif",
+                fontFamily: "'Titillium Web', sans-serif",
+                fontWeight: 500,
+                fontSize: "16px",
               }}
             >
               Cada resumen es una semilla de lo que Dios nos habló durante la
@@ -92,7 +107,9 @@ const Articulo = () => {
               variant="body1"
               sx={{
                 marginTop: "40px",
-                fontFamily: "Titillium Web', sans-serif",
+                fontFamily: "'Titillium Web', sans-serif",
+                fontWeight: 500,
+                fontSize: "16px",
               }}
             >
               Cada prédica que subimos lleva un mensaje con propósito, palabras
