@@ -6,7 +6,7 @@
   display: flex;           /* activa flexbox */
   flex-direction: row;     /* en fila horizontal */
   align-items: center;     /* centra verticalmente */
-  gap: 12px;               /* separación entre botones */
+  gap: 30px;               /* separación entre botones */
 }
 
 .botones img {
