@@ -1,125 +1,119 @@
 .container {
-    font-family: "Tillilium";
-    position: fixed;
-    top: 0;
-    width: 100%;   
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    margin: 0;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-family: "Tillilium";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+   padding-left: 50px;
+  align-items: center;
+  z-index: 100;
+  margin: 0;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .menuItem .linkBlack {
-    color: black !important;
+  color: black !important;
 }
 .linkBlack {
-    color: #000000;
-    text-shadow: none;
-    gap:5px;
+  color: #000000;
+  text-shadow: none;
+  gap: 5px;
 }
 
 .linkWhite {
-    color: #ffffff;
-    text-shadow: none;
+  color: #ffffff;
+  text-shadow: none;
 }
 
-
 .logo {
-   
-    height: 70px;
-    width: 105px;
-    margin: 10px;
-    padding: 10px;
-    margin-left:50px;
-    
+  height: 70px;
+  width: 105px;
+  margin: 10px;
+  padding: 10px;
+  margin-left: 50px;
 }
 
 .menu {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-left: 680px;
 }
 
 .menuItem {
-    width: auto;
-    white-space: nowrap;
+  width: auto;
+  white-space: nowrap;
 }
 
 .link {
-    margin-right:60px;
-    font-weight: 400;
-    font-size: 1.2rem;
-    cursor: pointer;
-    gap: 5px;
-    text-decoration: none;
-    color: rgb(255, 246, 246);
-    position: relative; 
-    transition: color 0.3s ease-in-out; 
-    
+  margin-right: 60px;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 5px;
+  text-decoration: none;
+  color: rgb(255, 246, 246);
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
-
 
 .link:hover {
-    border-bottom:2px solid rgb(150, 150, 0);
-    font-weight: 700;
-    color: #ffffff; 
+  border-bottom: 2px solid rgb(150, 150, 0);
+  font-weight: 700;
+  color: #ffffff;
 }
-
 
 .hide {
-    top: 70px;
+  top: 70px;
 }
-.menuIcon{
-    display:none;
-    position:absolute;
-    top: 1.6rem;
-    right: 1rem;
-    flex-direction: column;
-    justify-content:space-between ;
-    width: 2rem;
-    height: 2rem;
+.menuIcon {
+  display: none;
+  position: absolute;
+  top: 1.6rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 2rem;
 }
-.menuIcon span{
-    height: 0.25rem;
-    width: 100%;
-    border-radius: 0.2rem;
-    background-color: #ffffff;
+.menuIcon span {
+  height: 0.25rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
 }
 
 @media (max-width: 450px) {
-    .menuIcon {
-        display: flex;
-    }
+  .menuIcon {
+    display: flex;
+  }
 
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 4rem;
-        right: 0;
-        width: 100%;
-        background-color:rgba(86, 89, 90, 0.61);
-        z-index: 99;
-    }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 100%;
+    background-color: rgba(86, 89, 90, 0.61);
+    z-index: 99;
+  }
 
-    .menu.open {
-        display: flex;
-    }
-    
-    .menuItem {
-        text-align: center;
-        padding: 1rem 0;
-    }
+  .menu.open {
+    display: flex;
+  }
 
-    .link {
-        margin: 0.5rem 0;
-        color: white;
-        font-size: 1.2rem;
-    }
+  .menuItem {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .link {
+    margin: 0.5rem 0;
+    color: white;
+    font-size: 1.2rem;
+  }
 }
-
-

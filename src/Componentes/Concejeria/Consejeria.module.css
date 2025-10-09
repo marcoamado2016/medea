@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    height: 790px;
+    height: 900px;
     padding: 15px;
     position: relative; 
 }
@@ -14,7 +14,8 @@
     color: aliceblue;
     max-width: 400px;
     padding: 10px;
-    margin-right: 100px;
+    margin-right: 200px;
+    margin-top: 200px;
     
 }
 
