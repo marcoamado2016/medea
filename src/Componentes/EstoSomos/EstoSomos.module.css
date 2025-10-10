@@ -1,134 +1,135 @@
-.estoSomos{
-    background-image: url(../../assets/esto-somos.jpg);
-    display: flex;
-    height: 800px;
-    background-size:cover;
-    background-position:top center;
-    background-repeat: no-repeat;
-    font-family:"TheSeason" ;
-    align-items: center;
-    justify-content: start;
+.estoSomos {
+  background-image: url(../../assets/esto-somos.jpg);
+  display: flex;
+  height: 800px;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: "TheSeason";
+  align-items: center;
+  justify-content: start;
+}
 
+.miLista {
+  color: antiquewhite;
+  width: 80%;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 3rem; /* tamaño grande */
+  list-style: none;
+  margin-left: 120px;
+  margin-top: 120px;
+  display: flex;
 }
-.miLista{
-    color: antiquewhite;
-    width: 80%;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 2rem;
-    list-style: none;
-    margin-left: 120px; 
-}
+
 .miLista li {
-    
-    justify-content: start;
-    display: flex;
-    margin: 5px 0; 
-    padding: 5px 0; 
-    cursor: pointer;
+  justify-content: start;
+  display: flex;
+  margin: 5px 0;
+  padding: 5px 0;
+  cursor: pointer;
 }
+
 .miLista li a {
-    display: block; 
-    width: 100%;
-    color: antiquewhite;
-    text-decoration: none; 
-    position: relative; 
+  display: inline-block; /* ajusta ancho al contenido */
+  position: relative;
+  color: antiquewhite;
+  text-decoration: none;
+  width: auto;
+  transition: color 0.3s; /* suaviza cambio de color */
 }
+
+.miLista li a:hover {
+  color: gray; /* cambia a gris al hover */
+}
+
+/* Líneas amarillas arriba y abajo */
 .miLista li a::before,
 .miLista li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height:2px;
-    background-color: rgb(59, 59, 16);
-    opacity: 0; 
-    transition: opacity 0.3s, transform 0.3s; 
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .miLista li a::before {
-    top: -2px; 
-    width: 100%;
+  top: 0;
+  transform: translateY(-4px); /* separa un poco arriba */
 }
 
 .miLista li a::after {
-    bottom: -2px; 
-    width: 100%;
+  bottom: 0;
+  transform: translateY(4px); /* separa un poco abajo */
 }
 
 .miLista li a:hover::before,
 .miLista li a:hover::after {
-    opacity: 1; 
+  opacity: 1;
 }
-.estoSomos h1{
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 2em;
-    font-weight: 100;
-    font-family:"TheSeason" ;
-    color:antiquewhite
 
+.estoSomos h1 {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 100;
+  font-family: "TheSeason";
+  color: antiquewhite;
 }
+
+/* Media Queries */
 @media (max-width: 768px) {
-  
-
-    .miLista {
-       
-        gap: 15px;
-        font-size: 1.5rem;
-        
-    }
-
-   
+  .miLista {
+    gap: 15px;
+    font-size: 1.5rem;
+  }
 }
-
 
 @media (max-width: 450px) {
-    .estoSomos {
-        min-height:700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center;
-        height: auto;
-        
-        
-    }
-    .estoSomos h1{
-        display: flex;
+  .estoSomos {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
 
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: start;
-        font-size: 2em;
-        font-weight: 100;
-        font-family:"TheSeason" ;
-        color:antiquewhite;
-        margin-bottom: 10px;
-    
-    }
- 
+  .estoSomos h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    font-size: 2em;
+    font-weight: 100;
+    font-family: "TheSeason";
+    color: antiquewhite;
+    margin-bottom: 10px;
+  }
 
-    .miLista {
-        font-size: 1.2rem; 
-        gap:1px ;
-        padding: 2px;
-        margin-right:60px ;
-        margin-bottom: 180px;
-    }
-    .miLista ul{
-        padding: 0px;
-        
-    }
-    .miLista li {
-        margin: 2px 0; 
-        padding: 10px 10px;
-    
-    }
-    .miLista li a {
-        padding: 0px ;
-        margin:0;
-    }
+  .miLista {
+    font-size: 1.2rem;
+    gap: 1px;
+    padding: 2px;
+    margin-right: 60px;
+    margin-bottom: 180px;
+  }
+
+  .miLista ul {
+    padding: 0px;
+  }
+
+  .miLista li {
+    margin: 2px 0;
+    padding: 10px 10px;
+  }
+
+  .miLista li a {
+    padding: 0px;
+    margin: 0;
+  }
 }

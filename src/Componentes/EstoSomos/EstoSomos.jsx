@@ -16,7 +16,7 @@ const EstoSomos = () => {
       <h1>ESTO SOMOS</h1>
       <ul className={style.miLista}>
         <li>
-          <Link to="/ciem" onClick={Onclick}>
+          <Link to="/ciem" onClick={Onclick} >
             Centro Integral Educativo
           </Link>
         </li>

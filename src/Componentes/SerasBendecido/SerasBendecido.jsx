@@ -14,8 +14,8 @@ const SerasBendecido = () => {
   return (
     <div className={style.container} onClick={handleNavigate}>
       <h1 onClick={handleNavigate}>
-        <span>Ser</span>
-        <span>bendecido</span>
+        <span style={{ color: "transparent" }}>Ser</span>
+        <span style={{ color: "transparent" }}>bendecido</span>
       </h1>
     </div>
   );
