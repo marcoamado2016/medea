@@ -124,11 +124,8 @@ const Footer = () => {
           <p>Recibe contenido exclusivo</p>
         </div>
       </div>
-      <hr className={style.divider} />
-      <div className={style.longFooter}>
-        <img src={medea} alt="Medea logo" />
-        <h2>Copyright©2024. Todos los derechos reservados</h2>
-      </div>
+   
+
       {modal && <SubirFotosModal open={modal} setOpen={setOpen} />}
       {pdf && <SubirPdf pdf={pdf} setPdf={setPdf} />}
     </div>
