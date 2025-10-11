@@ -17,7 +17,7 @@
   gap: 10px;
   font-size: 3rem; /* tamaño grande */
   list-style: none;
-  margin-left: 120px;
+  margin-left: 88px;
   margin-top: 120px;
   display: flex;
 }
@@ -79,6 +79,7 @@
   font-weight: 100;
   font-family: "TheSeason";
   color: antiquewhite;
+  margin-bottom: "100px";
 }
 
 /* Media Queries */

@@ -13,7 +13,7 @@ const EstoSomos = () => {
 
   return (
     <div className={style.estoSomos} id="Estos">
-      <h1>ESTO SOMOS</h1>
+      <h1 >ESTO SOMOS</h1>
       <ul className={style.miLista}>
         <li>
           <Link to="/ciem" onClick={Onclick} >
