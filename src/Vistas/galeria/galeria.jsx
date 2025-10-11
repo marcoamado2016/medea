@@ -67,7 +67,6 @@ const Slider = ({ setOpen, noticia, open }) => {
           height: "150vh",
           width: "100%",
           position: "relative",
-
           borderRadius: "10px",
         }}
       >
