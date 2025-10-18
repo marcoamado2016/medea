@@ -12,14 +12,14 @@
   
   .Fm {
     display: flex;
-    height: 300px;
-    width: 200px;
+    height: 215px;
+    width: 220px;
     flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    padding: 20px;
+    padding: 30px;
     left: 320px;
     top: 70px;
   }
