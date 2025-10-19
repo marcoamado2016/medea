@@ -1,157 +1,150 @@
 .containerRadio {
-    background-image: url("../../assets/FONDORadio.png");
-    background-size: cover;
+  background-image: url("../../assets/FONDORadio.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 110vh;
+}
+
+.Fm {
+  display: flex;
+  height: 215px;
+  width: 220px;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  left: 320px;
+  top: 70px;
+}
+
+.radioFuncion {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 50px;
+  left: 320px;
+  top: 300px;
+  margin-left: 85px;
+}
+.buttonPlay {
+  height: 40px;
+  gap: 50px;
+  left: 800px;
+  top: 130px;
+}
+.buttonPlay:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.buttonPlay.active {
+  filter: grayscale(100%);
+}
+.buttonFav {
+  height: 40px;
+  gap: 50px;
+  left: 320px;
+  margin-right: 100px;
+  top: 130px;
+}
+.buttonFav:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.buttonFav.active {
+  filter: grayscale(100%);
+}
+.buttonMute {
+  height: 40px;
+  gap: 50px;
+  left: 320px;
+  margin-right: 100px;
+  top: 130px;
+}
+.buttonMute:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.buttonMute.active {
+  filter: grayscale(100%);
+}
+.buttonMute {
+  height: 40px;
+  gap: 50px;
+  left: 320px;
+  margin-left: 80px;
+  top: 130px;
+}
+.button {
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.button.active {
+  filter: grayscale(100%);
+}
+@media (max-width: 768px) {
+  .containerRadio {
     background-position: left;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 110vh;
+    min-height: 100vh;
+    padding: 5px;
   }
-  
+
   .Fm {
+    height: 40%;
+    width: 40%;
+    left: 0;
+    top: 20px;
+    padding: 10px;
+  }
+
+  .radioFuncion {
     display: flex;
-    height: 215px;
-    width: 220px;
-    flex-direction: column;
-    position: relative;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding: 30px;
-    left: 320px;
-    top: 70px;
+    left: 0;
+    top: 50px;
+    gap: 20px;
   }
-  
+}
+@media (max-width: 450px) {
+  .containerRadio {
+    background-position: left;
+    min-height: 100vh;
+    padding: 0px;
+  }
+
+  .Fm {
+    background-color: rgba(250, 250, 250, 0.253);
+    height: 20%;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    padding: 5px;
+  }
+
   .radioFuncion {
-    position: relative;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    gap: 50px;
-    left: 320px;
-    top: 130px;
-    margin-left: 100px;
-    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    padding: 5px;
+    top: 150px;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.541);
+    border-radius: 20px;
   }
-  .buttonPlay{
-    height: 40px;
-    gap: 50px;
-    left: 320px;
-    top: 130px;
-    
-  }
-  .buttonPlay:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-  }
-  .buttonPlay.active {
-    filter: grayscale(100%);
-  }
-  .buttonFav{
-    height: 40px;
-    gap: 50px;
-    left: 320px;
-    margin-right: 100px;
-    top: 130px;
-    
-  }
-  .buttonFav:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-  }
-  .buttonFav.active {
-    filter: grayscale(100%);
-  }
-  .buttonMute{
-    height: 40px;
-    gap: 50px;
-    left: 320px;
-    margin-right: 100px;
-    top: 130px;
-  }
-  .buttonMute:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-  }
-  .buttonMute.active {
-    filter: grayscale(100%);
-  }
-  .buttonMute{
-    height: 40px;
-    gap: 50px;
-    left: 320px;
-    margin-left: 80px;
-    top: 130px;
-  }
-  .button {
-    cursor: pointer;
-    transition: transform 0.2s, filter 0.2s;
-    
-  }
-  
-  .button:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-  }
-  
-  .button.active {
-    filter: grayscale(100%);
-  }
-  @media (max-width: 768px) {
-    .containerRadio {
-      background-position: left;
-      min-height: 100vh;
-      padding: 5px;
-    }
-
-    .Fm {
-      height: 40%;
-      width: 40%;
-      left: 0;
-      top: 20px;
-      padding: 10px;
-    }
-
-    .radioFuncion {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      left: 0;
-      top: 50px;
-      gap: 20px;
-    }
-  }
-  @media (max-width: 450px) {
-    .containerRadio {
-      background-position: left;
-      min-height: 100vh;
-      padding: 0px;
-    }
-
-    .Fm {
-      
-      background-color: rgba(250, 250, 250, 0.253);
-      height: 20%;
-      width: 100%;
-      left: 0;
-      top: 100px;
-      padding: 5px;
-    }
-
-    .radioFuncion {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      left: 0;
-      padding: 5px;
-      top: 150px;
-      gap: 10px;
-      background-color: rgba(0, 0, 0, 0.541);
-      border-radius: 20px;
-    }
-  }
-  
-  
+}

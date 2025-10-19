@@ -48,8 +48,16 @@ const RadioPlayer = () => {
     <section className={style.containerRadio}>
       {/* Información de la radio */}
       <div className={style.Fm}>
-        <img src={fm} alt="Logo FM" />
-        <img src={onAir} alt="En vivo" />
+        <img
+          src={fm}
+          alt="Logo FM"
+          style={{ width: "170px", height: "150px", marginTop: "250px" }}
+        />
+        <img
+          src={onAir}
+          alt="En vivo"
+          style={{ width: "50px", height: "50px", marginTop: "30px" }}
+        />
       </div>
 
       {/* Controles de la radio */}
@@ -60,20 +68,18 @@ const RadioPlayer = () => {
           onClick={handleFavorite}
           className={style.buttonFav}
         />
-        <img
-          src={isPlaying ? pausa : play}
-          alt={isPlaying ? "Pausar" : "Reproducir"}
-          onClick={togglePlay}
-          className={style.buttonPlay}
-          target="_blank"
-        />
+        <div >
+          <img
+            src={isPlaying ? pausa : play}
+            alt={isPlaying ? "Pausar" : "Reproducir"}
+            onClick={togglePlay}
+            className={style.buttonPlay}
+            target="_blank"
+            style={{ width: "80px", height: "80px" }}
+          />
 
-        <img
-          src={stop}
-          alt="Detener"
-          onClick={handleStop}
-          className={style.button}
-        />
+        </div>
+
         <img
           src={mute}
           alt="Silenciar"
