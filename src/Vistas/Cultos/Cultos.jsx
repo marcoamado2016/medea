@@ -8,7 +8,7 @@ const Culto = () => {
   return (
     <div className={style.containerCultos}>
       <div className={style.cultosText}>
-        <h1 style={{ fontFamily: "'The Seasons" }}>Cultos</h1>
+        <h1 style={{ fontFamily: "'The Seasons'" }}>Cultos</h1>
         <div className={style.cultos}>
           <div className={style.actividad}>
             <p>

@@ -1,149 +1,154 @@
 .containerCultos {
-    min-height: 160vh;
-    min-width: 98vw;
-    background-image: url('../../assets/cultos.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    overflow: hidden;
+  min-height: 160vh;
+  min-width: 98vw;
+  background-image: url('../../assets/cultos.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .cultosText {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* 🔹 Cambiado: antes estaba center */
-    margin-right: 200px;
-    /* 🔹 Ajusta esta distancia si querés mover todo más a la derecha */
-    margin-top: 80px;
-    flex-grow: 1;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 200px;
+  margin-top: 80px;
+  flex-grow: 1;
 }
 
 .cultosText h1 {
-    font-family: "TheSeason";
-    font-size: 3rem;
-    margin: 0 0 40px 0;
-    /* 🔹 Elimina margen lateral para alinear bien */
-    align-self: flex-start;
-    /* 🔹 Asegura que quede a la izquierda del bloque */
+  font-family: "TheSeason";
+  font-size: 3rem;
+  color: #000;
+  margin: 0 0 80px 0; /* separación vertical */
+  align-self: flex-start;
+  letter-spacing: 1px;
 }
 
 .cultos {
-    width: 100%;
-    max-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    font-family: "Tillilium";
-    gap: 0px;
-    padding-left: 10px;
-    /* 🔹 Ligeramente indentado para que quede visualmente parejo con el título */
-    scrollbar-width: thin;
-    scrollbar-color: #a09e9e transparent;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Tillilium";
+  gap: 1px;
+  /* ➡️ AJUSTE: padding-right reducido a 50px para mínima separación del scroll */
+  padding: 0 50px 60px 15px; 
+  scrollbar-width: thin;
+  scrollbar-color: #a09e9e transparent;
 }
 
 .actividad {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    line-height: 1.6;
-    padding: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.6;
+  padding: 12px 0;
 }
 
 .actividad p {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #000000;
-    margin: 0;
-    width: 100px;
-    /* 🔹 Fija un ancho para alinear bien los días */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000000;
+  margin: 0;
+  width: 100px;
 }
 
 .actividad span {
-    font-weight: 300;
-    font-size: 1rem;
-    color: #0f0f0f;
-    text-align: justify;
-    margin: 0;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #0f0f0f;
+  text-align: justify;
+  margin: 0;
+  text-decoration: none;
 }
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 1450px) {
-    .containerCultos {
-        min-height: 150vh;
-        min-width: 95vw;
-    }
+  .containerCultos {
+    min-height: 150vh;
+    min-width: 95vw;
+  }
 
-    .cultosText {
-        width: 480px;
-        margin-right: 120px;
-        margin-top: 90px;
-    }
+  .cultosText {
+    width: 480px;
+    margin-right: 120px;
+    margin-top: 152px;
+  }
 
-    .cultosText h1 {
-        margin-bottom: 30px;
-    }
+  .cultosText h1 {
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+  }
 
-    .cultos {
-        max-height: 90vh;
-        padding-left: 5px;
-    }
+  .cultos {
+    max-height: 90vh;
+    /* ➡️ AJUSTE: padding-right reducido a 40px */
+    padding: 0 40px 50px 10px; 
+  }
 }
 
 @media (max-width: 760px) {
-    .containerCultos {
-        min-height: 140vh;
-        min-width: 90vw;
-        align-items: center;
-    }
+  .containerCultos {
+    min-height: 140vh;
+    min-width: 90vw;
+    align-items: center;
+  }
 
-    .cultosText {
-        width: 400px;
-        margin-right: 0;
-        margin-top: 60px;
-        align-items: center;
+  .cultosText {
+    width: 400px;
+    margin-right: 0;
+    margin-top: 60px;
+    align-items: center;
+  }
 
-    }
+  .cultosText h1 {
+    font-family: "TheSeason";
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-    .cultosText h1 {
-        text-align: center;
-        font-family: "TheSeason";
-    }
-
-    .cultos {
-        width: 90%;
-        max-height: 85vh;
-        padding-right: 10px;
-    }
+  .cultos {
+    width: 90%;
+    max-height: 85vh;
+    /* ➡️ AJUSTE: padding-right reducido a 30px */
+    padding: 0 30px 50px 10px; 
+  }
 }
 
 @media (max-width: 450px) {
-    .containerCultos {
-        min-height: 130vh;
-        min-width: 85vw;
-        align-items: center;
-    }
+  .containerCultos {
+    min-height: 130vh;
+    min-width: 85vw;
+    align-items: center;
+  }
 
-    .cultosText {
-        width: 320px;
-        margin-right: 0;
-        margin-top: 70px;
-        background-color: rgba(105, 105, 105, 0.445);
-        align-items: center;
-    }
+  .cultosText {
+    width: 320px;
+    margin-right: 0;
+    margin-top: 70px;
+    background-color: rgba(105, 105, 105, 0.445);
+    align-items: center;
+  }
 
-    .cultosText h1 {
-        text-align: center;
-    }
+  .cultosText h1 {
+    font-family: "TheSeason";
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
-    .cultos {
-        width: 85%;
-        max-height: 80vh;
-    }
+  .cultos {
+    width: 85%;
+    max-height: 80vh;
+    /* ➡️ AJUSTE: padding-right reducido a 20px */
+    padding: 0 20px 50px 10px; 
+  }
 }
