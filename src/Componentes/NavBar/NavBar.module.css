@@ -3,9 +3,22 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(28, 28, 28, 0.836);
   display: flex;
-   padding-left: 50px;
+  padding-left: 50px;
+  align-items: center;
+  z-index: 100;
+  margin: 0;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.container1 {
+  font-family: "Tillilium";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding-left: 50px;
   align-items: center;
   z-index: 100;
   margin: 0;
@@ -13,10 +26,10 @@
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .menuItem .linkBlack {
-  color: black !important;
+  color: rgb(253, 252, 252) !important;
 }
 .linkBlack {
-  color: #000000;
+  color: #fcfbfb;
   text-shadow: none;
   gap: 5px;
 }

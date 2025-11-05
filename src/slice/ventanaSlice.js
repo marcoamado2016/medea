@@ -2,16 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const initial = {
   estado: false,
 };
-const authSlice = createSlice({
-  name: "auth",
+const ventanaSlice = createSlice({
+  name: "ventana",
   initialState: initial,
   reducers: {
-    login: (state, action) => {
+    ventana: (state, action) => {
       state.estado = action.payload.estado;
     },
-    
   },
 });
 
-export const { login } = authSlice.actions;
-export default authSlice.reducer;
+export const { ventana } = ventanaSlice.actions;
+export default ventanaSlice.reducer;

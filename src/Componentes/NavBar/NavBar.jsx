@@ -3,11 +3,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logocupula.png";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 412);
   const navigate = useNavigate();
   const [scroll, setScroll] = useState(false);
+  const estado = useSelector((state) => state.ventana?.estado);
+  console.log("estado ", estado);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [scroll]);
@@ -33,7 +36,7 @@ const NavBar = () => {
     "/cultos",
   ].includes(location.pathname);
   return (
-    <div className={style.container}>
+    <div className={estado ? style.container : style.container1}>
       <div>
         <img
           src={Logo}
