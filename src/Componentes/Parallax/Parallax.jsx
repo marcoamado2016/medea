@@ -28,7 +28,7 @@ const Parallax = () => {
       // Mover las nubes hacia arriba
       const nubeElement = document.querySelector(`.${style.nube}`);
       if (nubeElement) {
-        nubeElement.style.transform = `translate(-50%, calc(60% - ${
+        nubeElement.style.transform = `translate(-50%, calc(50% - ${
           scrollPosition * 0.85
         }px))`; // Ajusta la velocidad cambiando el multiplicador
       }
