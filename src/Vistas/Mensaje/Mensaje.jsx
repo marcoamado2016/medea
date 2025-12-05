@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import style from "./Mensaje.module.css";
-
+import botonHover from "./boton hover (1).png";
 const Mensaje = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,11 +35,11 @@ const Mensaje = () => {
         "1A4pExR15gOAYEkYl"
       )
       .then(() => {
-        alert("Tu oración fue enviada correctamente ❤️");
+        alert("Tu oración fue enviada correctamente");
         setFormData({ nombre: "", telefono: "", peticion: "" });
       })
       .catch((error) => {
-        console.error("Error al enviar el correo ❌", error);
+        console.error("Error al enviar el correo", error);
         alert("Hubo un problema al enviar el correo.");
       });
     setFormData({ nombre: "", telefono: "", peticion: "" });
@@ -47,39 +47,41 @@ const Mensaje = () => {
 
   return (
     <div className={style.ContainerForm}>
-      <section className={style.SectionForm}>
-        <div className={style.tituloForm}>
-          <h1>No estás solo</h1>
-        </div>
-        <div className={style.InputForm}>
-          <input
-            type="text"
-            name="nombre"
-            placeholder="Nombre"
-            value={formData.nombre}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="telefono"
-            placeholder="Teléfono"
-            value={formData.telefono}
-            onChange={handleInputChange}
-          />
-          <textarea
-            name="peticion"
-            placeholder="Petición"
-            className={`${style.InputField} ${style.TextArea}`}
-            value={formData.peticion}
-            onChange={handleInputChange}
-          ></textarea>
-        </div>
-        <div className={style.ButtonContainer}>
-          <button className={style.SubmitButton} onClick={handleSubmit}>
-            Enviar
-          </button>
-        </div>
-      </section>
+      <div className={style.InputForm}>
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Nombre"
+          value={formData.nombre}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="telefono"
+          placeholder="Teléfono"
+          value={formData.telefono}
+          onChange={handleInputChange}
+        />
+        <textarea
+          name="peticion"
+          placeholder="Petición"
+          className={`${style.TextArea}`}
+          value={formData.peticion}
+          onChange={handleInputChange}
+        ></textarea>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          width: "52%",
+          paddingTop: "8px",
+        }}
+      >
+        <button onClick={handleSubmit}>
+          <img src={botonHover} alt="" />
+        </button>
+      </div>
     </div>
   );
 };

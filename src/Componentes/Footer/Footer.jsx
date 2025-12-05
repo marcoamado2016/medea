@@ -41,9 +41,8 @@ const Footer = () => {
       <div className={style.row}>
         <div className={style.titulos}>
           <h4>AQUÍ ESTAMOS</h4>
-          <Link to="/">Libertad en la red</Link>
-          <Link to="/mensaje">Un mensaje al corazón</Link>
-          <a href="#slider">Noticias</a>
+          <Link to="/radio">Libertad en la red</Link>
+          <Link to="/tv">Un mensaje al corazón</Link>
         </div>
         <div className={style.titulos}>
           <h4>SOMOS</h4>
@@ -61,7 +60,7 @@ const Footer = () => {
         </div>
         <div className={style.titulos}>
           <h4>AYUDA</h4>
-          <p>Contacto</p>
+          <Link to="/mensaje">Contacto</Link>
           <h4 className={style.redesTitle}>REDES SOCIALES</h4>
           {status && (
             <div onClick={subirFotos}>
@@ -124,7 +123,6 @@ const Footer = () => {
           <p>Recibe contenido exclusivo</p>
         </div>
       </div>
-   
 
       {modal && <SubirFotosModal open={modal} setOpen={setOpen} />}
       {pdf && <SubirPdf pdf={pdf} setPdf={setPdf} />}

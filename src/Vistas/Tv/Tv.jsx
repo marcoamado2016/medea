@@ -6,14 +6,6 @@ const Tv = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleDownloadClick = () => {
-    const link = document.createElement("a");
-    link.href = "/Dios.pdf";
-    link.download = "Dios.pdf";
-    // document.body.appendChild(link);
-    link.click();
-    // document.body.removeChild(link);
-  };
 
   return (
     <div className={style.tvContainer}>
@@ -32,7 +24,7 @@ const Tv = () => {
         </div>
       </section>
       <section className={style.word}>
-        <h1>El poder de la palabra</h1>
+        <h2>El poder de la palabra</h2>
         <div className={style.words}>
           <h2>Raul Villareal</h2>
           <h2>24.11.2024</h2>

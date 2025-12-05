@@ -71,7 +71,7 @@ const Parallax = () => {
 
         <div className={style.textoLanding}>
           <p>
-            El Ministerio M.E.D.E.A., con 41 años de misión, difunde el
+            El Ministerio M.E.D.E.A., con 42 años de misión, difunde el
             evangelio globalmente mediante tecnología y medios, alcanzando a
             quienes no pueden asistir en persona. Brinda apoyo espiritual a
             personas privadas de libertad y mantiene una presencia continua a
