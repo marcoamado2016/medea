@@ -42,14 +42,6 @@
   text-shadow: none;
 }
 
-.logo {
-  height: 70px;
-  width: 105px;
-  margin: 10px;
-  padding: 10px;
-  margin-left: 22px;
-}
-
 .menu {
   list-style-type: none;
   display: flex;
@@ -137,17 +129,33 @@
 }
 
 @media (max-width: 1920px) {
+  .logo {
+    height: 70px;
+    width: 105px;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 90px;
+  }
+
   .menu {
     list-style-type: none;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
-    margin-left: 1110px;
+    margin-left: 1042px;
   }
 }
 
 @media (max-width: 1366px) {
+  .logo {
+    height: 70px;
+    width: 105px;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 22px;
+  }
+
   .menu {
     list-style-type: none;
     display: flex;

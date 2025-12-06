@@ -1,17 +1,3 @@
-.containerCultos {
-  min-height: 160vh;
-  min-width: 98vw;
-  background-image: url('../../assets/cultos.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
 .cultosText {
   width: 600px;
   display: flex;
@@ -26,7 +12,8 @@
   font-family: "TheSeason";
   font-size: 3rem;
   color: #000;
-  margin: 0 0 80px 0; /* separación vertical */
+  margin: 0 0 80px 0;
+  /* separación vertical */
   align-self: flex-start;
   letter-spacing: 1px;
 }
@@ -41,7 +28,7 @@
   font-family: "Tillilium";
   gap: 1px;
   /* ➡️ AJUSTE: padding-right reducido a 50px para mínima separación del scroll */
-  padding: 0 50px 60px 15px; 
+  padding: 0 50px 60px 15px;
   scrollbar-width: thin;
   scrollbar-color: #a09e9e transparent;
 }
@@ -92,7 +79,23 @@
   .cultos {
     max-height: 90vh;
     /* ➡️ AJUSTE: padding-right reducido a 40px */
-    padding: 0 40px 50px 10px; 
+    padding: 0 40px 50px 10px;
+  }
+}
+
+@media(max-width: 1366px) {
+  .containerCultos {
+    min-height: 160vh;
+    min-width: 50vw;
+    background-image: url('../../assets/cultos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeast;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
   }
 }
 
@@ -120,7 +123,7 @@
     width: 90%;
     max-height: 85vh;
     /* ➡️ AJUSTE: padding-right reducido a 30px */
-    padding: 0 30px 50px 10px; 
+    padding: 0 30px 50px 10px;
   }
 }
 
@@ -149,6 +152,34 @@
     width: 85%;
     max-height: 80vh;
     /* ➡️ AJUSTE: padding-right reducido a 20px */
-    padding: 0 20px 50px 10px; 
+    padding: 0 20px 50px 10px;
   }
 }
+
+@media(min-width:1920px) {
+  .containerCultos {
+    min-height: 160vh;
+    min-width: 130vw;
+    background-image: url('../../assets/cultos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .cultosText {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 598px;
+    margin-top: 80px;
+    flex-grow: 1;
+  }
+}
+
+@media(max-width:1366px) {}

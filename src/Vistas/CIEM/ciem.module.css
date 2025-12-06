@@ -1,15 +1,22 @@
-.containerCiem{
+.containerCiem {
     min-height: 140vh;
     min-width: 98vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: center;
 }
-.textCiem{
+
+.text {
+    width: 500px;
+    margin-right: 80px;
+    padding: 5px;
+}
+
+.textCiem {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,58 +26,60 @@
     margin-top: 160px;
     gap: 30px;
 }
-.textCiem h1{
+
+.textCiem h1 {
     font-size: 2.5rem;
     font-weight: 100;
-    font-family:"TheSeason" ;
+    font-family: "TheSeason";
     margin-right: 90px;
     margin-top: 10px;
 
-    
+
 }
-.text{
-    width: 500px;
-    margin-right: 80px;
-    padding: 5px;
-}
-@media(max-width: 1450px){
-    .containerCiem{
+
+@media(max-width: 1450px) {
+    .containerCiem {
         min-height: 120vh;
         min-width: 90vw;
         background-image: url('../../assets/Ciem.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: end;
         justify-content: center;
         margin-right: 50px;
         width: 100%;
     }
-    .textCiem{
+
+    .textCiem {
         margin-top: 25px;
         gap: 50px;
     }
-    
+
 }
+
 @media (max-width: 760px) {
     .containerCiem {
         min-height: 100vh;
         min-width: 100vw;
         align-items: center;
     }
+
     .textCiem {
         margin-top: 90px;
         gap: 20px;
         background-color: rgba(169, 169, 169, 0.459);
         border-radius: 10px;
     }
+
     .textCiem h1 {
         font-size: 2rem;
         margin-right: 0;
         text-align: center;
     }
+
     .text {
         width: 90%;
         margin-right: 0;
@@ -84,11 +93,43 @@
         background-color: rgba(169, 169, 169, 0.459);
         border-radius: 10px;
     }
+
     .textCiem h1 {
         font-size: 1.5rem;
     }
+
     .text {
         width: 100%;
     }
 }
 
+@media(max-width: 1366px) {
+
+
+    .containerCiem {
+        min-height: 140vh;
+        min-width: 98vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1920px) {
+
+    .containerCiem {
+        min-height: 80vh;
+        min-width: 50vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+}

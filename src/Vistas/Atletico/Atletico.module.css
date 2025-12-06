@@ -1,44 +1,10 @@
-.atleticoContainer {
-    min-height: 140vh;
-    min-width: 98vw;
-    background-image: url('../../assets/atletico.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-
-}
-
-.atleticoText {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 50%;
-    height: 100%;
-
-}
-
 .atleticoText h1 {
     font-size: 2.5rem;
     font-weight: 100;
     font-family: "TheSeason";
     margin-left: 45px;
-
 }
 
-.textoAtletico {
-    height: 500px;
-    width: 80%;
-    align-items: center;
-    margin-left: 45px;
-    line-height: 1.5;
-
-}
 
 .textoAtletico p {
     font-family: "Tillilium";
@@ -126,5 +92,76 @@
         height: auto;
         margin: 0 auto;
         padding: 10px;
+    }
+}
+
+@media(max-width: 1920px) {
+    .atleticoContainer {
+        min-height: 80vh;
+        min-width: 130vw;
+        background-image: url('../../assets/atletico.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+
+    }
+    .textoAtletico {
+        height: 500px;
+        width: 45%;
+        align-items: center;
+        margin-left: 45px;
+        line-height: 1.5;
+
+    }
+    .atleticoText {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        height: 100%;
+        padding-left: 10px;
+
+    }
+}
+
+@media(max-width: 1366px) {
+    .atleticoContainer {
+        min-height: 140vh;
+        min-width: 98vw;
+        background-image: url('../../assets/atletico.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+
+    }
+
+    .textoAtletico {
+        height: 500px;
+        width: 80%;
+        align-items: center;
+        margin-left: 45px;
+        line-height: 1.5;
+
+    }
+
+    .atleticoText {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        height: 100%;
+
     }
 }
