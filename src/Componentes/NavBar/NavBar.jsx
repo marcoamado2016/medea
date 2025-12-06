@@ -10,7 +10,6 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [scroll, setScroll] = useState(false);
   const estado = useSelector((state) => state.ventana?.estado);
-  console.log("estado ", estado);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [scroll]);

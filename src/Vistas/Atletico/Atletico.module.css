@@ -1,4 +1,4 @@
-.atleticoContainer{
+.atleticoContainer {
     min-height: 140vh;
     min-width: 98vw;
     background-image: url('../../assets/atletico.png');
@@ -10,7 +10,8 @@
     justify-content: end;
 
 }
-.atleticoText{
+
+.atleticoText {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -19,54 +20,60 @@
     align-items: flex-start;
     width: 50%;
     height: 100%;
-   
+
 }
-.atleticoText h1{
+
+.atleticoText h1 {
     font-size: 2.5rem;
     font-weight: 100;
-    font-family:"TheSeason" ;
+    font-family: "TheSeason";
     margin-left: 45px;
- 
-    
+
 }
-.textoAtletico{
+
+.textoAtletico {
     height: 500px;
     width: 80%;
-    align-items:center ;
+    align-items: center;
     margin-left: 45px;
     line-height: 1.5;
-    
+
 }
 
 .textoAtletico p {
-    font-family:"Tillilium" ;
+    font-family: "Tillilium";
     text-align: justify;
     font-size: 1rem;
     margin: 20px 0;
     color: #000000;
-;
+    ;
 }
 
-    @media (max-width: 1025px) {
-        .atleticoContainer {
-            min-height: 130vh;
-            min-width: 95vw;
-        }
-        .atleticoText h1 {
-            font-size: 2.25rem;
-            margin-left: 40px;
-        }
-        .textoAtletico {
-            width: 75%;
-            margin-left: 40px;
-        }
-        .textoAtletico p {
-            font-size: 0.95rem;
-        }
-    }
+@media (max-width: 1025px) {
     .atleticoContainer {
-        min-height: 120vh;
+        min-height: 130vh;
+        min-width: 95vw;
     }
+
+    .atleticoText h1 {
+        font-size: 2.25rem;
+        margin-left: 40px;
+    }
+
+    .textoAtletico {
+        width: 75%;
+        margin-left: 40px;
+    }
+
+    .textoAtletico p {
+        font-size: 0.95rem;
+    }
+}
+
+.atleticoContainer {
+    min-height: 120vh;
+}
+
 @media (max-width: 760px) {
     .atleticoContainer {
         min-height: 100vh;
@@ -74,11 +81,12 @@
         align-items: center;
         justify-content: center;
     }
+
     .atleticoText h1 {
         font-size: 2rem;
         margin-right: 0;
     }
-    
+
 }
 
 @media (max-width: 450px) {
@@ -88,12 +96,14 @@
         align-items: center;
         justify-content: center;
     }
+
     .atleticoText h1 {
         font-size: 1.5rem;
         margin-top: 80px;
         ;
-       
+
     }
+
     .textoAtletico {
         background-color: rgba(105, 105, 105, 0.342);
         border-radius: 20px;
@@ -102,13 +112,15 @@
         align-items: center;
         padding: 10px;
         margin-top: 80px;
-        margin-right:100px;
+        margin-right: 100px;
         height: auto;
     }
+
     .textoAtletico p {
         font-size: 0.875rem;
-        
+
     }
+
     .atleticoText {
         width: 90%;
         height: auto;

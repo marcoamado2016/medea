@@ -17,7 +17,7 @@
   gap: 10px;
   font-size: 3rem;
   list-style: none;
-  margin-left: 88px;
+  margin-left: 150px;
   margin-top: 120px;
   display: flex;
 }
@@ -31,16 +31,19 @@
 }
 
 .miLista li a {
-  display: inline-block; /* ajusta ancho al contenido */
+  display: inline-block;
+  /* ajusta ancho al contenido */
   position: relative;
   color: antiquewhite;
   text-decoration: none;
   width: auto;
-  transition: color 0.3s; /* suaviza cambio de color */
+  transition: color 0.3s;
+  /* suaviza cambio de color */
 }
 
 .miLista li a:hover {
-  color: gray; /* cambia a gris al hover */
+  color: gray;
+  /* cambia a gris al hover */
 }
 
 /* Líneas amarillas arriba y abajo */
@@ -57,12 +60,14 @@
 
 .miLista li a::before {
   top: 0;
-  transform: translateY(-4px); /* separa un poco arriba */
+  transform: translateY(-4px);
+  /* separa un poco arriba */
 }
 
 .miLista li a::after {
   bottom: 0;
-  transform: translateY(4px); /* separa un poco abajo */
+  transform: translateY(4px);
+  /* separa un poco abajo */
 }
 
 .miLista li a:hover::before,
@@ -132,5 +137,33 @@
   .miLista li a {
     padding: 0px;
     margin: 0;
+  }
+}
+
+@media (max-width: 1920px) {
+  .miLista {
+    color: antiquewhite;
+    width: 80%;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 3rem;
+    list-style: none;
+    margin-left: 150px;
+    margin-top: 120px;
+    display: flex;
+  }
+}
+
+@media (max-width: 1366px) {
+  .miLista {
+    color: antiquewhite;
+    width: 80%;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 3rem;
+    list-style: none;
+    margin-left: 88px;
+    margin-top: 120px;
+    display: flex;
   }
 }

@@ -12,6 +12,7 @@
   justify-content: flex-start;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
 .container1 {
   font-family: "Tillilium";
   position: fixed;
@@ -25,9 +26,11 @@
   justify-content: flex-start;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
 .menuItem .linkBlack {
   color: rgb(253, 252, 252) !important;
 }
+
 .linkBlack {
   color: #fcfbfb;
   text-shadow: none;
@@ -82,6 +85,7 @@
 .hide {
   top: 70px;
 }
+
 .menuIcon {
   display: none;
   position: absolute;
@@ -92,6 +96,7 @@
   width: 2rem;
   height: 2rem;
 }
+
 .menuIcon span {
   height: 0.25rem;
   width: 100%;
@@ -128,5 +133,27 @@
     margin: 0.5rem 0;
     color: white;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 1110px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 558px;
   }
 }
