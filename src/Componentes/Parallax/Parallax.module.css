@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    height: 2000px; 
+    height: 2000px;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -21,18 +21,18 @@
     overflow: hidden;
 }
 
-@media (max-width: 412px){
-    .parallax{
-        width:100%;
+@media (max-width: 412px) {
+    .parallax {
+        width: 100%;
     }
 }
 
 .titulo {
     font-family: 'TheSeason';
     color: #ffffff;
-    position:absolute;
-    top: 50%; 
-    left: 50%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
@@ -50,27 +50,13 @@
 }
 
 .titulo h2 {
-    font-weight:200;
+    font-weight: 200;
     margin: 0;
     padding: 0;
     font-size: 5rem;
     line-height: 0.5;
 }
 
-/* ☁️ Nube más grande (aumentado ancho y escala) */
-.nube {  
-    position: absolute;
-    top: 1%;
-    left: 50%;
-    transform: translate(-40%, 50%) scale(1.05); /* antes 0.9 */
-    transform-origin: center center;
-    width: auto;
-    height: auto;
-    max-width: 1400px; /* antes 1200px */
-    z-index: 99;
-    pointer-events: none;
-    transition: transform 0.1s ease-out;
-}
 
 .aquiEstamos {
     height: fit-content;
@@ -152,7 +138,7 @@
 /* 📱 Responsive */
 @media (max-width: 768px) {
     .titulo h1 {
-        font-size: 4rem; 
+        font-size: 4rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -164,18 +150,20 @@
     }
 
     .card {
-        width: 200px; 
+        width: 200px;
         height: 100px;
     }
 
     .textoLanding p {
-        font-size: 0.9rem; 
+        font-size: 0.9rem;
     }
 
     .nube {
         top: 400px;
-        transform: translate(-40%, 50%) scale(0.9); /* antes 0.75 */
-        max-width: 950px; /* antes 800px */
+        transform: translate(-40%, 50%) scale(0.9);
+        /* antes 0.75 */
+        max-width: 950px;
+        /* antes 800px */
     }
 }
 
@@ -189,17 +177,17 @@
     }
 
     .medio {
-        display: flex;  
+        display: flex;
         flex-direction: column;
     }
 
     .card {
         width: 180px;
-        height: 90px; 
+        height: 90px;
     }
 
     .textoLanding p {
-        font-size: 0.7rem; 
+        font-size: 0.7rem;
         line-height: 1.4;
     }
 
@@ -209,12 +197,58 @@
 
     .nube {
         top: 500px;
-        transform: translate(-40%, 50%) scale(0.8); /* más grande en móviles */
+        transform: translate(-40%, 50%) scale(0.8);
+        /* más grande en móviles */
         max-width: 850px;
-        display: none; /* puedes quitar esta línea si querés que se vea */
+        display: none;
+        /* puedes quitar esta línea si querés que se vea */
     }
 
     .outerParallax {
         min-height: 130vh;
     }
+}
+
+@media(max-width: 1920px) {
+
+    /* ☁️ Nube más grande (aumentado ancho y escala) */
+    .nube {
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translate(-40%, 50%) scale(1.05);
+        /* antes 0.9 */
+        transform-origin: center center;
+        width: auto;
+        height: auto;
+        max-width: 1900px;
+        /* antes 1200px */
+        z-index: 99;
+        pointer-events: none;
+        transition: transform 0.1s ease-out;
+    }
+
+
+}
+
+@media(max-width: 1366px) {
+
+    /* ☁️ Nube más grande (aumentado ancho y escala) */
+    .nube {
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translate(-40%, 50%) scale(1.05);
+        /* antes 0.9 */
+        transform-origin: center center;
+        width: auto;
+        height: auto;
+        max-width: 1400px;
+        /* antes 1200px */
+        z-index: 99;
+        pointer-events: none;
+        transition: transform 0.1s ease-out;
+    }
+
+
 }
