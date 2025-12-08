@@ -158,7 +158,7 @@
 
 @media(min-width:1920px) {
   .containerCultos {
-    min-height: 160vh;
+    min-height: 145vh;
     min-width: 130vw;
     background-image: url('../../assets/cultos.png');
     background-size: cover;
@@ -177,9 +177,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-right: 598px;
-    margin-top: 80px;
+    margin-top: 200px;
     flex-grow: 1;
   }
 }
-
-@media(max-width:1366px) {}
