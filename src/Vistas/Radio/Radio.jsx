@@ -32,14 +32,6 @@ const RadioPlayer = () => {
     setIsMuted(!isMuted);
   };
 
-  const handleStop = () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reinicia el audio al principio
-    }
-    setIsPlaying(false);
-  };
-
   const handleFavorite = () => {
     alert("¡Agregado a favoritos!");
   };
