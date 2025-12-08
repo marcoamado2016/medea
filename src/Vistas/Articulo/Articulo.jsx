@@ -72,7 +72,11 @@ const Articulo = () => {
         {/* Columna izquierda: texto */}
         <Grid item xs={12} md={6}>
           <Box
-            sx={{ maxWidth: "400px", marginTop: "200px", marginLeft: "80px" }}
+            sx={{
+              maxWidth: "400px", marginTop: "200px",
+              "@media (min-width:1920px)": { marginLeft: "120px" },
+              "@media (max-width: 1366px)": { marginLeft: "80px" }
+            }}
           >
             <Typography variant="h3">
               <img src={articulos} alt="articulos" />
@@ -122,7 +126,13 @@ const Articulo = () => {
               overflow: "hidden",
               width: "50%",
               marginLeft: "590px",
-              marginTop: "-500px",
+
+              "@media (min-width:1920px)": {
+                marginTop: "150px"
+              },
+              "@media (max-width: 1366px)": {
+                marginTop: "-500px"
+              }
             }}
           >
             <img
