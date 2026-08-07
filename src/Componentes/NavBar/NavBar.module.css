@@ -96,9 +96,14 @@
   background-color: #ffffff;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 412px) {
   .menuIcon {
     display: flex;
+    z-index: 600;
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 1rem;
+    right: 1rem;
   }
 
   .menu {
@@ -112,13 +117,18 @@
     z-index: 99;
   }
 
-  .menu.open {
+  .open {
     display: flex;
   }
 
   .menuItem {
     text-align: center;
     padding: 1rem 0;
+  }
+
+  .menuIcon span {
+    height: 0.32rem;
+    background-color: #ffffff;
   }
 
   .link {

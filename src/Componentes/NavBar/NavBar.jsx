@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 412);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 390);
   const navigate = useNavigate();
   const [scroll, setScroll] = useState(false);
   const estado = useSelector((state) => state.ventana?.estado);
@@ -15,7 +15,7 @@ const NavBar = () => {
   }, [scroll]);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 412);
+      setIsMobile(window.innerWidth <= 390);
     };
 
     window.addEventListener("resize", handleResize);
@@ -53,16 +53,19 @@ const NavBar = () => {
         onClick={() => {
           setMenuOpen(!menuOpen);
         }}
+        aria-label="menu-toggle"
       >
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <ul className={`${style.menu} ${menuOpen ? style.open : ""}`}>
+      {(!isMobile || menuOpen) && (
+        <ul className={`${style.menu} ${menuOpen ? style.open : ""}`}>
         <li className={style.menuItem}>
           <Link
             to="/"
+            onClick={() => setMenuOpen(false)}
             className={`${style.link} ${
               isBlackTextRoute ? style.linkBlack : style.linkWhite
             }`}
@@ -73,6 +76,7 @@ const NavBar = () => {
         <li className={style.menuItem}>
           <a
             href="#aquiEstamos"
+            onClick={() => setMenuOpen(false)}
             className={`${style.link} ${
               isBlackTextRoute ? style.linkBlack : style.linkWhite
             }`}
@@ -83,6 +87,7 @@ const NavBar = () => {
         <li className={style.menuItem}>
           <a
             href="#slider"
+            onClick={() => setMenuOpen(false)}
             className={`${style.link} ${
               isBlackTextRoute ? style.linkBlack : style.linkWhite
             }`}
@@ -93,6 +98,7 @@ const NavBar = () => {
         <li className={style.menuItem}>
           <Link
             to="/quienes"
+            onClick={() => setMenuOpen(false)}
             className={`${style.link} ${
               isBlackTextRoute ? style.linkBlack : style.linkWhite
             }`}
@@ -101,6 +107,7 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
+      )}
     </div>
   );
 };
