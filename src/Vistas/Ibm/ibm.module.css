@@ -102,6 +102,33 @@
 
 }
 
+@media (min-width: 1200px) {
+    .ibmContainer {
+        background-image: url('../../assets/FONDOIBM.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: flex-end;
+    }
+
+    .textIbm {
+        margin-top: 50px;
+        width: 600px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: left;
+        margin-right: 90px;
+    }
+}
+
 @media(max-width: 1366px) {
     .ibmContainer {
         background-image: url('../../assets/FONDOIBM.png');
