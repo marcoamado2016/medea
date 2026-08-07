@@ -181,3 +181,31 @@
     flex-grow: 1;
   }
 }
+@media (max-width: 1659px) {
+  .containerCultos {
+    min-height: 145vh;
+    min-width: 50vw;
+    background-image: url('../../assets/cultos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .cultosText {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    margin-top: 200px;
+    flex-grow: 1;
+  }
+
+}
+
+
