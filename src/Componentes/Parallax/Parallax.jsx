@@ -54,7 +54,6 @@ const Parallax = () => {
         <div className={style.titulo2} id="aquiEstamos">
           <h1>AQUÍ ESTAMOS</h1>
         </div>
-
         <div className={style.medio}>
           <Link to="/radio" onClick={Onclick}>
             <div className={style.card}>
