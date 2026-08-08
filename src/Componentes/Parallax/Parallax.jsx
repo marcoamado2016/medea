@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Parallax.module.css";
 import nube from "../../assets/nube 03.png";
@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { ventana } from "../../slice/ventanaSlice";
 const Parallax = () => {
   const dispatch = useDispatch();
+  const [showExtraLinks, setShowExtraLinks] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -39,6 +40,19 @@ const Parallax = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setShowExtraLinks(
+        window.innerWidth === 390 && window.innerHeight === 844
+      );
+    };
+
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
   const Onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -69,17 +83,20 @@ const Parallax = () => {
             </div>
           </Link>
           
-          <Link to="/donacion" onClick={Onclick}>
-            <div className={style.card}>
-              <img src={donacion} alt="Donación" />
-            </div>
-          </Link>
-          
-          <Link to="/canal" onClick={Onclick}>
-            <div className={style.card}>
-              <img src={canal} alt="Canal" />
-            </div>
-          </Link>
+          {showExtraLinks && (
+            <>
+              <Link to="/colaborar" onClick={Onclick}>
+                <div className={style.card}>
+                  <img src={donacion} alt="Donación" />
+                </div>
+              </Link>
+              <Link to="https://www.youtube.com/@MEDEATVHD" >
+                <div className={style.card}>
+                  <img src={canal} alt="Canal" />
+                </div>
+              </Link>
+            </>
+          )}
         </div>
 
         <div className={style.textoLanding}>
