@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Parallax.module.css";
 import nube from "../../assets/nube 03.png";
+import cieloCelu from "../../assets/cieloCelu.png";
+import nubeCelu from "../../assets/nubeCelu.png";
 import radio from "../../assets/index_14.jpg";
 import tv from "../../assets/index_16.jpg";
 import donacion from "../../assets/DONACION.png";
@@ -61,14 +63,14 @@ const Parallax = () => {
   };
 
   return (
-    <div className={style.parallax}>
+    <div className={`${style.parallax} ${showExtraLinks ? style.parallaxCelu : ""}`}>
       <div className={style.outerParallax}>
         <div className={style.titulo}>
           <h2>una institución</h2>
           <h1>con Vida</h1>
         </div>
       </div>
-      <img src={nube} alt="Nube" className={style.nube} />
+      <img src={showExtraLinks ? nubeCelu : nube} alt="Nube" className={style.nube} />
       <div className={style.aquiEstamos}>
         <div className={style.titulo2} id="aquiEstamos">
           <h1>AQUÍ ESTAMOS</h1>

@@ -12,6 +12,13 @@
     position: relative;
 }
 
+/* background for iPhone 390x844 (cielo adapted) */
+.parallaxCelu {
+    background-image: url('../../assets/cieloCelu.png');
+    background-position: center;
+    background-size: cover;
+}
+
 .outerParallax {
     position: relative;
     min-height: 109vh;
@@ -267,4 +274,24 @@
     }
 
 
+}
+
+/* ensure the adapted cloud and title animate on the 390x844 mobile view */
+.parallaxCelu .nube {
+    display: block !important;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(1);
+    transform-origin: center center;
+    width: auto;
+    height: auto;
+    max-width: 1000px;
+    z-index: 99;
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+}
+
+.parallaxCelu .titulo {
+    z-index: 100;
 }
