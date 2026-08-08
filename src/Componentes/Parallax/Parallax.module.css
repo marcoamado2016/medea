@@ -188,6 +188,7 @@
         -webkit-overflow-scrolling: touch;
         padding-bottom: 10px;
         width: 100%;
+        justify-content: flex-start;
     }
 
     .medio::-webkit-scrollbar {

@@ -43,9 +43,12 @@ const Parallax = () => {
 
   useEffect(() => {
     const updateScreenSize = () => {
-      setShowExtraLinks(
-        window.innerWidth === 390 && window.innerHeight === 844
-      );
+      const isExact390x844 =
+        (window.innerWidth === 390 && window.innerHeight === 844) ||
+        (window.screen.width === 390 && window.screen.height === 844) ||
+        window.matchMedia("(device-width: 390px) and (device-height: 844px)").matches;
+
+      setShowExtraLinks(isExact390x844);
     };
 
     updateScreenSize();
