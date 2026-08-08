@@ -4,6 +4,8 @@ import style from "./Parallax.module.css";
 import nube from "../../assets/nube 03.png";
 import radio from "../../assets/index_14.jpg";
 import tv from "../../assets/index_16.jpg";
+import donacion from "../../assets/DONACION.png";
+import canal from "../../assets/CANAL.png";
 import { useDispatch } from "react-redux";
 import { ventana } from "../../slice/ventanaSlice";
 const Parallax = () => {
@@ -64,6 +66,18 @@ const Parallax = () => {
           <Link to="/tv" onClick={Onclick}>
             <div className={style.card}>
               <img src={tv} alt="TV" />
+            </div>
+          </Link>
+          
+          <Link to="/donacion" onClick={Onclick}>
+            <div className={style.card}>
+              <img src={donacion} alt="Donación" />
+            </div>
+          </Link>
+          
+          <Link to="/canal" onClick={Onclick}>
+            <div className={style.card}>
+              <img src={canal} alt="Canal" />
             </div>
           </Link>
         </div>

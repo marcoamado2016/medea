@@ -91,6 +91,8 @@
     justify-content: center;
     gap: 10px;
     margin-top: 80px;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .card {
@@ -102,6 +104,8 @@
     transition: transform 0.3s ease;
     cursor: pointer;
     margin-bottom: 20px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
 }
 
 .card:hover {
@@ -178,12 +182,22 @@
 
     .medio {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .medio::-webkit-scrollbar {
+        display: none;
     }
 
     .card {
-        width: 180px;
-        height: 90px;
+        width: 220px;
+        min-width: 220px;
+        height: 120px;
     }
 
     .textoLanding p {
